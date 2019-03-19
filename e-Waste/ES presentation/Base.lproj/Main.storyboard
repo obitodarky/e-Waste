@@ -232,25 +232,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-RJ-QQd">
-                                <rect key="frame" x="0.0" y="72" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-RJ-QQd">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARl-d1-318">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARl-d1-318">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Find Dustbin" id="bh7-U8-zlN"/>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3ON-RJ-QQd" firstAttribute="bottom" secondItem="Lnu-QO-HZ2" secondAttribute="bottom" id="6Ab-Wk-mnP"/>
+                            <constraint firstItem="ARl-d1-318" firstAttribute="top" secondItem="Lnu-QO-HZ2" secondAttribute="top" constant="8" id="Gs8-NL-P0k"/>
+                            <constraint firstItem="ARl-d1-318" firstAttribute="leading" secondItem="Lnu-QO-HZ2" secondAttribute="leading" id="Kvm-uf-bZy"/>
+                            <constraint firstItem="3ON-RJ-QQd" firstAttribute="top" secondItem="ARl-d1-318" secondAttribute="bottom" id="UDG-AC-BLK"/>
+                            <constraint firstItem="3ON-RJ-QQd" firstAttribute="top" secondItem="ARl-d1-318" secondAttribute="bottom" id="VG5-jB-cYE"/>
+                            <constraint firstItem="3ON-RJ-QQd" firstAttribute="leading" secondItem="Lnu-QO-HZ2" secondAttribute="leading" id="e7r-gb-foY"/>
+                            <constraint firstItem="ARl-d1-318" firstAttribute="trailing" secondItem="Lnu-QO-HZ2" secondAttribute="trailing" id="qAs-4J-yDv"/>
+                            <constraint firstItem="3ON-RJ-QQd" firstAttribute="trailing" secondItem="Lnu-QO-HZ2" secondAttribute="trailing" id="whO-bh-Yaf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lnu-QO-HZ2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mJ-0n-iMN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="46"/>
+            <point key="canvasLocation" x="1824.8" y="45.42728635682159"/>
         </scene>
     </scenes>
 </document>
