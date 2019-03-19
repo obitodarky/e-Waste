@@ -21,6 +21,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1O-4b-Bsg">
                                 <rect key="frame" x="153" y="318" width="69" height="31"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Ch8-v4-yOS"/>
+                                    <constraint firstAttribute="width" constant="69" id="bcP-wj-h3h"/>
+                                    <constraint firstAttribute="width" secondItem="Y1O-4b-Bsg" secondAttribute="height" multiplier="69:31" id="y4u-4M-jV5"/>
+                                </constraints>
                                 <state key="normal" title="AppName">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
