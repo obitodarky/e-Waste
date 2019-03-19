@@ -63,14 +63,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="380" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetable Peels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-qe-DFe">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetable Peels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1b-qe-DFe">
                                                     <rect key="frame" x="15" y="12" width="123" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v1b-qe-DFe" firstAttribute="top" secondItem="rdt-55-MoU" secondAttribute="topMargin" constant="1" id="8LG-82-uDk"/>
+                                                <constraint firstItem="v1b-qe-DFe" firstAttribute="bottom" secondItem="rdt-55-MoU" secondAttribute="bottomMargin" id="oYS-kQ-k49"/>
+                                                <constraint firstItem="v1b-qe-DFe" firstAttribute="leading" secondItem="rdt-55-MoU" secondAttribute="leadingMargin" id="s6L-G5-mW8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
