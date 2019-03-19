@@ -18,28 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1O-4b-Bsg">
-                                <rect key="frame" x="153" y="318" width="69" height="31"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="Ch8-v4-yOS"/>
-                                    <constraint firstAttribute="width" constant="69" id="bcP-wj-h3h"/>
-                                    <constraint firstAttribute="width" secondItem="Y1O-4b-Bsg" secondAttribute="height" multiplier="69:31" id="y4u-4M-jV5"/>
-                                </constraints>
-                                <state key="normal" title="AppName">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="x8O-Lx-HIE" kind="show" id="pTO-SH-zgF"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkE-BG-ula">
+                                <rect key="frame" x="0.0" y="30" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="App Title" id="3xC-NZ-eOy"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zfj-R1-daj"/>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bv5-2j-4p2"/>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="gPH-9w-SQj"/>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="m9i-y2-l8L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gkE-BG-ula" secondAttribute="bottom" constant="593" id="Gca-gj-YDG"/>
+                            <constraint firstItem="gkE-BG-ula" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="O4f-3g-lR5"/>
+                            <constraint firstItem="gkE-BG-ula" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OR7-HN-pW0"/>
+                            <constraint firstItem="gkE-BG-ula" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ptg-nt-947"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
