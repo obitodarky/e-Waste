@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1O-4b-Bsg">
-                                <rect key="frame" x="153" y="318" width="68" height="30"/>
+                                <rect key="frame" x="153" y="318" width="69" height="31"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="AppName">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,10 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="Jqv-8b-i00"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y1O-4b-Bsg" secondAttribute="bottom" constant="319" id="TFu-oA-tc6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y1O-4b-Bsg" secondAttribute="trailing" constant="154" id="TTu-Np-bxy"/>
-                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="e3G-JS-WRe"/>
+                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zfj-R1-daj"/>
+                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bv5-2j-4p2"/>
+                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="gPH-9w-SQj"/>
+                            <constraint firstItem="Y1O-4b-Bsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="m9i-y2-l8L"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
