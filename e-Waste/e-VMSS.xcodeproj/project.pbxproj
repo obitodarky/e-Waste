@@ -40,6 +40,7 @@
 		084E188122420C8100A7183E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				084E1885224254BE00A7183E /* Default-568h@2x.png */,
 				089D3EA4223A212400C45B26 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -72,7 +73,6 @@
 		089D3E91223A212100C45B26 = {
 			isa = PBXGroup;
 			children = (
-				084E1885224254BE00A7183E /* Default-568h@2x.png */,
 				084E1884224213AE00A7183E /* Controller */,
 				084E1883224213A500A7183E /* View */,
 				084E18822242136A00A7183E /* Model */,
