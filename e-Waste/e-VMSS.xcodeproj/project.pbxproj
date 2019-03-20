@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089D3E9A223A212100C45B26 /* ES presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ES presentation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		089D3EA2223A212100C45B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				084E1883224213A500A7183E /* View */,
 				084E18822242136A00A7183E /* Model */,
 				084E188122420C8100A7183E /* Assets */,
-				089D3E9C223A212100C45B26 /* ES presentation */,
+				089D3E9C223A212100C45B26 /* e-VMSS */,
 				089D3E9B223A212100C45B26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,26 +82,26 @@
 		089D3E9B223A212100C45B26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				089D3E9A223A212100C45B26 /* ES presentation.app */,
+				089D3E9A223A212100C45B26 /* e-VMSS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		089D3E9C223A212100C45B26 /* ES presentation */ = {
+		089D3E9C223A212100C45B26 /* e-VMSS */ = {
 			isa = PBXGroup;
 			children = (
 				089D3E9D223A212100C45B26 /* AppDelegate.swift */,
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
-			path = "ES presentation";
+			path = "e-VMSS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		089D3E99223A212100C45B26 /* ES presentation */ = {
+		089D3E99223A212100C45B26 /* e-VMSS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 089D3EAC223A212400C45B26 /* Build configuration list for PBXNativeTarget "ES presentation" */;
+			buildConfigurationList = 089D3EAC223A212400C45B26 /* Build configuration list for PBXNativeTarget "e-VMSS" */;
 			buildPhases = (
 				089D3E96223A212100C45B26 /* Sources */,
 				089D3E97223A212100C45B26 /* Frameworks */,
@@ -111,9 +111,9 @@
 			);
 			dependencies = (
 			);
-			name = "ES presentation";
+			name = "e-VMSS";
 			productName = "ES presentation";
-			productReference = 089D3E9A223A212100C45B26 /* ES presentation.app */;
+			productReference = 089D3E9A223A212100C45B26 /* e-VMSS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 089D3E95223A212100C45B26 /* Build configuration list for PBXProject "ES presentation" */;
+			buildConfigurationList = 089D3E95223A212100C45B26 /* Build configuration list for PBXProject "e-VMSS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -144,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				089D3E99223A212100C45B26 /* ES presentation */,
+				089D3E99223A212100C45B26 /* e-VMSS */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		089D3E95223A212100C45B26 /* Build configuration list for PBXProject "ES presentation" */ = {
+		089D3E95223A212100C45B26 /* Build configuration list for PBXProject "e-VMSS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				089D3EAA223A212400C45B26 /* Debug */,
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		089D3EAC223A212400C45B26 /* Build configuration list for PBXNativeTarget "ES presentation" */ = {
+		089D3EAC223A212400C45B26 /* Build configuration list for PBXNativeTarget "e-VMSS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				089D3EAD223A212400C45B26 /* Debug */,
