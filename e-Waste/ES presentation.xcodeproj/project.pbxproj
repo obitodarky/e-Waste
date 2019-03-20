@@ -53,6 +53,8 @@
 		084E1883224213A500A7183E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */,
+				089D3EA1223A212100C45B26 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,6 +62,7 @@
 		084E1884224213AE00A7183E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				089D3E9F223A212100C45B26 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,9 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				089D3E9D223A212100C45B26 /* AppDelegate.swift */,
-				089D3E9F223A212100C45B26 /* ViewController.swift */,
-				089D3EA1223A212100C45B26 /* Main.storyboard */,
-				089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */,
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
 			path = "ES presentation";
