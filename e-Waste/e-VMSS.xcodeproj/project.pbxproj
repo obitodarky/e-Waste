@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084E1886224254BE00A7183E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1885224254BE00A7183E /* Default-568h@2x.png */; };
 		089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9D223A212100C45B26 /* AppDelegate.swift */; };
 		089D3EA0223A212100C45B26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* ViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		084E1885224254BE00A7183E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		089D3E91223A212100C45B26 = {
 			isa = PBXGroup;
 			children = (
+				084E1885224254BE00A7183E /* Default-568h@2x.png */,
 				084E1884224213AE00A7183E /* Controller */,
 				084E1883224213A500A7183E /* View */,
 				084E18822242136A00A7183E /* Model */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */,
+				084E1886224254BE00A7183E /* Default-568h@2x.png in Resources */,
 				089D3EA5223A212400C45B26 /* Assets.xcassets in Resources */,
 				089D3EA3223A212100C45B26 /* Main.storyboard in Resources */,
 			);
