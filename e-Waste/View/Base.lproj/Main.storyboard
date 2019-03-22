@@ -65,10 +65,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="Ipl-LE-O65" id="ckq-3B-zDO"/>
+                        <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1358" y="69"/>
         </scene>
     </scenes>
 </document>
