@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		084E1886224254BE00A7183E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 084E1885224254BE00A7183E /* Default-568h@2x.png */; };
+		08743EB72244BCB300C2389C /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08743EB62244BCB300C2389C /* background.jpg */; };
 		089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9D223A212100C45B26 /* AppDelegate.swift */; };
 		089D3EA0223A212100C45B26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* ViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		084E1885224254BE00A7183E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		08743EB62244BCB300C2389C /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		084E188122420C8100A7183E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				08743EB62244BCB300C2389C /* background.jpg */,
 				084E1885224254BE00A7183E /* Default-568h@2x.png */,
 				089D3EA4223A212400C45B26 /* Assets.xcassets */,
 			);
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */,
+				08743EB72244BCB300C2389C /* background.jpg in Resources */,
 				084E1886224254BE00A7183E /* Default-568h@2x.png in Resources */,
 				089D3EA5223A212400C45B26 /* Assets.xcassets in Resources */,
 				089D3EA3223A212100C45B26 /* Main.storyboard in Resources */,
