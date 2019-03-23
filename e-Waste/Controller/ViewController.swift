@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.email.resignFirstResponder()
-        self.password.resignFirstResponder()
+        self.view.endEditing(true)
     }
 
 }
