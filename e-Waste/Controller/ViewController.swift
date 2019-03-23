@@ -14,9 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     
-    override func resignFirstResponder() -> Bool {
-        return true;
-    }
 
 }
 
