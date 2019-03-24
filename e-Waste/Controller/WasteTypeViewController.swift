@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WasteTypeViewController: ViewController,UITableViewDataSource {
+class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
