@@ -81,13 +81,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-Pc-4Ha">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-Pc-4Ha">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="top" secondItem="BLy-cw-5j3" secondAttribute="top" id="52Q-KV-fLM"/>
+                            <constraint firstItem="BLy-cw-5j3" firstAttribute="trailing" secondItem="ws4-Pc-4Ha" secondAttribute="trailing" id="7vR-Af-M0Z"/>
+                            <constraint firstItem="BLy-cw-5j3" firstAttribute="bottom" secondItem="ws4-Pc-4Ha" secondAttribute="bottom" id="NAX-S3-kUx"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="leading" secondItem="BLy-cw-5j3" secondAttribute="leading" id="cgy-IB-2vz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BLy-cw-5j3"/>
                     </view>
                 </viewController>
