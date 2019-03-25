@@ -10,18 +10,20 @@ import UIKit
 
 class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate {
     
+    let wasteArray = ["waste 1" , "waste 2"]
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.wasteArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = "Bacon"
+        cell.textLabel?.text = wasteArray[indexPath.row]
         
         return cell
     }
