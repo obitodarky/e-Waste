@@ -88,27 +88,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-Pc-4Ha">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="593" id="wQk-ox-xkb"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="KJX-9r-cO7" id="HDG-ZK-qnU"/>
                                     <outlet property="delegate" destination="KJX-9r-cO7" id="smM-Zm-181"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6yU-PO-Vtx">
+                                <rect key="frame" x="0.0" y="18" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KJX-9r-cO7" id="tgu-JI-2ov"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="top" secondItem="BLy-cw-5j3" secondAttribute="top" id="52Q-KV-fLM"/>
-                            <constraint firstItem="BLy-cw-5j3" firstAttribute="trailing" secondItem="ws4-Pc-4Ha" secondAttribute="trailing" id="7vR-Af-M0Z"/>
-                            <constraint firstItem="BLy-cw-5j3" firstAttribute="bottom" secondItem="ws4-Pc-4Ha" secondAttribute="bottom" id="NAX-S3-kUx"/>
-                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="leading" secondItem="BLy-cw-5j3" secondAttribute="leading" id="cgy-IB-2vz"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="leading" secondItem="PSU-3K-Hp0" secondAttribute="leading" id="AwE-pW-9rV"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="bottom" secondItem="BLy-cw-5j3" secondAttribute="bottom" id="D8C-Um-28T"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="top" secondItem="6yU-PO-Vtx" secondAttribute="bottom" id="DK5-Tg-duu"/>
+                            <constraint firstAttribute="trailing" secondItem="ws4-Pc-4Ha" secondAttribute="trailing" id="eW2-rj-9Kp"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="leading" secondItem="6yU-PO-Vtx" secondAttribute="leading" id="fvT-bi-YZn"/>
+                            <constraint firstItem="ws4-Pc-4Ha" firstAttribute="trailing" secondItem="6yU-PO-Vtx" secondAttribute="trailing" id="gVd-Zi-kLe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BLy-cw-5j3"/>
                     </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="XaQ-4v-K73" id="d3h-BE-XjY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kg-pc-ZJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="XaQ-4v-K73">
+                    <connections>
+                        <outlet property="delegate" destination="KJX-9r-cO7" id="zMw-QA-Kgp"/>
+                        <outlet property="searchBar" destination="6yU-PO-Vtx" id="3we-fI-qYo"/>
+                        <outlet property="searchContentsController" destination="KJX-9r-cO7" id="ebs-sG-BGP"/>
+                        <outlet property="searchResultsDataSource" destination="KJX-9r-cO7" id="sVe-Aa-6SW"/>
+                        <outlet property="searchResultsDelegate" destination="KJX-9r-cO7" id="1cZ-66-vu9"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2900" y="64"/>
+            <point key="canvasLocation" x="2900" y="63.418290854572717"/>
         </scene>
     </scenes>
 </document>
