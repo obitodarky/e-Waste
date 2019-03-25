@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate {
+class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate , UISearchBarDelegate, UISearchDisplayDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
