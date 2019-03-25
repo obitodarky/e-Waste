@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="18" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="KJX-9r-cO7" id="tgu-JI-2ov"/>
+                                    <outlet property="delegate" destination="ws4-Pc-4Ha" id="rVv-jW-xVg"/>
                                 </connections>
                             </searchBar>
                         </subviews>
@@ -124,11 +124,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kg-pc-ZJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="XaQ-4v-K73">
                     <connections>
-                        <outlet property="delegate" destination="KJX-9r-cO7" id="zMw-QA-Kgp"/>
-                        <outlet property="searchBar" destination="6yU-PO-Vtx" id="3we-fI-qYo"/>
-                        <outlet property="searchContentsController" destination="KJX-9r-cO7" id="ebs-sG-BGP"/>
-                        <outlet property="searchResultsDataSource" destination="KJX-9r-cO7" id="sVe-Aa-6SW"/>
-                        <outlet property="searchResultsDelegate" destination="KJX-9r-cO7" id="1cZ-66-vu9"/>
+                        <outlet property="delegate" destination="ws4-Pc-4Ha" id="H1j-xM-XHt"/>
+                        <outlet property="searchBar" destination="6yU-PO-Vtx" id="f6n-li-2mj"/>
+                        <outlet property="searchContentsController" destination="KJX-9r-cO7" id="X50-lp-Agg"/>
+                        <outlet property="searchResultsDataSource" destination="ws4-Pc-4Ha" id="WWB-H7-t5F"/>
+                        <outlet property="searchResultsDelegate" destination="ws4-Pc-4Ha" id="hme-Q6-SDf"/>
                     </connections>
                 </searchDisplayController>
             </objects>
