@@ -40,7 +40,7 @@ class CoreLocationViewController: ViewController {
     
     private func activateLocationServices(){
         
-        locationManager?.startUpdatingLocation() 
+        locationManager?.startUpdatingLocation()
     }
     
     
@@ -55,5 +55,24 @@ extension CoreLocationViewController: CLLocationManagerDelegate{
             
             activateLocationServices()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if(previousLocation == nil){
+            
+            previousLocation =  locations.first
+        }
+        
+        else {
+            
+            guard let latestLocation = locations.first else { return }
+            
+            let distanceInMeters = previousLocation?.distance(from: latestLocation) ?? 0
+            
+            print("distance : \(distanceInMeters)")
+            
+            previousLocation = latestLocation
+        } 
     }
 }
