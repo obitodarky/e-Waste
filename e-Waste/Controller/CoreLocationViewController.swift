@@ -22,7 +22,6 @@ class CoreLocationViewController: ViewController {
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
-    
     @IBAction func startLocationManager(_ sender: UIButton)
     {
         
@@ -33,14 +32,12 @@ class CoreLocationViewController: ViewController {
             
             locationManager?.requestWhenInUseAuthorization()
         }
-        
     }
     
     private func activateLocationServices(){
         
         locationManager?.startUpdatingLocation()
     }
-    
     
 }
 
@@ -61,7 +58,6 @@ extension CoreLocationViewController: CLLocationManagerDelegate{
             
             previousLocation =  locations.first
         }
-        
         else {
             
             guard let latestLocation = locations.first else { return }
