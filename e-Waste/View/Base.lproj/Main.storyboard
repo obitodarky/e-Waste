@@ -148,7 +148,7 @@
                                 <state key="normal" title="Enable Location"/>
                                 <connections>
                                     <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
-                                    <segue destination="N3O-zA-Jw4" kind="show" id="qzp-l6-Rjv"/>
+                                    <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
                                 </connections>
                             </button>
                         </subviews>
