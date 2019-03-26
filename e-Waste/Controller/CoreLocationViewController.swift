@@ -20,7 +20,7 @@ class CoreLocationViewController: ViewController {
         
         locationManager = CLLocationManager()
         locationManager?.delegate = self
-        locationManager?.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
     }
     @IBAction func startLocationManager(_ sender: UIButton)
     {

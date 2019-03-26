@@ -8,8 +8,21 @@
 
 import Foundation
 import MapKit
+import CoreLocation
 
 class MapView: ViewController {
     
     
+    @IBOutlet var areaMapView: MKMapView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLocation()
+    }
+    
+    func setLocation() {
+        
+        areaMapView.showsUserLocation = true
+        
+    }
 }
