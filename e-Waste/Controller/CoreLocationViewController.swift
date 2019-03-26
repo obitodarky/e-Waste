@@ -25,5 +25,12 @@ class CoreLocationViewController: ViewController {
         
     }
     
+    @IBAction func startLocationManager(_ sender: UIButton
+    {
+        
+        
+        
+    }
+    
     
 }
