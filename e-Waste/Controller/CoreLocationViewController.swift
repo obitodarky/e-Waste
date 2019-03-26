@@ -40,8 +40,20 @@ class CoreLocationViewController: ViewController {
     
     private func activateLocationServices(){
         
-        
+        locationManager?.startUpdatingLocation() 
     }
     
     
+}
+
+extension CoreLocationViewController: CLLocationManagerDelegate{
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if(status == .authorizedWhenInUse || status == .authorizedAlways){
+            
+            activateLocationServices()
+        }
+    }
 }
