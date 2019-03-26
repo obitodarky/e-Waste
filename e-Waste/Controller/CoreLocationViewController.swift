@@ -13,6 +13,17 @@ import CoreLocation
 
 class CoreLocationViewController: ViewController {
     
+    var locationManager: CLLocationManager?
+    var previousLocation: CLLocation?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        
+    }
     
     
 }
