@@ -148,6 +148,7 @@
                                 <state key="normal" title="Enable Location"/>
                                 <connections>
                                     <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
+                                    <segue destination="N3O-zA-Jw4" kind="show" id="qzp-l6-Rjv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -166,7 +167,18 @@
                     <view key="view" contentMode="scaleToFill" id="2vS-au-fxH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lp9-UI-i6N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="Lp9-UI-i6N" secondAttribute="trailing" id="6zQ-55-tc5"/>
+                            <constraint firstItem="Lp9-UI-i6N" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" id="DeC-UC-4wy"/>
+                            <constraint firstItem="Lp9-UI-i6N" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" id="ii6-69-OjP"/>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="Lp9-UI-i6N" secondAttribute="bottom" id="szs-ev-FsT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WqU-fu-Zso"/>
                     </view>
                 </viewController>
