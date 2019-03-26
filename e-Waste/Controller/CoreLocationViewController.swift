@@ -25,9 +25,20 @@ class CoreLocationViewController: ViewController {
         
     }
     
-    @IBAction func startLocationManager(_ sender: UIButton
+    @IBAction func startLocationManager(_ sender: UIButton)
     {
         
+        if(CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
+            
+            activateLocationServices()
+        } else {
+            
+            locationManager?.requestWhenInUseAuthorization()
+        }
+        
+    }
+    
+    private func activateLocationServices(){
         
         
     }
