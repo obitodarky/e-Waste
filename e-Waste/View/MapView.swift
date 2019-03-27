@@ -14,6 +14,7 @@ class MapView: ViewController {
     
     
     @IBOutlet var areaMapView: MKMapView!
+    let locationRequest = CoreLocationViewController()
     
     var centralLocation: Double = 10000
     let locationManager = CLLocationManager()
@@ -41,6 +42,7 @@ class MapView: ViewController {
     func setLocation() {
         
         areaMapView.showsUserLocation = true
+        locationManager.startUpdatingLocation()
         centerLocation()
         
     }
@@ -49,11 +51,20 @@ class MapView: ViewController {
 extension MapView: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //code
+
+        guard let location = locations.last else { return }
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center , latitudinalMeters: centralLocation, longitudinalMeters: centralLocation)
+        
+        areaMapView.setRegion(region, animated: true)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        //code
+        
+        
+        
     }
     
 }

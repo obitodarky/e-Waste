@@ -61,11 +61,6 @@ extension CoreLocationViewController: CLLocationManagerDelegate{
         else {
             
             guard let latestLocation = locations.first else { return }
-            
-            let distanceInMeters = previousLocation?.distance(from: latestLocation) ?? 0
-            
-            print("distance : \(distanceInMeters)")
-            
             previousLocation = latestLocation
         } 
     }
