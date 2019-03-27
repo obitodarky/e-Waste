@@ -1,4 +1,3 @@
-
 //
 //  MapView.swift
 //  e-VMSS
@@ -6,16 +5,15 @@
 //  Created by Harsh Mehta on 26/03/19.
 //  Copyright © 2019 Harsh Mehta. All rights reserved.
 //
+
 import Foundation
 import MapKit
 import CoreLocation
 
 class MapView: ViewController {
     
-    
     @IBOutlet var areaMapView: MKMapView!
     let locationRequest = CoreLocationViewController()
-    
     var centralLocation: Double = 1000
     let locationManager = CLLocationManager()
     
@@ -71,13 +69,10 @@ extension MapView: CLLocationManagerDelegate {
         
         areaMapView.setRegion(region, animated: true)
         setAnnotations()
-        
     }
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
     }
-    
 }
 
 extension MapView: MKMapViewDelegate {
@@ -96,14 +91,11 @@ extension MapView: MKMapViewDelegate {
         }
         annotationView?.canShowCallout = true
         
-        
         return annotationView
     }
-    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         //code
     }
-    
     
 }
 
