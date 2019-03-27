@@ -21,6 +21,7 @@ class MapView: ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        areaMapView.delegate = self
         setLocation()
     }
     
@@ -75,8 +76,34 @@ extension MapView: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
-        
-        
     }
     
 }
+
+extension MapView: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var annotationView = areaMapView.dequeueReusableAnnotationView(withIdentifier: "Annotations")
+        
+        if annotationView == nil{
+            
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews")
+        }
+        
+        if (annotation.subtitle == "Trash"){
+            
+            annotationView?.image = UIImage(named: "Image")
+        }
+        annotationView?.canShowCallout = true
+        
+        
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        //code
+    }
+    
+    
+}
+
