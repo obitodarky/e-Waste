@@ -44,6 +44,17 @@ class MapView: ViewController {
         areaMapView.showsUserLocation = true
         locationManager.startUpdatingLocation()
         centerLocation()
+        setAnnotations()
+        
+    }
+    
+    private func setAnnotations(){
+        
+        let trashLocation = MKPointAnnotation()
+        trashLocation.subtitle =   "Trash"
+        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 37.337388, longitude: -122.082492)
+        
+        areaMapView.addAnnotation(trashLocation)
         
     }
 }
@@ -58,6 +69,7 @@ extension MapView: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: center , latitudinalMeters: centralLocation, longitudinalMeters: centralLocation)
         
         areaMapView.setRegion(region, animated: true)
+        setAnnotations()
         
     }
     
