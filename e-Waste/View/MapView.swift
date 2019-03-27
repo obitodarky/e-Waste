@@ -18,6 +18,7 @@ class MapView: ViewController {
     
     var centralLocation: Double = 10000
     let locationManager = CLLocationManager()
+    let trashLocation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,13 +50,41 @@ class MapView: ViewController {
         
     }
     
-    private func setAnnotations(){
+    func setAnnotations(){
         
         let trashLocation = MKPointAnnotation()
         trashLocation.subtitle =   "Trash"
-        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 37.337388, longitude: -122.082492)
+        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 22.293303, longitude: 73.123480)
         
         areaMapView.addAnnotation(trashLocation)
+        
+    }
+    
+    func getDirections(){
+        
+        guard let location = locationManager.location?.coordinate else { return }
+        
+        let request = directionRequest(from: location)
+        let directions = MKDirections(request: request)
+        
+        
+        
+        
+    }
+    
+    func directionRequest(from coordinate: CLLocationCoordinate2D ) -> MKDirections.Request {
+        
+        let destinationLocation = trashLocation.coordinate
+        let startingLocation  = MKPlacemark(coordinate: coordinate)
+        let destination = MKPlacemark(coordinate: destinationLocation)
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: startingLocation)
+        request.destination = MKMapItem(placemark: destination)
+        request.transportType = .walking
+        request.requestsAlternateRoutes = true
+        
+        return request
         
     }
 }
