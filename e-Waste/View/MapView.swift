@@ -1,3 +1,4 @@
+
 //
 //  MapView.swift
 //  e-VMSS
@@ -5,7 +6,6 @@
 //  Created by Harsh Mehta on 26/03/19.
 //  Copyright © 2019 Harsh Mehta. All rights reserved.
 //
-
 import Foundation
 import MapKit
 import CoreLocation
@@ -16,9 +16,8 @@ class MapView: ViewController {
     @IBOutlet var areaMapView: MKMapView!
     let locationRequest = CoreLocationViewController()
     
-    var centralLocation: Double = 10000
+    var centralLocation: Double = 1000
     let locationManager = CLLocationManager()
-    let trashLocation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +32,7 @@ class MapView: ViewController {
     }
     
     func centerLocation(){
-    
+        
         if let location = locationManager.location?.coordinate{
             
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: centralLocation , longitudinalMeters: centralLocation)
@@ -50,41 +49,13 @@ class MapView: ViewController {
         
     }
     
-    func setAnnotations(){
+    private func setAnnotations(){
         
         let trashLocation = MKPointAnnotation()
         trashLocation.subtitle =   "Trash"
-        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 22.293303, longitude: 73.123480)
+        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 22.292009, longitude: 73.122745)
         
         areaMapView.addAnnotation(trashLocation)
-        
-    }
-    
-    func getDirections(){
-        
-        guard let location = locationManager.location?.coordinate else { return }
-        
-        let request = directionRequest(from: location)
-        let directions = MKDirections(request: request)
-        
-        
-        
-        
-    }
-    
-    func directionRequest(from coordinate: CLLocationCoordinate2D ) -> MKDirections.Request {
-        
-        let destinationLocation = trashLocation.coordinate
-        let startingLocation  = MKPlacemark(coordinate: coordinate)
-        let destination = MKPlacemark(coordinate: destinationLocation)
-        
-        let request = MKDirections.Request()
-        request.source = MKMapItem(placemark: startingLocation)
-        request.destination = MKMapItem(placemark: destination)
-        request.transportType = .walking
-        request.requestsAlternateRoutes = true
-        
-        return request
         
     }
 }
@@ -92,7 +63,7 @@ class MapView: ViewController {
 extension MapView: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        
         guard let location = locations.last else { return }
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -135,4 +106,5 @@ extension MapView: MKMapViewDelegate {
     
     
 }
+
 
