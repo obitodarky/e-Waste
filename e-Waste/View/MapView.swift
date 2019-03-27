@@ -92,7 +92,7 @@ extension MapView: MKMapViewDelegate {
         
         if (annotation.subtitle == "Trash"){
             
-            annotationView?.image = UIImage(named: "Image")
+            annotationView?.image = UIImage(named: "trash-can")
         }
         annotationView?.canShowCallout = true
         
