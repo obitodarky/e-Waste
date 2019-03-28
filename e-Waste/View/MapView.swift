@@ -24,7 +24,6 @@ class MapView: ViewController {
     }
     
     func setLocationManager(){
-        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
@@ -44,7 +43,6 @@ class MapView: ViewController {
         locationManager.startUpdatingLocation()
         centerLocation()
         setAnnotations()
-        
     }
     
     private func setAnnotations(){
