@@ -119,7 +119,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2814" y="573"/>
+            <point key="canvasLocation" x="2814" y="758"/>
         </scene>
         <!--Core Location View Controller-->
         <scene sceneID="fH4-8o-Sbr">
@@ -130,9 +130,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
-                                <rect key="frame" x="133" y="318" width="109" height="30"/>
+                                <rect key="frame" x="127" y="318" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enable Location"/>
+                                <state key="normal" title="Dustbins near me"/>
                                 <connections>
                                     <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
                                     <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
@@ -153,6 +153,14 @@
                                     <navigationItem title="e-Waste" id="EYT-jc-7oh"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
+                                <rect key="frame" x="141" y="441" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Report Waste"/>
+                                <connections>
+                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YYl-Vp-SKU"/>
@@ -201,6 +209,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3f-Ec-Dff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3680.8000000000002" y="-187.55622188905548"/>
+        </scene>
+        <!--Report Waste View Controller-->
+        <scene sceneID="7iB-ad-x6D">
+            <objects>
+                <viewController id="qgZ-DO-GeO" customClass="ReportWasteViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J8c-cL-0JQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-fv-f8X">
+                                <rect key="frame" x="143" y="318" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a Photo"/>
+                                <connections>
+                                    <action selector="takePhotoWith_sender:" destination="qgZ-DO-GeO" eventType="touchUpInside" id="upt-fT-sig"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-tj-KjV">
+                                <rect key="frame" x="16" y="20" width="343" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cie-Nx-Nb5"/>
+                    </view>
+                    <connections>
+                        <outlet property="wastePhoto" destination="fU5-tj-KjV" id="NvB-nw-IgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dn-iJ-FGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3757.5999999999999" y="711.99400299850083"/>
         </scene>
     </scenes>
 </document>
