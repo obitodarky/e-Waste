@@ -16,6 +16,8 @@ class MapView: ViewController {
     let locationRequest = CoreLocationViewController()
     var centralLocation: Double = 1000
     let locationManager = CLLocationManager()
+    let trashLocation = MKPointAnnotation()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,10 @@ class MapView: ViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
+    @IBAction func showDirection(_ sender: Any) {
+        
+        getDirections()
+    }
     func centerLocation(){
         
         if let location = locationManager.location?.coordinate{
@@ -45,13 +51,52 @@ class MapView: ViewController {
         setAnnotations()
     }
     
-    private func setAnnotations(){
+    func setAnnotations(){
         
-        let trashLocation = MKPointAnnotation()
         trashLocation.subtitle =   "Trash"
         trashLocation.coordinate = CLLocationCoordinate2D(latitude: 22.292009, longitude: 73.122745)
         
         areaMapView.addAnnotation(trashLocation)
+        
+    }
+    
+    func getDirections(){
+        
+        guard let location = locationManager.location?.coordinate else{ return }
+        
+        let request = createDirectionsRequest(from: location)
+        
+        let directions = MKDirections(request: request)
+        
+        directions.calculate { [unowned self] (response, error) in
+            
+            guard let response = response else { return }
+            
+            
+            for route in response.routes {
+                
+                self.areaMapView.addOverlay(route.polyline)
+                self.areaMapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+                
+            }
+        }
+    }
+    
+    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
+        
+        let destination = trashLocation.coordinate
+        let startLocation = MKPlacemark(coordinate: coordinate)
+        let destinationLocation = MKPlacemark(coordinate: destination)
+        
+        let request = MKDirections.Request()
+        request.source = MKMapItem(placemark: startLocation)
+        request.destination = MKMapItem(placemark: destinationLocation)
+        
+        request.transportType = .automobile
+        request.requestsAlternateRoutes = true
+        
+        return request
+        
         
     }
 }
@@ -93,6 +138,13 @@ extension MapView: MKMapViewDelegate {
     }
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         //code
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        renderer.strokeColor = .green
+        return renderer
+        
     }
     
 }
