@@ -8,16 +8,26 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     let imagePicker = UIImagePickerController()
+    let getLocation = CoreLocationViewController()
     
 
     @IBOutlet weak var wastePhoto: UIImageView!
     
+    func setLocation (){
+        
+        let location = getLocation.previousLocation
+        print(location?.coordinate ?? 0)
+    }
+    
     @IBAction func takePhoto(_sender: Any){
+        
+        setLocation()
         
         imagePicker.delegate = self
         
@@ -31,9 +41,7 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
         }
         
         
-        
 
-        
         
         
     }
