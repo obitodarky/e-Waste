@@ -83,7 +83,7 @@ extension MapView: MKMapViewDelegate {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews")
         }
         
-        if (annotation.subtitle == "Trash"){
+        if let subtitle = annotation.subtitle , subtitle == "Trash"{
             
             annotationView?.image = UIImage(named: "trash-can")
         }

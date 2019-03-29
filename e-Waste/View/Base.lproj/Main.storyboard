@@ -176,16 +176,6 @@
                                     <outlet property="delegate" destination="N3O-zA-Jw4" id="ddg-rN-w1a"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCt-le-GNp">
-                                <rect key="frame" x="294" y="552" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="direciton.png">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="startDirecting:" destination="N3O-zA-Jw4" eventType="touchUpInside" id="VNU-6K-Iee"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -205,7 +195,4 @@
             <point key="canvasLocation" x="3681" y="-187"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="direciton.png" width="50" height="50"/>
-    </resources>
 </document>
