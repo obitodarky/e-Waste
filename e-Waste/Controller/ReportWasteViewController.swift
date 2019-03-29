@@ -16,6 +16,7 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
     let imagePicker = UIImagePickerController()
     let getLocation = CoreLocationViewController()
     
+    
 
     @IBOutlet weak var wastePhoto: UIImageView!
     
