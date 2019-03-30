@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0805C5A4224FCC9D00F77AD1 /* WasteTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0805C5A3224FCC9D00F77AD1 /* WasteTypeTableViewController.swift */; };
 		08557C80224A3CF400431369 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08557C7F224A3CF400431369 /* MapView.swift */; };
 		0863A9A6224DC44A000CA160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0863A9A5224DC44A000CA160 /* Assets.xcassets */; };
 		0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0805C5A3224FCC9D00F77AD1 /* WasteTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteTypeTableViewController.swift; sourceTree = "<group>"; };
 		08557C7F224A3CF400431369 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0863A9A5224DC44A000CA160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportWasteViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 		084E1883224213A500A7183E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 				08557C7F224A3CF400431369 /* MapView.swift */,
 				089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */,
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
@@ -69,7 +66,7 @@
 				089D3E9F223A212100C45B26 /* ViewController.swift */,
 				08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */,
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
-				0805C5A3224FCC9D00F77AD1 /* WasteTypeTableViewController.swift */,
+				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,7 +172,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
-				0805C5A4224FCC9D00F77AD1 /* WasteTypeTableViewController.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
 				089D3EA0223A212100C45B26 /* ViewController.swift in Sources */,
 				08557C80224A3CF400431369 /* MapView.swift in Sources */,

@@ -34,4 +34,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     }
     
     
+    
+    
 }
