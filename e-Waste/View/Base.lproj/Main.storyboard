@@ -94,7 +94,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHH-Vb-Ntg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHH-Vb-Ntg">
                                 <rect key="frame" x="16" y="20" width="343" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -109,6 +109,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5ZO-FV-eBU"/>
                     </view>
+                    <connections>
+                        <outlet property="wasteDescription" destination="3yP-QM-rSQ" id="xuh-S5-SwU"/>
+                        <outlet property="wasteName" destination="Jfb-aD-dQx" id="ULY-sw-j9S"/>
+                        <outlet property="wastePicture" destination="pHH-Vb-Ntg" id="ctO-cs-iDE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyQ-5l-hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

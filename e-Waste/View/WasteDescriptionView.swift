@@ -10,10 +10,18 @@ import UIKit
 
 class WasteDescriptionView: UIViewController {
 
+    
+    @IBOutlet var wastePicture: UIImageView!
+    @IBOutlet var wasteName: UILabel!
+    @IBOutlet var wasteDescription: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+            wasteName.text = wasteArray[final_index]
+            wasteDescription.text = "This is a small description of text"
+        
     }
     
 
