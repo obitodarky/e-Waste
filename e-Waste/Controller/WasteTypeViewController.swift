@@ -26,7 +26,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "waste_type", for: indexPath)
         
         cell.textLabel?.text = wasteArray[indexPath.row]
         
