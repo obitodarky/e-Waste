@@ -33,6 +33,12 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let index = indexPath.row
+        
+    }
+    
     
     
     
