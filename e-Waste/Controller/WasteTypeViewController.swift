@@ -36,6 +36,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let index = indexPath.row
+        performSegue(withIdentifier: "wasteSegue", sender: self)
         
     }
     
