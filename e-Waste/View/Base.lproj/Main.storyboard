@@ -157,7 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="XaQ-4v-K73" id="d3h-BE-XjY"/>
-                        <segue destination="gBB-gG-yxD" kind="show" id="la8-3c-DbO"/>
+                        <segue destination="gBB-gG-yxD" kind="show" identifier="wasteSegue" id="la8-3c-DbO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Kg-pc-ZJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
