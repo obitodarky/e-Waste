@@ -105,7 +105,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a hazardous waste , please put it somwhere else carefuly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-QM-rSQ">
                                 <rect key="frame" x="15" y="339" width="344" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="3C5-fc-0k7"/>
+                                    <constraint firstAttribute="height" constant="68" id="grd-8j-iKb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -114,16 +114,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="gr5-aU-4kD" secondAttribute="centerX" id="13E-dw-NV5"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="top" secondItem="Jfb-aD-dQx" secondAttribute="bottom" constant="8" symbolic="YES" id="4cp-GX-doe"/>
-                            <constraint firstItem="5ZO-FV-eBU" firstAttribute="bottom" secondItem="3yP-QM-rSQ" secondAttribute="bottom" constant="260" id="9kY-S9-vwi"/>
-                            <constraint firstItem="Jfb-aD-dQx" firstAttribute="trailing" secondItem="3yP-QM-rSQ" secondAttribute="trailing" id="E6r-Qx-FAS"/>
                             <constraint firstItem="pHH-Vb-Ntg" firstAttribute="top" secondItem="5ZO-FV-eBU" secondAttribute="top" id="MwB-3Y-gyf"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="gr5-aU-4kD" secondAttribute="trailingMargin" id="SZi-R3-rhw"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="Jfb-aD-dQx" secondAttribute="trailing" id="Q96-gR-Ilv"/>
                             <constraint firstItem="Jfb-aD-dQx" firstAttribute="leading" secondItem="pHH-Vb-Ntg" secondAttribute="leading" id="aen-hB-Y7P"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="pHH-Vb-Ntg" secondAttribute="centerX" id="kMU-uc-NAd"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="Jfb-aD-dQx" secondAttribute="centerX" id="dUx-ru-inT"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="pHH-Vb-Ntg" secondAttribute="trailing" id="h2B-o4-DCx"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="gr5-aU-4kD" secondAttribute="centerX" id="h7V-wU-wRi"/>
+                            <constraint firstItem="5ZO-FV-eBU" firstAttribute="bottom" secondItem="3yP-QM-rSQ" secondAttribute="bottom" constant="260" id="idX-JP-9Mc"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="gr5-aU-4kD" secondAttribute="trailingMargin" id="nyd-pW-X2f"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="top" secondItem="Jfb-aD-dQx" secondAttribute="bottom" constant="8" symbolic="YES" id="xd0-We-oXn"/>
                             <constraint firstItem="Jfb-aD-dQx" firstAttribute="top" secondItem="pHH-Vb-Ntg" secondAttribute="bottom" constant="23" id="yrG-eW-eNR"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="pHH-Vb-Ntg" secondAttribute="trailing" id="zCw-P1-hCb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5ZO-FV-eBU"/>
                     </view>
