@@ -24,7 +24,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = scrapTableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath)
         
         
         return cell
