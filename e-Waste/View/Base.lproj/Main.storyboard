@@ -251,6 +251,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2qY-aY-dvn"/>
                     </view>
+                    <connections>
+                        <outlet property="scrapTableView" destination="7xi-sL-hR6" id="gVf-f4-tbF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8X-ku-3kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
