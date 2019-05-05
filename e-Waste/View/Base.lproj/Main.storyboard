@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="2764" y="726"/>
         </scene>
-        <!--View Controller-->
+        <!--Scrap View Controller-->
         <scene sceneID="4K4-AO-huj">
             <objects>
-                <viewController id="8kO-SD-qrs" sceneMemberID="viewController">
+                <viewController id="8kO-SD-qrs" customClass="ScrapViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Lm-B1-FmA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,6 +236,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8kO-SD-qrs" id="hSk-ID-dMS"/>
+                                    <outlet property="delegate" destination="8kO-SD-qrs" id="dib-h9-8oK"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
