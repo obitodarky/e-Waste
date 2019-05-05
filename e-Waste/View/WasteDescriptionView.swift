@@ -20,7 +20,7 @@ class WasteDescriptionView: UIViewController {
         super.viewDidLoad()
 
             wasteName.text = wasteArray[final_index]
-            wasteDescription.text = "This is a small description of text"
+            wasteDescription.text = "This is a small description of waste"
         
     }
     
