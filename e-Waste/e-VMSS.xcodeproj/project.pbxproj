@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0805C5A622505EF000F77AD1 /* WasteDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0805C5A522505EF000F77AD1 /* WasteDescriptionView.swift */; };
+		0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0824DE11227E89EA0051B949 /* ScrapViewController.swift */; };
 		08557C80224A3CF400431369 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08557C7F224A3CF400431369 /* MapView.swift */; };
 		0863A9A6224DC44A000CA160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0863A9A5224DC44A000CA160 /* Assets.xcassets */; };
 		0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0805C5A522505EF000F77AD1 /* WasteDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionView.swift; sourceTree = "<group>"; };
+		0824DE11227E89EA0051B949 /* ScrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapViewController.swift; sourceTree = "<group>"; };
 		08557C7F224A3CF400431369 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0863A9A5224DC44A000CA160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportWasteViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */,
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
 				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
+				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
 				0805C5A622505EF000F77AD1 /* WasteDescriptionView.swift in Sources */,
 				089D3EA0223A212100C45B26 /* ViewController.swift in Sources */,
+				0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */,
 				08557C80224A3CF400431369 /* MapView.swift in Sources */,
 				08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */,
 				089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */,
