@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ubg-Pi-ryE">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,21 +15,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-LE-O65">
-                                <rect key="frame" x="98" y="332" width="184" height="30"/>
+                                <rect key="frame" x="98" y="332" width="223" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-H8-pI6">
-                                <rect key="frame" x="98" y="383" width="184" height="30"/>
+                                <rect key="frame" x="98" y="383" width="223" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgT-Tr-R40">
-                                <rect key="frame" x="163" y="288" width="49" height="36"/>
+                                <rect key="frame" x="163" y="288" width="88" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,19 +38,19 @@
                                     <segue destination="YZL-7H-6fV" kind="show" id="Jyy-Nb-RRT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not A Member ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-MR-4nN">
-                                <rect key="frame" x="126" y="421" width="156" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
-                                <rect key="frame" x="155" y="440" width="57" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
+                                <rect key="frame" x="179" y="438" width="57" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Not A Member ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-MR-4nN">
+                                <rect key="frame" x="148" y="421" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.66295919636472256" green="0.95686274510000002" blue="0.58311750718179522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,20 +91,20 @@
             <objects>
                 <viewController id="gBB-gG-yxD" customClass="WasteDescriptionView" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gr5-aU-4kD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hazardous Waste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-aD-dQx">
-                                <rect key="frame" x="16" y="302" width="343" height="29"/>
+                                <rect key="frame" x="20" y="371" width="374" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pHH-Vb-Ntg">
-                                <rect key="frame" x="16" y="64" width="343" height="215"/>
+                                <rect key="frame" x="20" y="64" width="374" height="284"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a hazardous waste , please put it somwhere else carefuly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-QM-rSQ">
-                                <rect key="frame" x="15" y="339" width="344" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a hazardous waste , please put it somwhere else carefuly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-QM-rSQ">
+                                <rect key="frame" x="20" y="408" width="344" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="grd-8j-iKb"/>
                                 </constraints>
@@ -116,13 +116,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pHH-Vb-Ntg" firstAttribute="top" secondItem="5ZO-FV-eBU" secondAttribute="top" id="MwB-3Y-gyf"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="Jfb-aD-dQx" secondAttribute="trailing" id="Q96-gR-Ilv"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="Jfb-aD-dQx" secondAttribute="trailing" constant="-30" id="Q96-gR-Ilv"/>
                             <constraint firstItem="Jfb-aD-dQx" firstAttribute="leading" secondItem="pHH-Vb-Ntg" secondAttribute="leading" id="aen-hB-Y7P"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="Jfb-aD-dQx" secondAttribute="centerX" id="dUx-ru-inT"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="pHH-Vb-Ntg" secondAttribute="trailing" id="h2B-o4-DCx"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="gr5-aU-4kD" secondAttribute="centerX" id="h7V-wU-wRi"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="Jfb-aD-dQx" secondAttribute="centerX" constant="-15" id="dUx-ru-inT"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="pHH-Vb-Ntg" secondAttribute="trailing" constant="-30" id="h2B-o4-DCx"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="centerX" secondItem="gr5-aU-4kD" secondAttribute="centerX" constant="-15" id="h7V-wU-wRi"/>
                             <constraint firstItem="5ZO-FV-eBU" firstAttribute="bottom" secondItem="3yP-QM-rSQ" secondAttribute="bottom" constant="260" id="idX-JP-9Mc"/>
-                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="gr5-aU-4kD" secondAttribute="trailingMargin" id="nyd-pW-X2f"/>
+                            <constraint firstItem="3yP-QM-rSQ" firstAttribute="trailing" secondItem="gr5-aU-4kD" secondAttribute="trailingMargin" constant="-30" id="nyd-pW-X2f"/>
                             <constraint firstItem="3yP-QM-rSQ" firstAttribute="top" secondItem="Jfb-aD-dQx" secondAttribute="bottom" constant="8" symbolic="YES" id="xd0-We-oXn"/>
                             <constraint firstItem="Jfb-aD-dQx" firstAttribute="top" secondItem="pHH-Vb-Ntg" secondAttribute="bottom" constant="23" id="yrG-eW-eNR"/>
                         </constraints>
@@ -143,18 +143,18 @@
             <objects>
                 <viewController id="KJX-9r-cO7" customClass="WasteTypeViewController" customModule="e_VMSS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PSU-3K-Hp0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-Pc-4Ha">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="waste_type" id="zbu-0k-3XL">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zbu-0k-3XL" id="GbY-ra-nPV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -196,18 +196,18 @@
             <objects>
                 <viewController id="8kO-SD-qrs" customClass="ScrapViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Lm-B1-FmA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7xi-sL-hR6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="waste" rowHeight="155" id="Jcb-5d-0vQ">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="155"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jcb-5d-0vQ" id="nQv-T4-UDz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="154.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="154.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnj-fe-Kg6">
@@ -266,19 +266,19 @@
             <objects>
                 <viewController id="YZL-7H-6fV" customClass="CoreLocationViewController" customModule="e_VMSS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0g-cR-77i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
-                                <rect key="frame" x="127" y="318" width="121" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
+                                <rect key="frame" x="147" y="270" width="120.99999999999997" height="100"/>
                                 <state key="normal" title="Dustbins near me"/>
                                 <connections>
                                     <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
                                     <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-KY-xba">
-                                <rect key="frame" x="127" y="379" width="121" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-KY-xba">
+                                <rect key="frame" x="147" y="353" width="120.99999999999997" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="i7o-2O-p8U"/>
                                 </constraints>
@@ -288,24 +288,24 @@
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5t-2w-oB9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="e-Waste" id="EYT-jc-7oh"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
-                                <rect key="frame" x="127" y="441" width="121" height="30"/>
-                                <state key="normal" title="Report Waste"/>
-                                <connections>
-                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-fp-Lau">
-                                <rect key="frame" x="140" y="269" width="94" height="30"/>
+                                <rect key="frame" x="160" y="255" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Donate Scrap"/>
                                 <connections>
                                     <segue destination="8kO-SD-qrs" kind="show" id="CBD-5e-VeC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
+                                <rect key="frame" x="147" y="408" width="120.99999999999997" height="30"/>
+                                <state key="normal" title="Report Waste"/>
+                                <connections>
+                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -336,17 +336,17 @@
             <objects>
                 <viewController id="N3O-zA-Jw4" customClass="MapView" customModule="e_VMSS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2vS-au-fxH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp9-UI-i6N">
-                                <rect key="frame" x="0.0" y="39" width="375" height="672"/>
+                                <rect key="frame" x="0.0" y="39" width="414" height="697"/>
                                 <connections>
                                     <outlet property="delegate" destination="N3O-zA-Jw4" id="ddg-rN-w1a"/>
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-1e-xvg">
-                                <rect key="frame" x="240" y="632" width="98" height="30"/>
+                                <rect key="frame" x="240" y="632" width="137" height="55"/>
                                 <state key="normal" title="Get Directions"/>
                                 <connections>
                                     <action selector="showDirection:" destination="N3O-zA-Jw4" eventType="touchUpInside" id="vRF-B2-JVF"/>
@@ -383,18 +383,18 @@
             <objects>
                 <viewController id="qgZ-DO-GeO" customClass="ReportWasteViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J8c-cL-0JQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-fv-f8X">
-                                <rect key="frame" x="143" y="362" width="89" height="30"/>
+                                <rect key="frame" x="162.66666666666666" y="362" width="89" height="30"/>
                                 <state key="normal" title="Take a Photo"/>
                                 <connections>
                                     <action selector="takePhotoWith_sender:" destination="qgZ-DO-GeO" eventType="touchUpInside" id="upt-fT-sig"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-tj-KjV">
-                                <rect key="frame" x="16" y="64" width="343" height="290"/>
+                                <rect key="frame" x="20" y="64" width="374" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="8EP-Jl-gA6"/>
                                 </constraints>
@@ -424,7 +424,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubg-Pi-ryE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DRZ-3e-iBP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
