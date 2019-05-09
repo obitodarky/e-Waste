@@ -1,0 +1,6 @@
+framework module Pods_e_VMSS {
+  umbrella header "Pods-e-VMSS-umbrella.h"
+
+  export *
+  module * { export * }
+}
