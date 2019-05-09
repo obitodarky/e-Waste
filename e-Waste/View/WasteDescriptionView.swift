@@ -20,8 +20,8 @@ class WasteDescriptionView: UIViewController {
         super.viewDidLoad()
 
             wasteName.text = wasteArray[final_index]
-            wasteDescription.text = "This is a small description of waste"
-        
+            wasteDescription.text = wasteArray[final_index] + " is an organic waste."
+            wastePicture.image = UIImage(imageLiteralResourceName: "vegetable")
     }
     
 
