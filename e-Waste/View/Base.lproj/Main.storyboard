@@ -35,6 +35,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j0N-Ou-awf"/>
                                     <segue destination="YZL-7H-6fV" kind="show" id="Jyy-Nb-RRT"/>
                                 </connections>
                             </button>
@@ -633,6 +634,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7mZ-fR-RZk"/>
+        <segue reference="Jyy-Nb-RRT"/>
     </inferredMetricsTieBreakers>
 </document>

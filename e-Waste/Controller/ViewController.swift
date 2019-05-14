@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController{
 
@@ -16,6 +17,18 @@ class ViewController: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
+    @IBAction func loginUser(_ sender: Any) {
+        
+        Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
+            
+            if(error != nil){
+                print(error!)
+            } else {
+                print("logged in")
+            }
+            
+        }
+    }
+    
 }
 
