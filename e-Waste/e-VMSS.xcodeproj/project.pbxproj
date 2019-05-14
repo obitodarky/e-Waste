@@ -19,6 +19,7 @@
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
 		089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */; };
 		08A97A84228A99690080A7E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A97A83228A99690080A7E4 /* GoogleService-Info.plist */; };
+		08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */; };
 		F4700B16AEFB38BF17A51FE6 /* Pods_e_VMSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D7D339FB1DCA3A9EB04EEE /* Pods_e_VMSS.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		089D3EA7223A212400C45B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		089D3EA9223A212400C45B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A97A83228A99690080A7E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReigsterViewController.swift; sourceTree = "<group>"; };
 		195BA4521675971D0454FEE3 /* Pods-e-VMSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.release.xcconfig"; sourceTree = "<group>"; };
 		51D7D339FB1DCA3A9EB04EEE /* Pods_e_VMSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_VMSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B708746232DE597A93A3EF /* Pods-e-VMSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
 				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
+				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
 				0805C5A622505EF000F77AD1 /* WasteDescriptionView.swift in Sources */,
 				089D3EA0223A212100C45B26 /* ViewController.swift in Sources */,
+				08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */,
 				0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */,
 				08557C80224A3CF400431369 /* MapView.swift in Sources */,
 				08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */,

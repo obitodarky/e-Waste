@@ -38,11 +38,12 @@
                                     <segue destination="YZL-7H-6fV" kind="show" id="Jyy-Nb-RRT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
-                                <rect key="frame" x="179" y="394" width="57" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
+                                <rect key="frame" x="20" y="394" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Signup">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="3wb-rR-OhG" kind="show" id="r1T-bM-PB8"/>
@@ -88,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2988" y="-18.440779610194905"/>
+            <point key="canvasLocation" x="2986.9565217391305" y="-18.75"/>
         </scene>
         <!--Waste Description View-->
         <scene sceneID="5ci-jR-A5H">
@@ -203,7 +204,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="2939" y="730"/>
+            <point key="canvasLocation" x="2987" y="756"/>
         </scene>
         <!--Scrap View Controller-->
         <scene sceneID="4K4-AO-huj">
@@ -245,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="2048" y="-1552"/>
         </scene>
-        <!--View Controller-->
+        <!--User Reigster View Controller-->
         <scene sceneID="wQw-pT-5za">
             <objects>
-                <viewController id="3wb-rR-OhG" sceneMemberID="viewController">
+                <viewController id="3wb-rR-OhG" customClass="UserReigsterViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fks-lk-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
