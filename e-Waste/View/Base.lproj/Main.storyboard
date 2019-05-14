@@ -363,14 +363,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
-                                <rect key="frame" x="273" y="194" width="121" height="100"/>
-                                <state key="normal" title="Dustbins near me"/>
-                                <connections>
-                                    <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
-                                    <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-KY-xba">
                                 <rect key="frame" x="20" y="366" width="122" height="98"/>
                                 <constraints>
@@ -429,6 +421,14 @@
                                     <constraint firstAttribute="width" constant="64" id="eHG-jS-4e3"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
+                                <rect key="frame" x="273" y="200" width="121" height="100"/>
+                                <state key="normal" title="Dustbins near me"/>
+                                <connections>
+                                    <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
+                                    <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -436,7 +436,7 @@
                             <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" constant="126.5" id="1Nl-lL-pvy"/>
                             <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="g0g-cR-77i" secondAttribute="centerX" constant="126.5" id="1Tt-2n-O4A"/>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="centerX" secondItem="d4s-fp-Lau" secondAttribute="centerX" id="1eX-dQ-wuh"/>
-                            <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="72" id="4B1-BT-6BJ"/>
+                            <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="66" id="4B1-BT-6BJ"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="zgu-Qi-n9d" secondAttribute="bottom" constant="310" id="7o3-gu-1DM"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="centerX" secondItem="eFP-BO-GOE" secondAttribute="centerX" id="81o-DP-s0L"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="leading" secondItem="zgu-Qi-n9d" secondAttribute="leading" id="Ak5-20-rhg"/>
@@ -450,10 +450,10 @@
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="top" secondItem="g0g-cR-77i" secondAttribute="top" constant="198" id="TRJ-q5-vbk"/>
                             <constraint firstItem="z5t-2w-oB9" firstAttribute="leading" secondItem="g0g-cR-77i" secondAttribute="leading" id="TT3-A1-wMr"/>
                             <constraint firstItem="gMP-q1-RnZ" firstAttribute="baseline" secondItem="RFE-KY-xba" secondAttribute="baseline" id="UDR-ft-Jnt"/>
-                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerY" secondItem="g0g-cR-77i" secondAttribute="centerY" constant="-124" id="UQx-ez-KZg"/>
+                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerY" secondItem="g0g-cR-77i" secondAttribute="centerY" constant="-118" id="UQx-ez-KZg"/>
                             <constraint firstItem="z5t-2w-oB9" firstAttribute="top" secondItem="YYl-Vp-SKU" secondAttribute="top" id="VRZ-GL-wSr"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="eFP-BO-GOE" secondAttribute="bottom" constant="143" id="cmf-47-tPg"/>
-                            <constraint firstItem="zgu-Qi-n9d" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="68" id="euA-9d-anC"/>
+                            <constraint firstItem="zgu-Qi-n9d" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="62" id="euA-9d-anC"/>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="trailing" secondItem="wSk-Fy-hNw" secondAttribute="trailing" id="fIh-D0-zbz"/>
                             <constraint firstItem="zgu-Qi-n9d" firstAttribute="centerX" secondItem="GhG-hz-e02" secondAttribute="centerX" id="g65-Gl-dcz"/>
                             <constraint firstItem="gMP-q1-RnZ" firstAttribute="leading" secondItem="GhG-hz-e02" secondAttribute="leading" id="gJS-lx-gId"/>
@@ -465,7 +465,7 @@
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="trailing" secondItem="zgu-Qi-n9d" secondAttribute="trailing" constant="49" id="tLj-H1-OYQ"/>
                             <constraint firstAttribute="bottom" secondItem="RFE-KY-xba" secondAttribute="bottom" constant="272" id="uIp-aI-kml"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" id="wEO-44-0JS"/>
-                            <constraint firstItem="d4s-fp-Lau" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="top" id="y3y-UM-Oz2"/>
+                            <constraint firstItem="d4s-fp-Lau" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="top" constant="-6" id="y3y-UM-Oz2"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="leading" secondItem="YYl-Vp-SKU" secondAttribute="leading" constant="146" id="ybv-fb-BS2"/>
                             <constraint firstItem="gMP-q1-RnZ" firstAttribute="top" secondItem="RFE-KY-xba" secondAttribute="top" id="ydN-az-jGx"/>
                             <constraint firstItem="wSk-Fy-hNw" firstAttribute="top" secondItem="d4s-fp-Lau" secondAttribute="bottom" constant="62" id="ykM-A4-oKU"/>
