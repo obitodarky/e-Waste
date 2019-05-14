@@ -18,6 +18,7 @@
 		089D3EA0223A212100C45B26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* ViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
 		089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */; };
+		08A97A84228A99690080A7E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A97A83228A99690080A7E4 /* GoogleService-Info.plist */; };
 		F4700B16AEFB38BF17A51FE6 /* Pods_e_VMSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D7D339FB1DCA3A9EB04EEE /* Pods_e_VMSS.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		089D3EA2223A212100C45B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089D3EA7223A212400C45B26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		089D3EA9223A212400C45B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A97A83228A99690080A7E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		195BA4521675971D0454FEE3 /* Pods-e-VMSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.release.xcconfig"; sourceTree = "<group>"; };
 		51D7D339FB1DCA3A9EB04EEE /* Pods_e_VMSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_VMSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B708746232DE597A93A3EF /* Pods-e-VMSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		089D3E9C223A212100C45B26 /* e-VMSS */ = {
 			isa = PBXGroup;
 			children = (
+				08A97A83228A99690080A7E4 /* GoogleService-Info.plist */,
 				089D3E9D223A212100C45B26 /* AppDelegate.swift */,
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */,
+				08A97A84228A99690080A7E4 /* GoogleService-Info.plist in Resources */,
 				0863A9A6224DC44A000CA160 /* Assets.xcassets in Resources */,
 				089D3EA3223A212100C45B26 /* Main.storyboard in Resources */,
 			);
@@ -208,12 +212,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
