@@ -14,6 +14,7 @@ class WasteDescriptionView: UIViewController {
     @IBOutlet var wastePicture: UIImageView!
     @IBOutlet var wasteName: UILabel!
     @IBOutlet var wasteDescription: UILabel!
+    @IBOutlet var wasteType: UILabel!
     
     
     override func viewDidLoad() {
