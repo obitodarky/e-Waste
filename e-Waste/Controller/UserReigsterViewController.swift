@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 class UserReigsterViewController: UIViewController {
-
+    @IBOutlet var userEmail: UITextField!
+    @IBOutlet var userPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       
+    }
+    @IBAction func registerButton(_ sender: Any) {
+   
+        Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
+            
+            if(error != nil ){
+                print(error!)
+            } else {
+                print("Succesful registration")
+            }
+        }
+    
     }
     
 
