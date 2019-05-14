@@ -198,35 +198,6 @@
                     <view key="view" contentMode="scaleToFill" id="5Lm-B1-FmA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maaji Electronics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-72-HCU">
-                                <rect key="frame" x="20" y="227" width="175" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Electronic parts and components sellers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-a2-BnS">
-                                <rect key="frame" x="20" y="271" width="364" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZb-JC-cRh">
-                                <rect key="frame" x="20" y="313" width="62" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Donate"/>
-                                <connections>
-                                    <segue destination="Wtj-t3-70d" kind="show" id="ZgE-0h-NbR"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="electronics" translatesAutoresizingMaskIntoConstraints="NO" id="eRS-EY-zu8">
-                                <rect key="frame" x="0.0" y="74" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2qY-aY-dvn"/>
                     </view>
@@ -268,18 +239,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
-                                <rect key="frame" x="147" y="270" width="120.99999999999997" height="100"/>
-                                <state key="normal" title="Dustbins near me"/>
-                                <connections>
-                                    <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
-                                    <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-KY-xba">
-                                <rect key="frame" x="147" y="353" width="120.99999999999997" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-KY-xba">
+                                <rect key="frame" x="20" y="366" width="122" height="98"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="i7o-2O-p8U"/>
+                                    <constraint firstAttribute="height" constant="98" id="i7o-2O-p8U"/>
                                 </constraints>
                                 <state key="normal" title="View Waste List"/>
                                 <connections>
@@ -292,43 +255,67 @@
                                     <navigationItem title="e-Waste" id="EYT-jc-7oh"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-fp-Lau">
-                                <rect key="frame" x="160" y="255" width="94" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-fp-Lau">
+                                <rect key="frame" x="33" y="194" width="95" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Donate Scrap"/>
                                 <connections>
                                     <segue destination="8kO-SD-qrs" kind="show" id="CBD-5e-VeC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
-                                <rect key="frame" x="147" y="408" width="120.99999999999997" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
+                                <rect key="frame" x="273" y="366" width="107" height="98"/>
                                 <state key="normal" title="Report Waste"/>
                                 <connections>
                                     <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-receive-cash-64" translatesAutoresizingMaskIntoConstraints="NO" id="K1r-6G-7hS">
+                                <rect key="frame" x="48" y="198" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-trash-128" translatesAutoresizingMaskIntoConstraints="NO" id="yvi-lv-yu8">
+                                <rect key="frame" x="301" y="198" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-screenshot-64" translatesAutoresizingMaskIntoConstraints="NO" id="zgu-Qi-n9d">
+                                <rect key="frame" x="301" y="362" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-list-200" translatesAutoresizingMaskIntoConstraints="NO" id="wSk-Fy-hNw">
+                                <rect key="frame" x="48" y="362" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
+                                <rect key="frame" x="273" y="194" width="120.99999999999997" height="100"/>
+                                <state key="normal" title="Dustbins near me"/>
+                                <connections>
+                                    <action selector="startLocationManager:" destination="YZL-7H-6fV" eventType="touchUpInside" id="bY8-d7-rH6"/>
+                                    <segue destination="N3O-zA-Jw4" kind="show" id="tAR-g6-RBF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" id="1Nl-lL-pvy"/>
-                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="g0g-cR-77i" secondAttribute="centerX" id="1Tt-2n-O4A"/>
-                            <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="30" id="4B1-BT-6BJ"/>
-                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="trailing" secondItem="RFE-KY-xba" secondAttribute="trailing" id="Lzz-fw-ZoQ"/>
+                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" constant="126.5" id="1Nl-lL-pvy"/>
+                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="g0g-cR-77i" secondAttribute="centerX" constant="126.5" id="1Tt-2n-O4A"/>
+                            <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="72" id="4B1-BT-6BJ"/>
+                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="trailing" secondItem="RFE-KY-xba" secondAttribute="trailing" constant="238" id="Lzz-fw-ZoQ"/>
                             <constraint firstItem="z5t-2w-oB9" firstAttribute="leading" secondItem="g0g-cR-77i" secondAttribute="leading" id="TT3-A1-wMr"/>
-                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerY" secondItem="g0g-cR-77i" secondAttribute="centerY" id="UQx-ez-KZg"/>
+                            <constraint firstItem="GhG-hz-e02" firstAttribute="centerY" secondItem="g0g-cR-77i" secondAttribute="centerY" constant="-124" id="UQx-ez-KZg"/>
                             <constraint firstItem="z5t-2w-oB9" firstAttribute="top" secondItem="YYl-Vp-SKU" secondAttribute="top" id="VRZ-GL-wSr"/>
-                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="top" secondItem="RFE-KY-xba" secondAttribute="bottom" constant="32" id="bKH-Ea-Ohd"/>
-                            <constraint firstItem="RFE-KY-xba" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" id="gxO-cl-kcl"/>
-                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" id="j2D-2X-vwz"/>
-                            <constraint firstItem="RFE-KY-xba" firstAttribute="leading" secondItem="GhG-hz-e02" secondAttribute="leading" id="rql-S0-KAI"/>
-                            <constraint firstAttribute="bottom" secondItem="RFE-KY-xba" secondAttribute="bottom" constant="258" id="uIp-aI-kml"/>
+                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="top" secondItem="RFE-KY-xba" secondAttribute="bottom" constant="-98" id="bKH-Ea-Ohd"/>
+                            <constraint firstItem="RFE-KY-xba" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" constant="-126" id="gxO-cl-kcl"/>
+                            <constraint firstItem="gMP-q1-RnZ" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" constant="119.5" id="j2D-2X-vwz"/>
+                            <constraint firstItem="RFE-KY-xba" firstAttribute="leading" secondItem="GhG-hz-e02" secondAttribute="leading" constant="-253" id="rql-S0-KAI"/>
+                            <constraint firstAttribute="bottom" secondItem="RFE-KY-xba" secondAttribute="bottom" constant="272" id="uIp-aI-kml"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YYl-Vp-SKU"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfO-PC-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3752.8000000000002" y="-186.65667166416793"/>
+            <point key="canvasLocation" x="3752.1739130434785" y="-186.68478260869566"/>
         </scene>
         <!--Map View-->
         <scene sceneID="jqj-8T-pNa">
@@ -344,28 +331,32 @@
                                     <outlet property="delegate" destination="N3O-zA-Jw4" id="ddg-rN-w1a"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-1e-xvg">
-                                <rect key="frame" x="240" y="632" width="137" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-1e-xvg">
+                                <rect key="frame" x="287" y="619" width="107" height="69"/>
                                 <state key="normal" title="Get Directions"/>
                                 <connections>
                                     <action selector="showDirection:" destination="N3O-zA-Jw4" eventType="touchUpInside" id="vRF-B2-JVF"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-near-me-96" translatesAutoresizingMaskIntoConstraints="NO" id="tNX-c7-yeR">
+                                <rect key="frame" x="315" y="619" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="Lp9-UI-i6N" secondAttribute="trailing" id="6zQ-55-tc5"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="568" id="Aih-wQ-7M1"/>
+                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="555" id="Aih-wQ-7M1"/>
                             <constraint firstItem="Lp9-UI-i6N" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" id="DeC-UC-4wy"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="568" id="PQr-YA-dC5"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="37" id="Ucg-VU-z0P"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="49" id="Xyt-AQ-48S"/>
+                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="555" id="PQr-YA-dC5"/>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="20" id="Ucg-VU-z0P"/>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="48" id="Xyt-AQ-48S"/>
                             <constraint firstItem="Lp9-UI-i6N" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="-25" id="ii6-69-OjP"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="49" id="l99-9t-pe9"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="240" id="rUh-XR-1py"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="37" id="rjI-if-ssX"/>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="48" id="l99-9t-pe9"/>
+                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="287" id="rUh-XR-1py"/>
+                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="20" id="rjI-if-ssX"/>
                             <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="Lp9-UI-i6N" secondAttribute="bottom" id="szs-ev-FsT"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="240" id="whO-YM-XWC"/>
+                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="287" id="whO-YM-XWC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WqU-fu-Zso"/>
                     </view>
@@ -375,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3f-Ec-Dff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4620" y="-187.55622188905548"/>
+            <point key="canvasLocation" x="4618.840579710145" y="-188.31521739130437"/>
         </scene>
         <!--Report Waste View Controller-->
         <scene sceneID="7iB-ad-x6D">
@@ -470,6 +461,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="electronics" width="700" height="467"/>
+        <image name="icons8-list-200" width="200" height="200"/>
+        <image name="icons8-near-me-96" width="96" height="96"/>
+        <image name="icons8-receive-cash-64" width="64" height="64"/>
+        <image name="icons8-screenshot-64" width="64" height="64"/>
+        <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
 </document>
