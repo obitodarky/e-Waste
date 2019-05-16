@@ -38,6 +38,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        tableView.deselectRow(at: indexPath, animated: true)
         final_index = indexPath.row
         performSegue(withIdentifier: "wasteSegue", sender: self)
         
