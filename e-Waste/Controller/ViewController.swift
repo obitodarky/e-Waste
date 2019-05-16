@@ -50,7 +50,7 @@ class ViewController: UIViewController{
     @IBAction func logInPressed(_ sender: Any) {
         
         if(password.text != ""){
-            SVProgressHUD.show()
+            SVProgressHUD.show(withStatus: "Logging in")
         }
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
             
