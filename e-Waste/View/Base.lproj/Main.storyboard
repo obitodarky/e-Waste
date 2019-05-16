@@ -263,6 +263,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="donateToCompany:" destination="ckd-7e-BLU" eventType="touchUpInside" id="npm-9R-fX1"/>
+                                                        <action selector="goToDonate:" destination="8kO-SD-qrs" eventType="touchUpInside" id="LnC-Hk-DyF"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-wa-vvZ">

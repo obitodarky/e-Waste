@@ -18,6 +18,9 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let companyDescription = ["This is an electronics shop","CVC is a non profit organization"]
     let companyPhotos = ["electronics",""]
     
+    @IBAction func goToDonate(_ sender: Any) {
+        performSegue(withIdentifier: "donateTo", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
