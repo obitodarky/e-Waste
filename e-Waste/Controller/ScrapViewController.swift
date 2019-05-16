@@ -14,7 +14,10 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     @IBOutlet var scrapTableView: UITableView!
-    let companyInfo = ["electronics", "cvc ngo"]
+    let companyNames = ["Electronics", "CVC"]
+    let companyDescription = ["This is an electronics shop","CVC is a non profit organization"]
+    let companyPhotos = ["electronics",""]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,16 +27,16 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return companyInfo.count
+        return companyNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
-        cell.company_name.text = companyInfo[indexPath.row]
-        
-        
+        cell.company_name.text = companyNames[indexPath.row]
+        cell.company_image.image = UIImage(imageLiteralResourceName: "electronics")
+        cell.company_description.text = companyDescription[indexPath.row]
     
         return cell
         
