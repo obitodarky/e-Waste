@@ -19,28 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-LE-O65">
-                                <rect key="frame" x="98" y="288" width="223" height="30"/>
+                                <rect key="frame" x="98" y="256" width="223" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-H8-pI6">
-                                <rect key="frame" x="98" y="339" width="223" height="30"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgT-Tr-R40">
-                                <rect key="frame" x="163" y="244" width="88" height="36"/>
+                                <rect key="frame" x="163" y="396" width="88" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j0N-Ou-awf"/>
                                     <segue destination="YZL-7H-6fV" kind="show" id="Jyy-Nb-RRT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
-                                <rect key="frame" x="20" y="394" width="374" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
+                                <rect key="frame" x="163" y="507" width="88" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,34 +48,35 @@
                                     <segue destination="3wb-rR-OhG" kind="show" id="r1T-bM-PB8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not A Member ? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-MR-4nN">
-                                <rect key="frame" x="148" y="377" width="195" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not A Member ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-MR-4nN">
+                                <rect key="frame" x="98" y="478" width="223" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-H8-pI6">
+                                <rect key="frame" x="98" y="353" width="223" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.66295919636472256" green="0.95686274510000002" blue="0.58311750718179522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JMf-H8-pI6" firstAttribute="top" secondItem="Ipl-LE-O65" secondAttribute="bottom" constant="21" id="1a3-Nk-Jp7"/>
-                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="8" symbolic="YES" id="CWP-wf-Vv2"/>
-                            <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="I1F-Ot-9W3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" constant="163" id="KsD-zy-3FV"/>
-                            <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="LOn-w0-gXJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="93" id="LV9-Hu-u2m"/>
-                            <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="OaS-eX-5qy"/>
-                            <constraint firstItem="was-MR-4nN" firstAttribute="centerX" secondItem="JMf-H8-pI6" secondAttribute="centerX" constant="36" id="Tml-6Z-ubd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JMf-H8-pI6" secondAttribute="trailing" constant="93" id="UBI-r7-2SH"/>
-                            <constraint firstItem="was-MR-4nN" firstAttribute="top" secondItem="JMf-H8-pI6" secondAttribute="bottom" constant="8" symbolic="YES" id="XxY-ks-aST"/>
-                            <constraint firstItem="JMf-H8-pI6" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="auV-9f-PTS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="was-MR-4nN" secondAttribute="trailing" constant="71" id="bZw-Ip-jkz"/>
-                            <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="-4" id="beI-A7-Fo2"/>
-                            <constraint firstItem="GgT-Tr-R40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="dsJ-x1-0Dp"/>
-                            <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="JMf-H8-pI6" secondAttribute="leading" constant="50" id="fk9-bW-SHK"/>
-                            <constraint firstItem="GgT-Tr-R40" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="qjG-ee-hi4"/>
-                            <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="bRp-ri-5P9" secondAttribute="trailing" constant="-88" id="upx-E4-wNJ"/>
-                            <constraint firstItem="GgT-Tr-R40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ypz-AU-o49"/>
-                            <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="z6R-vq-qPc"/>
+                            <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="00t-RA-1ai"/>
+                            <constraint firstItem="GgT-Tr-R40" firstAttribute="top" secondItem="JMf-H8-pI6" secondAttribute="bottom" constant="13" id="2jO-uv-eiQ"/>
+                            <constraint firstItem="was-MR-4nN" firstAttribute="top" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="46" id="4gQ-u8-RLY"/>
+                            <constraint firstItem="JMf-H8-pI6" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="5Pe-Gp-cDQ"/>
+                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="CTR-8R-BK3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="93" id="CXZ-V1-Hc0"/>
+                            <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="8" symbolic="YES" id="Hk3-jn-t6g"/>
+                            <constraint firstItem="bRp-ri-5P9" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" id="JNu-EF-z2X"/>
+                            <constraint firstItem="was-MR-4nN" firstAttribute="trailing" secondItem="JMf-H8-pI6" secondAttribute="trailing" id="RDT-1c-nci"/>
+                            <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Xw1-5M-QlV"/>
+                            <constraint firstItem="GgT-Tr-R40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZj-6e-X5s"/>
+                            <constraint firstItem="bRp-ri-5P9" firstAttribute="leading" secondItem="GgT-Tr-R40" secondAttribute="leading" id="b9q-Kb-IAS"/>
+                            <constraint firstItem="GgT-Tr-R40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="ebn-SX-f1q"/>
+                            <constraint firstAttribute="bottom" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="304" id="tdb-lj-FeZ"/>
+                            <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="JMf-H8-pI6" secondAttribute="leading" id="yLt-ee-Qsm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
