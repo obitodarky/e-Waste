@@ -18,6 +18,11 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    func wrongPassword(){
+        
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 15
@@ -26,6 +31,7 @@ class ViewController: UIViewController{
         animation.toValue = NSValue(cgPoint: CGPoint(x: password.center.x + 10, y: password.center.y))
         
         password.layer.add(animation, forKey: "position")
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,7 +42,7 @@ class ViewController: UIViewController{
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
             
             if(error != nil){
-                print(error!)
+                self.wrongPassword()
             } else {
                 print("logged in")
             }
