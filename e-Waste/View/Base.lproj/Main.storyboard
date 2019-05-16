@@ -298,6 +298,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dIo-gv-I8n"/>
                     <connections>
+                        <outlet property="scrapTableView" destination="hGp-Wk-X33" id="cBd-6T-Txt"/>
                         <segue destination="Wtj-t3-70d" kind="show" identifier="donateTo" id="tyW-rh-d6M"/>
                     </connections>
                 </viewController>

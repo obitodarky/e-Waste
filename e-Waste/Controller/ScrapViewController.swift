@@ -18,7 +18,9 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        scrapTableView.delegate = self
+        scrapTableView.dataSource = self
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
