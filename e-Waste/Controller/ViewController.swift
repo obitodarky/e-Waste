@@ -25,7 +25,7 @@ class ViewController: UIViewController{
         
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
-        animation.repeatCount = 15
+        animation.repeatCount = 3
         animation.autoreverses = true
         animation.fromValue = NSValue(cgPoint: CGPoint(x: password.center.x - 10, y: password.center.y) )
         animation.toValue = NSValue(cgPoint: CGPoint(x: password.center.x + 10, y: password.center.y))
@@ -37,18 +37,22 @@ class ViewController: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    @IBAction func loginUser(_ sender: Any) {
+    
+    @IBAction func logInPressed(_ sender: Any) {
+        
         
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
             
             if(error != nil){
                 self.wrongPassword()
-            } else {
-                print("logged in")
+            }
+            else {
+                self.performSegue(withIdentifier: "logIn", sender: self)
             }
             
         }
     }
+    
     
 }
 

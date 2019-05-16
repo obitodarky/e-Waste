@@ -32,8 +32,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j0N-Ou-awf"/>
-                                    <segue destination="YZL-7H-6fV" kind="show" id="Jyy-Nb-RRT"/>
+                                    <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XgJ-bZ-rYw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-ri-5P9">
@@ -85,11 +84,12 @@
                     <connections>
                         <outlet property="email" destination="Ipl-LE-O65" id="ckq-3B-zDO"/>
                         <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
+                        <segue destination="YZL-7H-6fV" kind="show" identifier="logIn" id="WpY-Q9-avQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2986.9565217391305" y="-18.75"/>
+            <point key="canvasLocation" x="3004" y="-48"/>
         </scene>
         <!--Waste Description View-->
         <scene sceneID="5ci-jR-A5H">
@@ -633,6 +633,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jyy-Nb-RRT"/>
+        <segue reference="WpY-Q9-avQ"/>
     </inferredMetricsTieBreakers>
 </document>
