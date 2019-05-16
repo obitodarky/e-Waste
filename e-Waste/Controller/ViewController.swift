@@ -15,23 +15,24 @@ class ViewController: UIViewController{
 
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
+    @IBOutlet var incorrectLogin: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        incorrectLogin.text = ""
     }
     
-    func wrongPassword(){
+    func wrongLogIn(){
         
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 3
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: password.center.x - 10, y: password.center.y) )
-        animation.toValue = NSValue(cgPoint: CGPoint(x: password.center.x + 10, y: password.center.y))
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x - 10, y: incorrectLogin.center.y) )
+        animation.toValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x + 10, y: incorrectLogin.center.y))
         
-        password.layer.add(animation, forKey: "position")
+        incorrectLogin.layer.add(animation, forKey: "position")
         
     }
     
@@ -48,7 +49,8 @@ class ViewController: UIViewController{
             
             if(error != nil){
                 SVProgressHUD.dismiss()
-                self.wrongPassword()
+                self.incorrectLogin.text = "Incorrect Email or Password"
+                self.wrongLogIn()
             }
             else {
                 SVProgressHUD.dismiss()

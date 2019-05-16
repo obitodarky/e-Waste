@@ -58,6 +58,12 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbn-cw-Oac">
+                                <rect key="frame" x="98" y="227" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.66295919636472256" green="0.95686274510000002" blue="0.58311750718179522" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,10 +76,13 @@
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="8" symbolic="YES" id="Hk3-jn-t6g"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" id="JNu-EF-z2X"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="trailing" secondItem="JMf-H8-pI6" secondAttribute="trailing" id="RDT-1c-nci"/>
+                            <constraint firstItem="zbn-cw-Oac" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="Te3-rQ-nXq"/>
                             <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Xw1-5M-QlV"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZj-6e-X5s"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="leading" secondItem="GgT-Tr-R40" secondAttribute="leading" id="b9q-Kb-IAS"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="ebn-SX-f1q"/>
+                            <constraint firstItem="zbn-cw-Oac" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="fdh-dn-190"/>
+                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="zbn-cw-Oac" secondAttribute="bottom" constant="8" symbolic="YES" id="pHT-zZ-30d"/>
                             <constraint firstAttribute="bottom" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="304" id="tdb-lj-FeZ"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="JMf-H8-pI6" secondAttribute="leading" id="yLt-ee-Qsm"/>
                         </constraints>
@@ -83,13 +92,14 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="Ipl-LE-O65" id="ckq-3B-zDO"/>
+                        <outlet property="incorrectLogin" destination="zbn-cw-Oac" id="zp5-vT-Fnz"/>
                         <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
                         <segue destination="YZL-7H-6fV" kind="show" identifier="logIn" id="WpY-Q9-avQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="-48"/>
+            <point key="canvasLocation" x="3002.898550724638" y="-48.097826086956523"/>
         </scene>
         <!--Waste Description View-->
         <scene sceneID="5ci-jR-A5H">
