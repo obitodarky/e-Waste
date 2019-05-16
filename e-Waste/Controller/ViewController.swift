@@ -26,8 +26,9 @@ class ViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        
     }
     func wrongLogIn(){
         
