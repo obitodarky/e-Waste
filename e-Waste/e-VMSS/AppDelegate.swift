@@ -19,11 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
-        
         let myDatabase = Database.database().reference()
         myDatabase.setValue("Sample Value")
+        checkUserDefaults()
         return true
         
+    }
+    
+    func checkUserDefaults(){
+        
+        if (UserDefaults.standard.value(forKey: "email") != nil ){
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "CoreLocationViewController")
+            
+            let navVC = UINavigationController(rootViewController: vc)
+            
+            let share = UIApplication.shared.delegate as? AppDelegate
+            share?.window?.rootViewController = navVC
+            share?.window?.makeKeyAndVisible()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

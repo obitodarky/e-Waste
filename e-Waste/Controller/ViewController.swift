@@ -61,6 +61,8 @@ class ViewController: UIViewController{
                 self.wrongLogIn()
             }
             else {
+                UserDefaults.standard.setValue(self.email.text, forKey: "email")
+                UserDefaults.standard.setValue(self.password.text, forKey: "password")
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "logIn", sender: self)
             }

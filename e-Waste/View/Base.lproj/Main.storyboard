@@ -484,7 +484,7 @@
         <!--Core Location View Controller-->
         <scene sceneID="fH4-8o-Sbr">
             <objects>
-                <viewController id="YZL-7H-6fV" customClass="CoreLocationViewController" customModule="e_VMSS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoreLocationViewController" id="YZL-7H-6fV" customClass="CoreLocationViewController" customModule="e_VMSS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0g-cR-77i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

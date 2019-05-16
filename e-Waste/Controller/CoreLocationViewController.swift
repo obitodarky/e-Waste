@@ -22,13 +22,14 @@ class CoreLocationViewController: ViewController {
         
         do {
             try Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: "email")
+            UserDefaults.standard.removeObject(forKey: "password")
             navigationController?.popToRootViewController(animated: true)
             SVProgressHUD.dismiss()
-            print("logged out")
+            
             
         } catch {
             SVProgressHUD.dismiss()
-            print("can't sign out")
         }
     }
     
