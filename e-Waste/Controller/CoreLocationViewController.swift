@@ -9,11 +9,25 @@
 import Foundation
 import UIKit
 import CoreLocation
+import Firebase
 
 class CoreLocationViewController: ViewController {
     
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
+    
+    @IBAction func logOutPressed(_ sender: Any) {
+        
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+            
+        } catch {
+            print("can't sign out")
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
