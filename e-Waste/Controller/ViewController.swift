@@ -23,6 +23,12 @@ class ViewController: UIViewController{
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
     func wrongLogIn(){
         
         let animation = CABasicAnimation(keyPath: "position")
