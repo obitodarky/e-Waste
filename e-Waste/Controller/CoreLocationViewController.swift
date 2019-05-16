@@ -10,19 +10,24 @@ import Foundation
 import UIKit
 import CoreLocation
 import Firebase
+import SVProgressHUD
 
 class CoreLocationViewController: ViewController {
     
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
     
-    @IBAction func logOutPressed(_ sender: Any) {
+    @IBAction func logOut(_ sender: Any) {
+        SVProgressHUD.show()
         
         do {
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
+            SVProgressHUD.dismiss()
+            print("logged out")
             
         } catch {
+            SVProgressHUD.dismiss()
             print("can't sign out")
         }
     }

@@ -497,7 +497,7 @@
                                                 <state key="normal" title="Log Out"/>
                                             </button>
                                             <connections>
-                                                <action selector="logOutPressed:" destination="YZL-7H-6fV" id="JCY-uM-eQf"/>
+                                                <action selector="logOut:" destination="YZL-7H-6fV" id="jGn-ug-vVy"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
