@@ -31,7 +31,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
-        cell.textLabel?.text = companyInfo[indexPath.row]
+        cell.company_name.text = companyInfo[indexPath.row]
         
         
     

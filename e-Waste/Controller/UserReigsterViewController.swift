@@ -13,6 +13,7 @@ import SVProgressHUD
 class UserReigsterViewController: UIViewController {
     @IBOutlet var userEmail: UITextField!
     @IBOutlet var userPassword: UITextField!
+    @IBOutlet var error_message: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,8 @@ class UserReigsterViewController: UIViewController {
             
             if(error != nil ){
                 SVProgressHUD.dismiss()
-                print(error!)
+                self.error_message.textColor = .red
+                self.error_message.text = "Some error occured while Signing up"
             } else {
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "signIn", sender: self)
