@@ -20,6 +20,19 @@ class UserReigsterViewController: UIViewController {
 
        
     }
+    
+    func wrongSignIn(){
+        
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: error_message.center.x - 10, y: error_message.center.y) )
+        animation.toValue = NSValue(cgPoint: CGPoint(x: error_message.center.x + 10, y: error_message.center.y))
+        
+        error_message.layer.add(animation, forKey: "position")
+        
+    }
     @IBAction func registerButton(_ sender: Any) {
         
         SVProgressHUD.show()
@@ -30,6 +43,7 @@ class UserReigsterViewController: UIViewController {
                 SVProgressHUD.dismiss()
                 self.error_message.textColor = .red
                 self.error_message.text = "Some error occured while Signing up"
+                self.wrongSignIn()
             } else {
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "signIn", sender: self)

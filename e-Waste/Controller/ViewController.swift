@@ -50,6 +50,7 @@ class ViewController: UIViewController{
             if(error != nil){
                 SVProgressHUD.dismiss()
                 self.incorrectLogin.text = "Incorrect Email or Password"
+                self.incorrectLogin.textColor = .red
                 self.wrongLogIn()
             }
             else {
