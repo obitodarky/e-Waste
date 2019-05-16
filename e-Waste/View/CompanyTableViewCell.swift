@@ -9,16 +9,13 @@
 import UIKit
 
 class CompanyTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet var company_image: UIImageView!
+    @IBOutlet var company_name: UILabel!
+    @IBOutlet var company_description: UILabel!
+    @IBOutlet var company_phone_number: UILabel!
+    @IBAction func donateToCompany(_ sender: Any) {
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }

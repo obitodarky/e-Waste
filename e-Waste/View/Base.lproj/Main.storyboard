@@ -256,6 +256,9 @@
                                                     <state key="normal" title="Donate">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="donateToCompany:" destination="ckd-7e-BLU" eventType="touchUpInside" id="npm-9R-fX1"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-phone-48" translatesAutoresizingMaskIntoConstraints="NO" id="Rwu-4X-wqE">
                                                     <rect key="frame" x="239" y="131" width="25" height="25"/>
@@ -274,6 +277,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="company_description" destination="7T8-cr-HtJ" id="sKh-5E-uVC"/>
+                                            <outlet property="company_image" destination="aVC-2I-BbE" id="eBJ-U2-ssL"/>
+                                            <outlet property="company_name" destination="kli-qJ-X2U" id="vGs-21-6oO"/>
+                                            <outlet property="company_phone_number" destination="wa8-wa-vvZ" id="SBr-ZF-bJw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

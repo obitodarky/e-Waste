@@ -14,7 +14,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
 
     @IBOutlet var scrapTableView: UITableView!
-    let companyInfo:[String:String] = ["Electronics": "electronics"]
+    let companyInfo = ["electronics", "cvc ngo"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,9 +27,12 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath)
+        let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
-        cell.textLabel?.text = "\(companyInfo)"
+        cell.textLabel?.text = companyInfo[indexPath.row]
+        
+        
+    
         return cell
         
     }
