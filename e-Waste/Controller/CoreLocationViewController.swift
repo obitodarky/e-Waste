@@ -24,6 +24,13 @@ class CoreLocationViewController: ViewController {
             try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: "email")
             UserDefaults.standard.removeObject(forKey: "password")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController")
+            
+            let navVC = UINavigationController(rootViewController: vc!)
+            
+            let share = UIApplication.shared.delegate as? AppDelegate
+            share?.window?.rootViewController = navVC
+            share?.window?.makeKeyAndVisible()
             navigationController?.popToRootViewController(animated: true)
             SVProgressHUD.dismiss()
             
