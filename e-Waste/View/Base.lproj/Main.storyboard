@@ -255,15 +255,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="icons8-phone-48" translatesAutoresizingMaskIntoConstraints="NO" id="Rwu-4X-wqE">
-                                                    <rect key="frame" x="236" y="136" width="48" height="25"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-wa-vvZ">
-                                                    <rect key="frame" x="272" y="138" width="129" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzy-PL-Z5Y">
                                                     <rect key="frame" x="251" y="192" width="147" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -274,6 +265,15 @@
                                                         <action selector="donateToCompany:" destination="ckd-7e-BLU" eventType="touchUpInside" id="npm-9R-fX1"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-wa-vvZ">
+                                                    <rect key="frame" x="272" y="138" width="129" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icons8-phone-48" translatesAutoresizingMaskIntoConstraints="NO" id="Rwu-4X-wqE">
+                                                    <rect key="frame" x="247" y="136" width="25" height="25"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Xzy-PL-Z5Y" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="8" id="6U5-Be-Ur4"/>
@@ -285,12 +285,13 @@
                                                 <constraint firstItem="7T8-cr-HtJ" firstAttribute="top" secondItem="kli-qJ-X2U" secondAttribute="bottom" constant="18" id="WCI-Nk-lS3"/>
                                                 <constraint firstItem="Xzy-PL-Z5Y" firstAttribute="top" secondItem="wa8-wa-vvZ" secondAttribute="bottom" constant="33" id="Xnt-Ct-USx"/>
                                                 <constraint firstItem="aVC-2I-BbE" firstAttribute="leading" secondItem="BFP-H2-cOb" secondAttribute="leading" constant="20" id="a1W-Xg-km8"/>
-                                                <constraint firstItem="Rwu-4X-wqE" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="-3" id="atM-9r-eoo"/>
-                                                <constraint firstItem="Rwu-4X-wqE" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="6" id="hlW-kz-ldd"/>
+                                                <constraint firstItem="Rwu-4X-wqE" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="8" id="atM-9r-eoo"/>
+                                                <constraint firstItem="Rwu-4X-wqE" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="8" id="hlW-kz-ldd"/>
                                                 <constraint firstItem="7T8-cr-HtJ" firstAttribute="leading" secondItem="kli-qJ-X2U" secondAttribute="leading" id="kH3-BU-q4x"/>
                                                 <constraint firstItem="Xzy-PL-Z5Y" firstAttribute="top" secondItem="kli-qJ-X2U" secondAttribute="bottom" constant="163" id="lkg-P2-cd8"/>
-                                                <constraint firstItem="wa8-wa-vvZ" firstAttribute="leading" secondItem="Rwu-4X-wqE" secondAttribute="trailing" constant="-12" id="ma5-os-3bj"/>
+                                                <constraint firstItem="wa8-wa-vvZ" firstAttribute="leading" secondItem="Rwu-4X-wqE" secondAttribute="trailing" id="ma5-os-3bj"/>
                                                 <constraint firstItem="wa8-wa-vvZ" firstAttribute="top" secondItem="kli-qJ-X2U" secondAttribute="bottom" constant="109" id="nL0-xF-sKg"/>
+                                                <constraint firstItem="Rwu-4X-wqE" firstAttribute="top" secondItem="7T8-cr-HtJ" secondAttribute="bottom" constant="48" id="pa5-UI-jjL"/>
                                                 <constraint firstItem="kli-qJ-X2U" firstAttribute="leading" secondItem="aVC-2I-BbE" secondAttribute="trailing" constant="8" id="tMj-a4-7q6"/>
                                             </constraints>
                                         </tableViewCellContentView>
