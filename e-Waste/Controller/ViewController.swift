@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class ViewController: UIViewController{
 
@@ -40,13 +41,16 @@ class ViewController: UIViewController{
     
     @IBAction func logInPressed(_ sender: Any) {
         
+        SVProgressHUD.show()
         
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
             
             if(error != nil){
+                SVProgressHUD.dismiss()
                 self.wrongPassword()
             }
             else {
+                SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "logIn", sender: self)
             }
             
