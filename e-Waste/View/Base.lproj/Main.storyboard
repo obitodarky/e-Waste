@@ -65,28 +65,33 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbn-cw-Oac">
                                 <rect key="frame" x="98" y="248" width="223" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoMakr_4IJwoQ" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-cp-y6n">
+                                <rect key="frame" x="35" y="48" width="276" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="00t-RA-1ai"/>
+                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="zbn-cw-Oac" secondAttribute="bottom" constant="8" id="1Pn-61-ig4"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="top" secondItem="JMf-H8-pI6" secondAttribute="bottom" constant="13" id="2jO-uv-eiQ"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="top" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="46" id="4gQ-u8-RLY"/>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="5Pe-Gp-cDQ"/>
                             <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="CTR-8R-BK3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="93" id="CXZ-V1-Hc0"/>
+                            <constraint firstItem="zbn-cw-Oac" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Erz-TE-fqS"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="8" symbolic="YES" id="Hk3-jn-t6g"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" id="JNu-EF-z2X"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="trailing" secondItem="JMf-H8-pI6" secondAttribute="trailing" id="RDT-1c-nci"/>
-                            <constraint firstItem="zbn-cw-Oac" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="Te3-rQ-nXq"/>
                             <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Xw1-5M-QlV"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZj-6e-X5s"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="leading" secondItem="GgT-Tr-R40" secondAttribute="leading" id="b9q-Kb-IAS"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="ebn-SX-f1q"/>
-                            <constraint firstItem="zbn-cw-Oac" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="fdh-dn-190"/>
-                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="zbn-cw-Oac" secondAttribute="bottom" constant="8" symbolic="YES" id="pHT-zZ-30d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zbn-cw-Oac" secondAttribute="trailing" constant="93" id="g1F-na-ZKs"/>
                             <constraint firstAttribute="bottom" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="304" id="tdb-lj-FeZ"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="JMf-H8-pI6" secondAttribute="leading" id="yLt-ee-Qsm"/>
                         </constraints>
@@ -103,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="-48"/>
+            <point key="canvasLocation" x="2721.739130434783" y="-48.097826086956523"/>
         </scene>
         <!--Waste Description View-->
         <scene sceneID="5ci-jR-A5H">
@@ -800,6 +805,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LogoMakr_4IJwoQ" width="400" height="237"/>
         <image name="icons8-error-96" width="96" height="96"/>
         <image name="icons8-feedback-128" width="128" height="128"/>
         <image name="icons8-list-200" width="200" height="200"/>
