@@ -212,6 +212,7 @@
                     </view>
                     <connections>
                         <outlet property="searchDisplayController" destination="XaQ-4v-K73" id="d3h-BE-XjY"/>
+                        <outlet property="tableView" destination="ws4-Pc-4Ha" id="wEU-Wl-huD"/>
                         <segue destination="gBB-gG-yxD" kind="show" identifier="wasteSegue" id="la8-3c-DbO"/>
                     </connections>
                 </viewController>

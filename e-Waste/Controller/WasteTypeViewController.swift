@@ -14,28 +14,34 @@ let wasteArray = ["Vegetable Peels ", "Mop Stick ", "Mosquito Repellent Refill B
 var final_index = 0
 
 class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate , UISearchBarDelegate, UISearchDisplayDelegate {
+
     
-    var ref: DatabaseReference?
-    var databaseReference: DatabaseHandle?
+    
+    @IBOutlet var tableView: UITableView!
+    var ref: DatabaseReference!
+    var databaseHandle: DatabaseHandle?
     
     var wasteData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
         
-    }
-    
-    func getData(){
-        databaseReference = ref?.child("Vegetables").observe(.childAdded, with: { (snapshot) in
+        tableView.delegate  = self
+        tableView.dataSource = self
+        
+        ref = Database.database().reference()
+        ref?.child("Waste").observeSingleEvent(of: .value, with: { (snapshot) in
+
             
-            let data = snapshot.value as? String
-            if let theData = data {
-                self.wasteData.append(theData)
+            let name = snapshot.childSnapshot(forPath: "Item1").value as? String
+            if let name_exists = name{
+                self.wasteData.append(name_exists)
+                self.tableView.reloadData()
             }
-            
-            
-        })
+
+        }){ (error) in
+            print(error.localizedDescription)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
