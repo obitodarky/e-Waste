@@ -27,7 +27,7 @@ class MapView: ViewController {
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        
+        self.areaMapView.removeOverlays(self.areaMapView.overlays)
         getDirections(to: view.annotation!.coordinate)
     }
     func setLocationManager(){
