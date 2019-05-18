@@ -26,6 +26,10 @@ class MapView: ViewController {
         setLocation()
     }
     
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        
+        getDirections(to: view.annotation!.coordinate)
+    }
     func setLocationManager(){
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -33,7 +37,7 @@ class MapView: ViewController {
     
     @IBAction func showDirection(_ sender: Any) {
         
-        getDirections()
+        //getDirections()
     }
     func centerLocation(){
         
@@ -70,11 +74,11 @@ class MapView: ViewController {
         
     }
     
-    func getDirections(){
+    func getDirections(to coordinate: CLLocationCoordinate2D){
         
         guard let location = locationManager.location?.coordinate else{ return }
         
-        let request = createDirectionsRequest(from: location)
+        let request = createDirectionsRequest(from: location, to: coordinate)
         
         let directions = MKDirections(request: request)
         
@@ -92,10 +96,9 @@ class MapView: ViewController {
         }
     }
     
-    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
+    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D, to trash_coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
         
-        sampleTrash.coordinate = CLLocationCoordinate2D(latitude: 22.292009, longitude: 73.122745)
-        let destination = sampleTrash.coordinate
+        let destination = trash_coordinate
         let startLocation = MKPlacemark(coordinate: coordinate)
         let destinationLocation = MKPlacemark(coordinate: destination)
         
@@ -104,7 +107,7 @@ class MapView: ViewController {
         request.destination = MKMapItem(placemark: destinationLocation)
         
         request.transportType = .automobile
-        request.requestsAlternateRoutes = true
+        request.requestsAlternateRoutes = false
         
         return request
         
