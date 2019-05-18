@@ -527,12 +527,20 @@
                                     <action selector="submitFeedback:" destination="pCX-wW-5qz" eventType="touchUpInside" id="aUJ-uu-qRb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FeedBack Sent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLj-4B-93F">
+                                <rect key="frame" x="20" y="379" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b8h-m4-FzX"/>
                     </view>
                     <connections>
                         <outlet property="feedbackMessage" destination="fo1-dR-wqB" id="hJq-br-ShE"/>
+                        <outlet property="feedbackSent" destination="jLj-4B-93F" id="Fsw-1s-GXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMJ-s8-yqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
