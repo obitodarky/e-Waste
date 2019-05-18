@@ -12,4 +12,5 @@ target 'e-VMSS' do
     pod 'SVProgressHUD'
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'GoogleSignIn'
 end
