@@ -16,8 +16,9 @@ class MapView: ViewController {
     let locationRequest = CoreLocationViewController()
     var centralLocation: Double = 1000
     let locationManager = CLLocationManager()
-    let trashLocation = MKPointAnnotation()
-
+    let sampleTrash = MKPointAnnotation()
+    //dictonary for trashcan locations : [latititude: longitute]
+    let trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +54,19 @@ class MapView: ViewController {
     
     func setAnnotations(){
         
-        trashLocation.subtitle =   "Trash"
-        trashLocation.coordinate = CLLocationCoordinate2D(latitude: 22.292009, longitude: 73.122745)
+        // Remove all annotations from map
+        self.areaMapView.removeAnnotations(self.areaMapView.annotations)
         
-        areaMapView.addAnnotation(trashLocation)
+        // Loop trough all trash places and add them to the map
+        for (latitutde, longitute) in trashCans {
+            let trashLocation = MKPointAnnotation()
+            
+            trashLocation.subtitle = "Trash"
+            trashLocation.coordinate = CLLocationCoordinate2D(latitude: latitutde, longitude: longitute)
+            self.areaMapView.addAnnotation(trashLocation)
+        }
+        
+        
         
     }
     
@@ -84,7 +94,8 @@ class MapView: ViewController {
     
     func createDirectionsRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
         
-        let destination = trashLocation.coordinate
+        sampleTrash.coordinate = CLLocationCoordinate2D(latitude: 22.292009, longitude: 73.122745)
+        let destination = sampleTrash.coordinate
         let startLocation = MKPlacemark(coordinate: coordinate)
         let destinationLocation = MKPlacemark(coordinate: destination)
         
