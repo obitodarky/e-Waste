@@ -16,7 +16,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet var scrapTableView: UITableView!
     let companyNames = ["Electronics", "CVC"]
     let companyDescription = ["This is an electronics shop","CVC is a non profit organization"]
-    let companyPhotos = ["electronics",""]
+    let companyPhotos = ["electronics","CVC"]
     
     @IBAction func goToDonate(_ sender: Any) {
         performSegue(withIdentifier: "donateTo", sender: self)
@@ -38,7 +38,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
         cell.company_name.text = companyNames[indexPath.row]
-        cell.company_image.image = UIImage(imageLiteralResourceName: "electronics")
+        cell.company_image.image = UIImage(imageLiteralResourceName: companyPhotos[indexPath.row])
         cell.company_description.text = companyDescription[indexPath.row]
     
         return cell
