@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // ...
         if let error = error {
             // ...
+            print (error)
             return
         }
         
@@ -52,10 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                        accessToken: authentication.accessToken)
         // ...
         
-        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+        Auth.auth().signIn(with: credential) { (authResult, error) in
             if let error = error {
                 // ...
+                print(error)
                 return
+                
             }
             // User is signed in
             // ...
