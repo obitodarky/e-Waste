@@ -16,6 +16,12 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
     let imagePicker = UIImagePickerController()
     let getLocation = CoreLocationViewController()
     @IBOutlet weak var wastePhoto: UIImageView!
+    @IBOutlet var reportStatus: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        reportStatus.text = ""
+    }
     
     func setLocation (){
         
@@ -35,7 +41,7 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
             self.present(imagePicker, animated: true, completion: nil)
         } else {
             
-            print("Camera not available")
+            reportStatus.text = "Photo can't be taken"
         }
         
     }
