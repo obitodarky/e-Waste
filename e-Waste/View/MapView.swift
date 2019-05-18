@@ -26,9 +26,6 @@ class MapView: ViewController {
         setLocation()
     }
     
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        getDirections(to: view.annotation!.coordinate)
-    }
     func setLocationManager(){
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -59,7 +56,6 @@ class MapView: ViewController {
         // Loop trough all trash places and add them to the map
         for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
-            
             trashLocation.subtitle = "Trash"
             trashLocation.coordinate = CLLocationCoordinate2D(latitude: latitutde, longitude: longitute)
             self.areaMapView.addAnnotation(trashLocation)
@@ -140,14 +136,15 @@ extension MapView: MKMapViewDelegate {
         
         if let subtitle = annotation.subtitle , subtitle == "Trash"{
             
-            annotationView?.image = UIImage(named: "trash-can")
+            annotationView!.image = UIImage(named: "trash-can")
         }
-        annotationView?.canShowCallout = true
+        annotationView!.canShowCallout = true
         
         return annotationView
     }
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        //code
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        print("selected")
+        getDirections(to: view.annotation!.coordinate)
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
