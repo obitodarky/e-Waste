@@ -27,7 +27,6 @@ class MapView: ViewController {
     }
     
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        self.areaMapView.removeOverlays(self.areaMapView.overlays)
         getDirections(to: view.annotation!.coordinate)
     }
     func setLocationManager(){
@@ -35,10 +34,6 @@ class MapView: ViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    @IBAction func showDirection(_ sender: Any) {
-        
-        //getDirections()
-    }
     func centerLocation(){
         
         if let location = locationManager.location?.coordinate{
@@ -76,6 +71,7 @@ class MapView: ViewController {
     
     func getDirections(to coordinate: CLLocationCoordinate2D){
         
+               self.areaMapView.removeOverlays(self.areaMapView.overlays)
         guard let location = locationManager.location?.coordinate else{ return }
         
         let request = createDirectionsRequest(from: location, to: coordinate)

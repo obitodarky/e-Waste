@@ -697,37 +697,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp9-UI-i6N">
-                                <rect key="frame" x="0.0" y="-5" width="414" height="741"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="619"/>
                                 <connections>
                                     <outlet property="delegate" destination="N3O-zA-Jw4" id="ddg-rN-w1a"/>
                                 </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-1e-xvg">
-                                <rect key="frame" x="287" y="575" width="107" height="113"/>
-                                <state key="normal" title="Get Directions"/>
-                                <connections>
-                                    <action selector="showDirection:" destination="N3O-zA-Jw4" eventType="touchUpInside" id="vRF-B2-JVF"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-near-me-96" translatesAutoresizingMaskIntoConstraints="NO" id="tNX-c7-yeR">
-                                <rect key="frame" x="315" y="619" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="Lp9-UI-i6N" secondAttribute="trailing" id="6zQ-55-tc5"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="555" id="Aih-wQ-7M1"/>
                             <constraint firstItem="Lp9-UI-i6N" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" id="DeC-UC-4wy"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="555" id="PQr-YA-dC5"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="20" id="Ucg-VU-z0P"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="48" id="Xyt-AQ-48S"/>
-                            <constraint firstItem="Lp9-UI-i6N" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="-25" id="ii6-69-OjP"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="WGF-1e-xvg" secondAttribute="bottom" constant="48" id="l99-9t-pe9"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="287" id="rUh-XR-1py"/>
-                            <constraint firstItem="WqU-fu-Zso" firstAttribute="trailing" secondItem="WGF-1e-xvg" secondAttribute="trailing" constant="20" id="rjI-if-ssX"/>
+                            <constraint firstItem="Lp9-UI-i6N" firstAttribute="top" secondItem="WqU-fu-Zso" secondAttribute="top" constant="97" id="ii6-69-OjP"/>
                             <constraint firstItem="WqU-fu-Zso" firstAttribute="bottom" secondItem="Lp9-UI-i6N" secondAttribute="bottom" id="szs-ev-FsT"/>
-                            <constraint firstItem="WGF-1e-xvg" firstAttribute="leading" secondItem="WqU-fu-Zso" secondAttribute="leading" constant="287" id="whO-YM-XWC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WqU-fu-Zso"/>
                     </view>
@@ -737,7 +718,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3f-Ec-Dff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5535" y="-48"/>
+            <point key="canvasLocation" x="5534.7826086956529" y="-48.097826086956523"/>
         </scene>
         <!--Report Waste View Controller-->
         <scene sceneID="7iB-ad-x6D">
@@ -758,9 +739,6 @@
                                 <state key="normal" title="Report To VMC">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="oWt-U4-928" kind="show" id="Z6e-jl-mPZ"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-fv-f8X">
                                 <rect key="frame" x="157" y="399" width="100" height="30"/>
@@ -801,29 +779,6 @@
             </objects>
             <point key="canvasLocation" x="3792.753623188406" y="911.41304347826099"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="yHT-Xt-6ju">
-            <objects>
-                <viewController id="oWt-U4-928" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bYS-dn-DJa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reporting Module" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQi-DA-nia">
-                                <rect key="frame" x="122" y="355" width="170" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2rJ-yM-x2a"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Cw-Dd-tLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4642" y="1312"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vh9-Vh-nD6">
             <objects>
@@ -848,7 +803,6 @@
         <image name="icons8-error-96" width="96" height="96"/>
         <image name="icons8-feedback-128" width="128" height="128"/>
         <image name="icons8-list-200" width="200" height="200"/>
-        <image name="icons8-near-me-96" width="96" height="96"/>
         <image name="icons8-phone-48" width="48" height="48"/>
         <image name="icons8-receive-cash-64" width="64" height="64"/>
         <image name="icons8-screenshot-64" width="64" height="64"/>
