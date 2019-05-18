@@ -17,12 +17,13 @@ class UserReigsterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        error_message.text = ""
+        
     }
     
     func wrongSignIn(){
         
+        error_message.frame.size.height = 22
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 3
@@ -35,8 +36,9 @@ class UserReigsterViewController: UIViewController {
     }
     @IBAction func registerButton(_ sender: Any) {
         
-        SVProgressHUD.show()
-        
+        if (userEmail.text != nil || userPassword.text != nil){
+            SVProgressHUD.show(withStatus: "Signing up")
+        }
         Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
             
             if(error != nil ){
