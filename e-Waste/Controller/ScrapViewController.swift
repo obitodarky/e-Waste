@@ -17,6 +17,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let companyNames = ["Electronics", "CVC"]
     let companyDescription = ["This is an electronics shop","CVC is a non profit organization"]
     let companyPhotos = ["electronics","CVC"]
+    let companyPhoneNo = ["9871434245","8712312360"]
     
     @IBAction func goToDonate(_ sender: Any) {
         performSegue(withIdentifier: "donateTo", sender: self)
@@ -40,7 +41,8 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.company_name.text = companyNames[indexPath.row]
         cell.company_image.image = UIImage(imageLiteralResourceName: companyPhotos[indexPath.row])
         cell.company_description.text = companyDescription[indexPath.row]
-    
+        cell.company_phone_number.text = companyPhoneNo[indexPath.row]
+        
         return cell
         
     }
