@@ -52,7 +52,8 @@ class CoreLocationViewController: ViewController {
     @IBAction func startLocationManager(_ sender: UIButton)
     {
         
-        if(CLLocationManager.authorizationStatus() == .authorizedAlways || CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
+        if(CLLocationManager.authorizationStatus() == .authorizedAlways ||
+            CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
             
             activateLocationServices()
         } else {
