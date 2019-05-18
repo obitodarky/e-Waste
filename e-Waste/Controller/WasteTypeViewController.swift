@@ -32,16 +32,11 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         ref = Database.database().reference()
         ref?.child("Waste").observeSingleEvent(of: .value, with: { (snapshot) in
 
-            
-            //let name = snapshot.value as? String
-            
-                //self.wasteData.append(name!)
+
                 self.tableView.reloadData()
             
 
-        }){ (error) in
-            print(error.localizedDescription)
-        }
+        })
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

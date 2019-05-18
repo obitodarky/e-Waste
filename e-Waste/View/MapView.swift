@@ -143,7 +143,7 @@ extension MapView: MKMapViewDelegate {
         return annotationView
     }
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        print("selected")
+
         getDirections(to: view.annotation!.coordinate)
     }
     
