@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import GoogleSignIn
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, GIDSignInUIDelegate{
 
 
     @IBOutlet var email: UITextField!
@@ -20,6 +21,9 @@ class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+
         
     }
     

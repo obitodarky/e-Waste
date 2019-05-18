@@ -74,6 +74,11 @@
                                 <rect key="frame" x="35" y="48" width="276" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lX-wU-WPT" customClass="GIDSignInButton">
+                                <rect key="frame" x="92" y="637" width="234" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="00t-RA-1ai"/>
@@ -831,6 +836,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6bS-FR-rcI"/>
-        <segue reference="oJl-l0-Ldw"/>
+        <segue reference="WpY-Q9-avQ"/>
     </inferredMetricsTieBreakers>
 </document>
