@@ -494,10 +494,10 @@
             </objects>
             <point key="canvasLocation" x="3792.753623188406" y="-1118.4782608695652"/>
         </scene>
-        <!--View Controller-->
+        <!--Feedback View-->
         <scene sceneID="XPa-t9-3sg">
             <objects>
-                <viewController id="pCX-wW-5qz" sceneMemberID="viewController">
+                <viewController id="pCX-wW-5qz" customClass="FeedbackView" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7R-r4-dxn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,11 +523,17 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitFeedback:" destination="pCX-wW-5qz" eventType="touchUpInside" id="aUJ-uu-qRb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="b8h-m4-FzX"/>
                     </view>
+                    <connections>
+                        <outlet property="feedbackMessage" destination="fo1-dR-wqB" id="hJq-br-ShE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMJ-s8-yqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
