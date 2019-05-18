@@ -34,10 +34,10 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
 
             
             let name = snapshot.childSnapshot(forPath: "Item1").value as? String
-            if let name_exists = name{
-                self.wasteData.append(name_exists)
+            
+                self.wasteData.append(name!)
                 self.tableView.reloadData()
-            }
+            
 
         }){ (error) in
             print(error.localizedDescription)
