@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-LE-O65">
-                                <rect key="frame" x="98" y="256" width="223" height="30"/>
+                                <rect key="frame" x="59" y="256" width="296" height="30"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="go" textContentType="email"/>
                             </textField>
@@ -53,16 +53,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not A Member ? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="was-MR-4nN">
-                                <rect key="frame" x="98" y="478" width="223" height="21"/>
+                                <rect key="frame" x="59" y="478" width="296" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-H8-pI6">
-                                <rect key="frame" x="98" y="353" width="223" height="30"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbn-cw-Oac">
                                 <rect key="frame" x="98" y="248" width="223" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +74,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMf-H8-pI6">
+                                <rect key="frame" x="59" y="353" width="296" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="00t-RA-1ai"/>
@@ -87,12 +87,12 @@
                             <constraint firstItem="was-MR-4nN" firstAttribute="top" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="46" id="4gQ-u8-RLY"/>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="5Pe-Gp-cDQ"/>
                             <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="CTR-8R-BK3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="93" id="CXZ-V1-Hc0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="59" id="CXZ-V1-Hc0"/>
                             <constraint firstItem="zbn-cw-Oac" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Erz-TE-fqS"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="8" symbolic="YES" id="Hk3-jn-t6g"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" id="JNu-EF-z2X"/>
                             <constraint firstItem="was-MR-4nN" firstAttribute="trailing" secondItem="JMf-H8-pI6" secondAttribute="trailing" id="RDT-1c-nci"/>
-                            <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Xw1-5M-QlV"/>
+                            <constraint firstItem="Ipl-LE-O65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="Xw1-5M-QlV"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZZj-6e-X5s"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="leading" secondItem="GgT-Tr-R40" secondAttribute="leading" id="b9q-Kb-IAS"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="ebn-SX-f1q"/>
