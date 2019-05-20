@@ -90,6 +90,11 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         tableView.reloadData()
     }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
+    }
 }
 
 
