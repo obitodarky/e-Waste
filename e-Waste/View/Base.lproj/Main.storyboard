@@ -79,7 +79,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMakr_4IJwoQ" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-cp-y6n">
-                                <rect key="frame" x="69" y="11" width="276" height="237.00000000000006"/>
+                                <rect key="frame" x="69" y="11" width="276" height="237"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="-48.097826086956523"/>
         </scene>
-        <!--Waste Description View-->
+        <!--Waste Description View Controller-->
         <scene sceneID="5ci-jR-A5H">
             <objects>
-                <viewController id="gBB-gG-yxD" customClass="WasteDescriptionView" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gBB-gG-yxD" customClass="WasteDescriptionViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gr5-aU-4kD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,10 +181,11 @@
                         <viewLayoutGuide key="safeArea" id="5ZO-FV-eBU"/>
                     </view>
                     <connections>
-                        <outlet property="wasteDescription" destination="3yP-QM-rSQ" id="xuh-S5-SwU"/>
-                        <outlet property="wasteName" destination="Ldu-DV-4jS" id="s20-dh-O8h"/>
+                        <outlet property="wasteDescription" destination="3yP-QM-rSQ" id="4fr-k7-XAV"/>
+                        <outlet property="wasteImage" destination="pHH-Vb-Ntg" id="NJ3-Wi-KHY"/>
+                        <outlet property="wasteName" destination="Ldu-DV-4jS" id="u19-Om-fPQ"/>
                         <outlet property="wastePicture" destination="pHH-Vb-Ntg" id="ctO-cs-iDE"/>
-                        <outlet property="wasteType" destination="Jfb-aD-dQx" id="IKb-a2-uPA"/>
+                        <outlet property="wasteType" destination="Jfb-aD-dQx" id="TNE-UN-aMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DyQ-5l-hcf" userLabel="First Responder" sceneMemberID="firstResponder"/>

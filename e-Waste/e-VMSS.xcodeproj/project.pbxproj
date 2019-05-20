@@ -24,6 +24,7 @@
 		08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */; };
 		08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB074F228FE98800A51310 /* FeedbackView.swift */; };
 		08BB07522292716000A51310 /* WasteDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */; };
+		08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReigsterViewController.swift; sourceTree = "<group>"; };
 		08BB074F228FE98800A51310 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionViewController.swift; sourceTree = "<group>"; };
 		462829244DCDCC0EF0EEC316 /* Pods-e-VMSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.release.xcconfig"; sourceTree = "<group>"; };
 		C0275A150434F454BAE880B5 /* Pods_e_VMSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_VMSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D7F2E19C94E51BA76900B0 /* Pods-e-VMSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
 				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
+				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
 				0825A6DB228E81000095CDE0 /* WallpaperWindow.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
