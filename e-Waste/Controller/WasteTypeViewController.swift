@@ -83,7 +83,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchItemArray = wasteArray.filter({
-            $0.prefix(searchText.count) == searchText
+            $0.lowercased().prefix(searchText.count) == searchText.lowercased()
 
         })
         searching = true
