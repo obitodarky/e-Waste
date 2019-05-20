@@ -571,7 +571,7 @@
         <scene sceneID="fH4-8o-Sbr">
             <objects>
                 <viewController storyboardIdentifier="CoreLocationViewController" id="YZL-7H-6fV" customClass="CoreLocationViewController" customModule="e_VMSS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="g0g-cR-77i">
+                    <view key="view" contentMode="scaleToFill" id="g0g-cR-77i" customClass="MainMenuView" customModule="e_VMSS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -619,6 +619,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="reportWaste:" destination="g0g-cR-77i" eventType="touchUpInside" id="HUD-F0-GNY"/>
                                     <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
                                 </connections>
                             </button>
