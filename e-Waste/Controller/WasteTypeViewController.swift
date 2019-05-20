@@ -16,12 +16,16 @@ var final_index = 0
 class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate , UISearchBarDelegate, UISearchDisplayDelegate {
 
     
+    @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var tableView: UITableView!
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
     
+    var searchItemArray = [String]()
     var wasteData = [String]()
+    
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +48,26 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return wasteArray.count
+        
+        if(searching){
+            return searchItemArray.count
+        }
+        else{
+            return wasteArray.count
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "waste_type", for: indexPath) as! WasteDescriptionTableViewCell
         
-        cell.wasteName.text = wasteArray[indexPath.row]
+        if (searching){
+            cell.wasteName.text = searchItemArray[indexPath.row]
+        } else {
+            cell.wasteName.text = wasteArray[indexPath.row]
+        }
+        
+        
         
         return cell
     }
@@ -62,7 +79,17 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         
     }
     
+    //MARK: search functions
     
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchItemArray = wasteArray.filter({
+            $0.prefix(searchText.count) == searchText
+
+        })
+        searching = true
+        tableView.reloadData()
+    }
     
 }
+
+

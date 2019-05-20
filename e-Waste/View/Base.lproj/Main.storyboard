@@ -224,9 +224,14 @@
                                     <outlet property="delegate" destination="KJX-9r-cO7" id="smM-Zm-181"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-KL-uqO">
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBg-KL-uqO">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.66295919640000001" green="0.95686274510000002" blue="0.5831175072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KJX-9r-cO7" id="PB7-I7-TYg"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,6 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="BLy-cw-5j3"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="uBg-KL-uqO" id="GF9-qq-AjQ"/>
                         <outlet property="searchDisplayController" destination="XaQ-4v-K73" id="d3h-BE-XjY"/>
                         <outlet property="tableView" destination="ws4-Pc-4Ha" id="wEU-Wl-huD"/>
                         <segue destination="gBB-gG-yxD" kind="show" identifier="wasteSegue" id="la8-3c-DbO"/>
