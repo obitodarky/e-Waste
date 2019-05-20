@@ -95,6 +95,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         searchBar.text = ""
         tableView.reloadData()
     }
+    
 }
 
 
