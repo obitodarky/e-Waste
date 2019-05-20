@@ -95,6 +95,27 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         searchBar.text = ""
         tableView.reloadData()
     }
+    func showSearchBar() {
+        searchBar.alpha = 0
+        navigationItem.titleView = searchBar
+        navigationItem.setLeftBarButton(nil, animated: true)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.searchBar.alpha = 1
+        }, completion: { finished in
+            self.searchBar.becomeFirstResponder()
+        })
+    }
+    
+    /*func hideSearchBar() {
+        navigationItem.setLeftBarButtonItem(searchBarButtonItem, animated: true)
+        logoImageView.alpha = 0
+        UIView.animateWithDuration(0.3, animations: {
+            self.navigationItem.titleView = self.logoImageView
+            self.logoImageView.alpha = 1
+        }, completion: { finished in
+            
+        })
+    }*/
     
 }
 
