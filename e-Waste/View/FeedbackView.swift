@@ -25,7 +25,7 @@ class FeedbackView: UIViewController {
     
     @IBAction func submitFeedback(_ sender: Any) {
         if(feedbackMessage.text != ""){
-            feedbackSent.text = "✅Feedback sent successfuly"
+            feedbackSent.text = "✅Feedback sent successfuly!"
         } else {
             feedbackSent.text = "Please write something"
         }
