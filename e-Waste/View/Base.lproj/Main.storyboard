@@ -697,9 +697,8 @@
                                     <segue destination="pCX-wW-5qz" kind="show" id="eec-bW-duH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-I6-EZg">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-I6-EZg">
                                 <rect key="frame" x="295" y="530" width="76" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -708,17 +707,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="leading" secondItem="wSk-Fy-hNw" secondAttribute="leading" id="0Ji-L0-k8p"/>
+                            <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="f6b-I6-EZg" secondAttribute="bottom" constant="109" id="0Wg-au-vl6"/>
                             <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="z5t-2w-oB9" secondAttribute="centerX" constant="126.5" id="1Nl-lL-pvy"/>
                             <constraint firstItem="GhG-hz-e02" firstAttribute="centerX" secondItem="g0g-cR-77i" secondAttribute="centerX" constant="126.5" id="1Tt-2n-O4A"/>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="centerX" secondItem="d4s-fp-Lau" secondAttribute="centerX" id="1eX-dQ-wuh"/>
                             <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="66" id="4B1-BT-6BJ"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="zgu-Qi-n9d" secondAttribute="bottom" constant="310" id="7o3-gu-1DM"/>
+                            <constraint firstItem="f6b-I6-EZg" firstAttribute="leading" secondItem="2I5-Im-jxA" secondAttribute="trailing" constant="153" id="7wz-gp-T7E"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="centerX" secondItem="eFP-BO-GOE" secondAttribute="centerX" constant="4" id="81o-DP-s0L"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="leading" secondItem="zgu-Qi-n9d" secondAttribute="leading" id="Ak5-20-rhg"/>
                             <constraint firstItem="zgu-Qi-n9d" firstAttribute="top" secondItem="wSk-Fy-hNw" secondAttribute="top" id="Bs2-LM-Ecp"/>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="leading" secondItem="YYl-Vp-SKU" secondAttribute="leading" constant="48" id="EZH-pM-dIn"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="top" secondItem="eFP-BO-GOE" secondAttribute="top" id="FZX-3a-Jaq"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="2I5-Im-jxA" secondAttribute="bottom" constant="109" id="KWt-de-JFm"/>
+                            <constraint firstItem="YYl-Vp-SKU" firstAttribute="trailing" secondItem="f6b-I6-EZg" secondAttribute="trailing" constant="43" id="Klg-tH-idg"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="top" secondItem="K1r-6G-7hS" secondAttribute="top" id="MXH-H0-haE"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="top" secondItem="z5t-2w-oB9" secondAttribute="bottom" constant="90" id="QVJ-CX-w9u"/>
                             <constraint firstItem="zgu-Qi-n9d" firstAttribute="bottom" secondItem="wSk-Fy-hNw" secondAttribute="bottom" id="Rgl-mx-jFg"/>
