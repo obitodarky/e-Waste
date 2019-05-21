@@ -1,6 +1,10 @@
 {
-    "Items": [
-        "Item1",
-        "Item2"
-    ]
+    "Items": {
+        "Item1" : {
+            "name": "Vegetable Peels",
+            "waste_type": "Organic",
+            "waste_description": "Description of vegetable peels",
+            "waste_image": "Image of the waste"
+        }
+    }
 }

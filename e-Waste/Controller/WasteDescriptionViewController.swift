@@ -19,7 +19,5 @@ class WasteDescriptionViewController: UIViewController {
 
         
     }
-    
-
 
 }
