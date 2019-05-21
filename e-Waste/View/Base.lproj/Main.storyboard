@@ -702,6 +702,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="U3c-of-fq4" kind="show" id="ZVi-0W-Z1Z"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -747,9 +750,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YYl-Vp-SKU"/>
                     </view>
-                    <connections>
-                        <segue destination="qgZ-DO-GeO" kind="show" identifier="take_photo" id="6bS-FR-rcI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfO-PC-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -970,7 +970,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6bS-FR-rcI"/>
         <segue reference="WpY-Q9-avQ"/>
     </inferredMetricsTieBreakers>
 </document>
