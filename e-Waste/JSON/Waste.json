@@ -5,6 +5,24 @@
             "waste_type": "Organic",
             "waste_description": "Description of vegetable peels",
             "waste_image": "Image of the waste"
+        },
+        "Item2" : {
+            "name": "Mop Sticks",
+            "waste_type": "Plastic",
+            "waste_description": "Description of Mop sticks",
+            "waste_image": "Image of the waste"
+        },
+        "Item3" : {
+            "name": "Water Bottles",
+            "waste_type": "Plastic",
+            "waste_description": "Description of water bottles",
+            "waste_image": "Image of the waste"
+        },
+        "Item4" : {
+            "name": "Newspapers",
+            "waste_type": "Recyclable",
+            "waste_description": "Description of newspapers",
+            "waste_image": "Image of the waste"
         }
     }
 }
