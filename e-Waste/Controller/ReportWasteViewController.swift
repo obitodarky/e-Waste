@@ -14,7 +14,6 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
     
     
     let imagePicker = UIImagePickerController()
-    let getLocation = CoreLocationViewController()
     @IBOutlet weak var wastePhoto: UIImageView!
     @IBOutlet var reportStatus: UILabel!
     
@@ -23,15 +22,9 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
         reportStatus.text = ""
     }
     
-    func setLocation (){
-        
-        let location = getLocation.previousLocation
-        print(location?.coordinate ?? 0)
-    }
     
     @IBAction func takePhoto(_sender: Any){
         
-        setLocation()
         
         imagePicker.delegate = self
         
