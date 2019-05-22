@@ -26,9 +26,16 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
 
     }
     @IBAction func organizationSubmitPressed(_ sender: Any) {
-        if (organizationDescription.text == ""){
-            registrationStatus.text = "Please Describe your organization"
-        } else{
+        if (organizationDescription.text == ""  ||
+            organizationName.text == ""         ||
+            organizationNumber.text == ""       ||
+            organizationImage.image  == nil
+            ){
+            registrationStatus.text = "Please fill all fields"
+        }
+        
+        
+        else{
             registrationStatus.text = "✅Registration Successful!"
         }
     }
