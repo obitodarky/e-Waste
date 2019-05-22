@@ -28,6 +28,8 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     @IBAction func organizationSubmitPressed(_ sender: Any) {
         if (organizationDescription.text == ""){
             registrationStatus.text = "Please Describe your organization"
+        } else{
+            registrationStatus.text = "✅Registration Successful!"
         }
     }
     @IBAction func takePhotoByCamera(_ sender: Any) {
