@@ -8,9 +8,9 @@
 
 import UIKit
 
-class RegisterOrganizationView: UIViewController {
+class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
+        let imagePicker = UIImagePickerController()
     @IBOutlet var organizationNumber: UITextField!
     @IBOutlet var organizationImage: UIImageView!
     @IBOutlet var organizationName: UITextField!
@@ -29,6 +29,35 @@ class RegisterOrganizationView: UIViewController {
         if (organizationDescription.text == ""){
             registrationStatus.text = "Please Describe your organization"
         }
+    }
+    @IBAction func takePhotoByCamera(_ sender: Any) {
+        imagePicker.delegate = self
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            
+            imagePicker.sourceType = .camera
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            
+            registrationStatus.text = "Photo can't be taken"
+        }
+    }
+    @IBAction func takePhotoByGallery(_ sender: Any) {
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        organizationImage.image = wasteImage
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+        
     }
     
 }

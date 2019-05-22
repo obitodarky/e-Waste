@@ -79,7 +79,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMakr_4IJwoQ" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-cp-y6n">
-                                <rect key="frame" x="69" y="11" width="276" height="237.00000000000006"/>
+                                <rect key="frame" x="69" y="11" width="276" height="237"/>
                             </imageView>
                         </subviews>
                         <constraints>
@@ -716,14 +716,14 @@
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="centerX" secondItem="d4s-fp-Lau" secondAttribute="centerX" id="1eX-dQ-wuh"/>
                             <constraint firstItem="RFE-KY-xba" firstAttribute="top" secondItem="GhG-hz-e02" secondAttribute="bottom" constant="66" id="4B1-BT-6BJ"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="zgu-Qi-n9d" secondAttribute="bottom" constant="310" id="7o3-gu-1DM"/>
-                            <constraint firstItem="f6b-I6-EZg" firstAttribute="leading" secondItem="2I5-Im-jxA" secondAttribute="trailing" constant="153" id="7wz-gp-T7E"/>
+                            <constraint firstItem="f6b-I6-EZg" firstAttribute="leading" secondItem="2I5-Im-jxA" secondAttribute="trailing" constant="93" id="7wz-gp-T7E"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="centerX" secondItem="eFP-BO-GOE" secondAttribute="centerX" constant="4" id="81o-DP-s0L"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="leading" secondItem="zgu-Qi-n9d" secondAttribute="leading" id="Ak5-20-rhg"/>
                             <constraint firstItem="zgu-Qi-n9d" firstAttribute="top" secondItem="wSk-Fy-hNw" secondAttribute="top" id="Bs2-LM-Ecp"/>
                             <constraint firstItem="K1r-6G-7hS" firstAttribute="leading" secondItem="YYl-Vp-SKU" secondAttribute="leading" constant="48" id="EZH-pM-dIn"/>
                             <constraint firstItem="2I5-Im-jxA" firstAttribute="top" secondItem="eFP-BO-GOE" secondAttribute="top" id="FZX-3a-Jaq"/>
                             <constraint firstItem="YYl-Vp-SKU" firstAttribute="bottom" secondItem="2I5-Im-jxA" secondAttribute="bottom" constant="109" id="KWt-de-JFm"/>
-                            <constraint firstItem="YYl-Vp-SKU" firstAttribute="trailing" secondItem="f6b-I6-EZg" secondAttribute="trailing" constant="43" id="Klg-tH-idg"/>
+                            <constraint firstItem="YYl-Vp-SKU" firstAttribute="trailing" secondItem="f6b-I6-EZg" secondAttribute="trailing" constant="-3" id="Klg-tH-idg"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="top" secondItem="K1r-6G-7hS" secondAttribute="top" id="MXH-H0-haE"/>
                             <constraint firstItem="yvi-lv-yu8" firstAttribute="top" secondItem="z5t-2w-oB9" secondAttribute="bottom" constant="90" id="QVJ-CX-w9u"/>
                             <constraint firstItem="zgu-Qi-n9d" firstAttribute="bottom" secondItem="wSk-Fy-hNw" secondAttribute="bottom" id="Rgl-mx-jFg"/>
@@ -940,6 +940,9 @@
                                 <state key="normal" title="Gallery">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhotoByGallery:" destination="U3c-of-fq4" eventType="touchUpInside" id="Xh5-HG-CDL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-google-images-96" translatesAutoresizingMaskIntoConstraints="NO" id="VsZ-aL-X5g">
                                 <rect key="frame" x="268" y="251" width="45" height="45"/>
@@ -952,6 +955,9 @@
                                 <state key="normal" title="Camera">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePhotoByCamera:" destination="U3c-of-fq4" eventType="touchUpInside" id="vas-5G-Ojb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYi-aP-aB1">
                                 <rect key="frame" x="19" y="686" width="66" height="30"/>
