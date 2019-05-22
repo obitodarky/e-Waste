@@ -55,6 +55,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         }
     }
     @IBAction func takePhotoByGallery(_ sender: Any) {
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
