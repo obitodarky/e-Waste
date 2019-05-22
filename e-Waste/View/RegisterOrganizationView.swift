@@ -25,6 +25,8 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         organizationDescription.layer.cornerRadius = 5.0;
 
     }
+    
+    //MARK: submit button
     @IBAction func organizationSubmitPressed(_ sender: Any) {
         if (organizationDescription.text == ""  ||
             organizationName.text == ""         ||
@@ -33,12 +35,13 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             ){
             registrationStatus.text = "Please fill all fields"
         }
-        
-        
+
         else{
             registrationStatus.text = "✅Registration Successful!"
         }
     }
+    
+    //MARK: image picker
     @IBAction func takePhotoByCamera(_ sender: Any) {
         imagePicker.delegate = self
         
