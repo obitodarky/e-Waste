@@ -18,8 +18,11 @@ class RegisterOrganizationView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        organizationDescription.text = ""
+        organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        organizationDescription.layer.borderWidth = 1.0;
+        organizationDescription.layer.cornerRadius = 5.0;
 
-        // Do any additional setup after loading the view.
     }
     @IBAction func organizationSubmitPressed(_ sender: Any) {
     }
