@@ -15,6 +15,7 @@ class RegisterOrganizationView: UIViewController {
     @IBOutlet var organizationImage: UIImageView!
     @IBOutlet var organizationName: UITextField!
     @IBOutlet var organizationDescription: UITextView!
+    @IBOutlet var registrationStatus: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class RegisterOrganizationView: UIViewController {
 
     }
     @IBAction func organizationSubmitPressed(_ sender: Any) {
+        if (organizationDescription.text == ""){
+            registrationStatus.text = "Please Describe your organization"
+        }
     }
     
 }

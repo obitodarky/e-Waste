@@ -967,7 +967,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registration Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KK2-jl-5kE">
                                 <rect key="frame" x="93" y="691" width="301" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -980,6 +980,7 @@
                         <outlet property="organizationImage" destination="FuN-cw-ooY" id="TKi-24-JRl"/>
                         <outlet property="organizationName" destination="Yze-pS-qw3" id="wQN-qH-dMz"/>
                         <outlet property="organizationNumber" destination="TQ3-or-PTh" id="Ie6-o6-xYl"/>
+                        <outlet property="registrationStatus" destination="KK2-jl-5kE" id="Fdf-oI-5tV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rR3-Xc-PT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
