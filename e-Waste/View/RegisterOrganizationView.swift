@@ -10,7 +10,7 @@ import UIKit
 
 class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-        let imagePicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     @IBOutlet var organizationNumber: UITextField!
     @IBOutlet var organizationImage: UIImageView!
     @IBOutlet var organizationName: UITextField!
@@ -55,8 +55,12 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         }
     }
     @IBAction func takePhotoByGallery(_ sender: Any) {
-        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        present(imagePicker, animated: true, completion: nil)
     }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -64,7 +68,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         
         organizationImage.image = wasteImage
         
-        picker.dismiss(animated: true, completion: nil)
+        imagePicker.dismiss(animated: true, completion: nil)
         
     }
     
