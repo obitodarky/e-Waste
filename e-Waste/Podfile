@@ -10,7 +10,5 @@ target 'e-VMSS' do
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
     pod 'SVProgressHUD'
-    pod 'Alamofire'
-    pod 'SwiftyJSON'
     pod 'GoogleSignIn'
 end
