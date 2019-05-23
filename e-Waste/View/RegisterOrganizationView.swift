@@ -35,7 +35,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         animation.autoreverses = true
         animation.fromValue = NSValue(cgPoint: CGPoint(x: registrationStatus.center.x - 10, y: registrationStatus.center.y) )
         animation.toValue = NSValue(cgPoint: CGPoint(x: registrationStatus.center.x + 10, y: registrationStatus.center.y))
-        
+
         registrationStatus.layer.add(animation, forKey: "position")
         
     }
@@ -50,7 +50,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             wrongSubmit()
             registrationStatus.text = "Please fill all fields"
         }
-
         else{
             registrationStatus.text = "✅Registration Successful!"
         }
@@ -59,13 +58,10 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     //MARK: image picker
     @IBAction func takePhotoByCamera(_ sender: Any) {
         imagePicker.delegate = self
-        
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-            
             registrationStatus.text = "Photo can't be taken"
         }
     }
@@ -78,18 +74,13 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
         organizationImage.image = wasteImage
-        
         imagePicker.dismiss(animated: true, completion: nil)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
-        
     }
     
 }
