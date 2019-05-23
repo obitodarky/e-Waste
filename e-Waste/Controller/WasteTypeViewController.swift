@@ -31,7 +31,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         wasteArray.sort()
         
         tableView.delegate  = self
@@ -39,11 +38,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         
         ref = Database.database().reference()
         ref?.child("Waste").observeSingleEvent(of: .value, with: { (snapshot) in
-
-
                 self.tableView.reloadData()
-            
-
         })
     }
     //MARK: table functions
@@ -58,7 +53,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         }
         else{
             return wasteArray.count
-            
         }
     }
     
@@ -70,17 +64,12 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         } else {
             cell.wasteName.text = wasteArray[indexPath.row]
         }
-        
-        
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "wasteSegue", sender: self)
-        
     }
     
     //MARK: search functions
@@ -88,7 +77,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchItemArray = wasteArray.filter({
             $0.lowercased().prefix(searchText.count) == searchText.lowercased()
-
         })
         searching = true
         tableView.reloadData()

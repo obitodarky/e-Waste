@@ -18,7 +18,6 @@ class UserReigsterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         error_message.text = ""
-        
     }
     
     func wrongSignIn(){
@@ -35,12 +34,10 @@ class UserReigsterViewController: UIViewController {
         
     }
     @IBAction func registerButton(_ sender: Any) {
-        
         if (userEmail.text != nil || userPassword.text != nil){
             SVProgressHUD.show(withStatus: "Signing up")
         }
         Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
-            
             if(error != nil ){
                 SVProgressHUD.dismiss()
                 self.error_message.textColor = .red
@@ -51,8 +48,5 @@ class UserReigsterViewController: UIViewController {
                 self.performSegue(withIdentifier: "signIn", sender: self)
             }
         }
-    
     }
-    
-
 }

@@ -23,8 +23,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +30,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
     }
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
-        
     }
+    
     func wrongLogIn(){
         
         let animation = CABasicAnimation(keyPath: "position")
@@ -52,12 +50,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
     }
     
     @IBAction func logInPressed(_ sender: Any) {
-        
         if(password.text != ""){
             SVProgressHUD.show(withStatus: "Logging in")
         }
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
-            
             if(error != nil){
                 SVProgressHUD.dismiss()
                 self.incorrectLogin.text = "Incorrect Email or Password"
@@ -70,10 +66,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "logIn", sender: self)
             }
-            
         }
     }
-    
-    
 }
 

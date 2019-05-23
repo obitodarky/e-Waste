@@ -16,8 +16,6 @@ class WasteDescriptionViewController: UIViewController {
     @IBOutlet var wasteDescription: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
 }

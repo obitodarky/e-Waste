@@ -22,36 +22,24 @@ class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate
         reportStatus.text = ""
     }
     
-    
     @IBAction func takePhoto(_sender: Any){
-        
-        
         imagePicker.delegate = self
-        
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
         } else {
-            
             reportStatus.text = "Photo can't be taken"
         }
-        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        
         wastePhoto.image = wasteImage
-        
-        picker.dismiss(animated: true, completion: nil)
-        
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
-        
     }
 }
 
