@@ -12,5 +12,4 @@ class WasteDescriptionTableViewCell: UITableViewCell {
 
     @IBOutlet var wasteName: UILabel!
     
-    
 }
