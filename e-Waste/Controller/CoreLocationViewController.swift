@@ -39,9 +39,7 @@ class CoreLocationViewController: ViewController {
             SVProgressHUD.dismiss()
         }
     }
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,16 +52,13 @@ class CoreLocationViewController: ViewController {
         
         if(CLLocationManager.authorizationStatus() == .authorizedAlways ||
             CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
-            
             activateLocationServices()
         } else {
-            
             locationManager?.requestWhenInUseAuthorization()
         }
     }
     
     private func activateLocationServices(){
-        
         locationManager?.startUpdatingLocation()
     }
     
@@ -71,23 +66,17 @@ class CoreLocationViewController: ViewController {
 
 extension CoreLocationViewController: CLLocationManagerDelegate{
     
-    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
         if(status == .authorizedWhenInUse || status == .authorizedAlways){
-            
             activateLocationServices()
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
         if(previousLocation == nil){
-            
             previousLocation =  locations.first
         }
         else {
-            
             guard let latestLocation = locations.first else { return }
             previousLocation = latestLocation
         } 
