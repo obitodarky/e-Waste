@@ -11,5 +11,6 @@ import UIKit
 class WasteDescriptionTableViewCell: UITableViewCell {
 
     @IBOutlet var wasteName: UILabel!
+    @IBOutlet var wasteImage: UIImageView!
     
 }
