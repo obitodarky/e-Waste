@@ -23,11 +23,8 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         organizationDescription.layer.borderWidth = 1.0;
         organizationDescription.layer.cornerRadius = 5.0;
-
     }
-    
     func wrongSubmit(){
-        
         registrationStatus.frame.size.height = 22
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
@@ -37,9 +34,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         animation.toValue = NSValue(cgPoint: CGPoint(x: registrationStatus.center.x + 10, y: registrationStatus.center.y))
 
         registrationStatus.layer.add(animation, forKey: "position")
-        
     }
-    
     //MARK: submit button
     @IBAction func organizationSubmitPressed(_ sender: Any) {
         if (organizationDescription.text == ""  ||
@@ -54,7 +49,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             registrationStatus.text = "✅Registration Successful!"
         }
     }
-    
     //MARK: image picker
     @IBAction func takePhotoByCamera(_ sender: Any) {
         imagePicker.delegate = self
@@ -71,14 +65,11 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion: nil)
     }
-    
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         organizationImage.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
