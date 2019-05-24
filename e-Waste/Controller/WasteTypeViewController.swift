@@ -44,7 +44,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if(searching){
@@ -100,16 +100,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         })
     }
     
-    /*func hideSearchBar() {
-        navigationItem.setLeftBarButtonItem(searchBarButtonItem, animated: true)
-        logoImageView.alpha = 0
-        UIView.animateWithDuration(0.3, animations: {
-            self.navigationItem.titleView = self.logoImageView
-            self.logoImageView.alpha = 1
-        }, completion: { finished in
-            
-        })
-    }*/
     
 }
 
