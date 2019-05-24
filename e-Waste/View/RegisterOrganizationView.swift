@@ -68,7 +68,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         organizationImage.image = wasteImage
-        picker.dismiss(animated: true, completion: nil)
+        imagePicker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
