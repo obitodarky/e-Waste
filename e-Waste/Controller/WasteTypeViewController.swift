@@ -34,6 +34,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         tableView.delegate  = self
         tableView.dataSource = self
         
+        
         ref = Database.database().reference()
         ref?.child("Waste").observeSingleEvent(of: .value, with: { (snapshot) in
                 self.tableView.reloadData()
