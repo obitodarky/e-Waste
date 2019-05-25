@@ -61,7 +61,9 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
             cell.wasteImage.image = UIImage(imageLiteralResourceName: "vegetable")
         } else {
             cell.wasteName.text = wasteData[indexPath.row].name
-            cell.wasteImage.image = UIImage(imageLiteralResourceName: "vegetable")
+            let url = NSURL(string: wasteData[indexPath.row].waste_image!)
+            let data = NSData(contentsOf : url! as URL)
+            cell.wasteImage.image = UIImage(data : data! as Data)
         }
         return cell
     }
