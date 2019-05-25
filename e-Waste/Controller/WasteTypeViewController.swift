@@ -60,10 +60,14 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
             cell.wasteName.text = searchItemArray[indexPath.row]
             cell.wasteImage.image = UIImage(imageLiteralResourceName: "vegetable")
         } else {
-            cell.wasteName.text = wasteData[indexPath.row].name
-            let url = NSURL(string: wasteData[indexPath.row].waste_image!)
-            let data = NSData(contentsOf : url! as URL)
-            cell.wasteImage.image = UIImage(data : data! as Data)
+            let wastes = wasteData[indexPath.row]
+            cell.wasteName.text = wastes.name
+            if let wasteImageUrl = wastes.waste_image{
+                let url = NSURL(string: wasteImageUrl)
+                URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    
+                }
+            }
         }
         return cell
     }
