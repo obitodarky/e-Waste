@@ -31,7 +31,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         tableView.dataSource = self
         
         fetchUser()
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +71,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
                         }
                     }
                 }
-            
             }
         }
         return cell
@@ -102,11 +100,8 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
                 self.wasteData.append(waste)
                 DispatchQueue.main.async { self.tableView.reloadData() }
             }
-
         })
-        
     }
-    
 }
 
 
