@@ -27,7 +27,6 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -20,7 +20,6 @@ class FeedbackView: UIViewController {
         feedbackMessage.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         feedbackMessage.layer.borderWidth = 1.0;
         feedbackMessage.layer.cornerRadius = 5.0;
-        
     }
     
     @IBAction func submitFeedback(_ sender: Any) {

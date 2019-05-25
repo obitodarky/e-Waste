@@ -15,7 +15,7 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet var company_description: UILabel!
     @IBOutlet var company_phone_number: UILabel!
     @IBAction func donateToCompany(_ sender: Any) {
-        
+        //donate data transfer
     }
     
 }
