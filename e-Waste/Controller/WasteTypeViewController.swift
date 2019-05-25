@@ -18,13 +18,14 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     var wasteImage = ["vegetable"]
     
+    var wasteData = [Waste]()
+    
     @IBOutlet var searchBar: UISearchBar!
     
     @IBOutlet var tableView: UITableView!
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
     var searchItemArray = [String]()
-    var wasteData = [String]()
     var searching = false
     
     override func viewDidLoad() {
@@ -34,11 +35,8 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         tableView.delegate  = self
         tableView.dataSource = self
         
+        fetchUser()
         
-        ref = Database.database().reference()
-        ref?.child("Waste").observeSingleEvent(of: .value, with: { (snapshot) in
-                self.tableView.reloadData()
-        })
     }
     //MARK: table functions
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -98,6 +96,24 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         }, completion: { finished in
             self.searchBar.becomeFirstResponder()
         })
+    }
+    
+    func fetchUser(){
+        ref = Database.database().reference()
+        ref?.observe(.childAdded, with: { (snapshot) in
+         
+            if let dictonary = snapshot.value as? NSDictionary{
+                let waste = Waste()
+                
+                let name = dictonary["name"] as? String ?? "Not found"
+                waste.name = name
+                self.wasteData.append(waste)
+                print(name)
+            }
+            //print(snapshot)
+            
+        })
+        
     }
     
     
