@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     
     
-    var window: UIWindow? = WallpaperWindow()
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -80,7 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             
             let share = UIApplication.shared.delegate as? AppDelegate
             share?.window?.rootViewController = navVC
-            share?.window?.makeKeyAndVisible()
+            
         }
     }
 
