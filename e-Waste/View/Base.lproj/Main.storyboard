@@ -78,9 +78,6 @@
                                     <constraint firstAttribute="width" constant="247" id="Yfi-bf-eMU"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoMakr_4IJwoQ" translatesAutoresizingMaskIntoConstraints="NO" id="9fZ-cp-y6n">
-                                <rect key="frame" x="69" y="11" width="276" height="237.00000000000006"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="leading" secondItem="Ipl-LE-O65" secondAttribute="leading" id="00t-RA-1ai"/>
@@ -88,16 +85,13 @@
                             <constraint firstItem="was-MR-4nN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="2do-zN-hTj"/>
                             <constraint firstItem="GgT-Tr-R40" firstAttribute="top" secondItem="JMf-H8-pI6" secondAttribute="bottom" constant="13" id="2jO-uv-eiQ"/>
                             <constraint firstItem="JMf-H8-pI6" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" id="5Pe-Gp-cDQ"/>
-                            <constraint firstItem="9fZ-cp-y6n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-9" id="5QX-8X-8ei"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="5d1-BS-Mld"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9fZ-cp-y6n" secondAttribute="trailing" constant="69" id="87w-Vf-gQF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="was-MR-4nN" secondAttribute="trailing" constant="59" id="91n-6p-B4k"/>
                             <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="CTR-8R-BK3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ipl-LE-O65" secondAttribute="trailing" constant="59" id="CXZ-V1-Hc0"/>
                             <constraint firstItem="zbn-cw-Oac" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="Erz-TE-fqS"/>
                             <constraint firstItem="2lX-wU-WPT" firstAttribute="top" secondItem="bRp-ri-5P9" secondAttribute="bottom" constant="115" id="JA5-Aq-4Fa"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="trailing" secondItem="GgT-Tr-R40" secondAttribute="trailing" id="JNu-EF-z2X"/>
-                            <constraint firstItem="Ipl-LE-O65" firstAttribute="top" secondItem="9fZ-cp-y6n" secondAttribute="bottom" constant="8" id="KnL-bo-VPL"/>
                             <constraint firstItem="bRp-ri-5P9" firstAttribute="top" secondItem="was-MR-4nN" secondAttribute="bottom" constant="8" id="OwL-O5-ukb"/>
                             <constraint firstItem="2lX-wU-WPT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="Pin-ly-hpO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bRp-ri-5P9" secondAttribute="trailing" constant="163" id="RlI-rP-EBz"/>
@@ -109,7 +103,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zbn-cw-Oac" secondAttribute="trailing" constant="93" id="g1F-na-ZKs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2lX-wU-WPT" secondAttribute="bottom" constant="28" id="k91-YX-yNF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2lX-wU-WPT" secondAttribute="trailing" constant="83" id="kXf-au-7aD"/>
-                            <constraint firstItem="9fZ-cp-y6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="mrT-yd-xYI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bRp-ri-5P9" secondAttribute="bottom" constant="195" id="q4u-qn-BUo"/>
                             <constraint firstAttribute="bottom" secondItem="GgT-Tr-R40" secondAttribute="bottom" constant="304" id="tdb-lj-FeZ"/>
                         </constraints>
