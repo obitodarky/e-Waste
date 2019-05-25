@@ -11,7 +11,7 @@ import UIKit
 
 class WallpaperWindow: UIWindow {
     
-    var wallpaper: UIImage? = UIImage(named: "background_image") {
+    var wallpaper: UIImage? = UIImage(named: "background") {
         didSet {
             setNeedsDisplay()
         }
