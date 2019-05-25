@@ -87,33 +87,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         performSegue(withIdentifier: "wasteSegue", sender: self)
     }
     
-    //MARK: search functions
-    
-    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchItemArray = wasteData.filter({
-            $0.lowercased().prefix(searchText.count) == searchText.lowercased()
-        })
-        searching = true
-        tableView.reloadData()
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searching = false
-        searchBar.text = ""
-        searchBar.endEditing(true)
-        tableView.reloadData()
-    }
-    func showSearchBar() {
-        searchBar.alpha = 0
-        navigationItem.titleView = searchBar
-        navigationItem.setLeftBarButton(nil, animated: true)
-        UIView.animate(withDuration: 0.5, animations: {
-            self.searchBar.alpha = 1
-        }, completion: { finished in
-            self.searchBar.becomeFirstResponder()
-        })
-    }*/
-    
     func fetchUser(){
         ref = Database.database().reference()
         ref?.observe(.childAdded, with: { (snapshot) in
