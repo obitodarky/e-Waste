@@ -17,7 +17,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     var wasteSearchArray = [String]()
     
     @IBOutlet var searchBar: UISearchBar!
-    
     @IBOutlet var tableView: UITableView!
     var ref: DatabaseReference!
     var databaseHandle: DatabaseHandle?
@@ -26,7 +25,6 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate  = self
         tableView.dataSource = self
         
