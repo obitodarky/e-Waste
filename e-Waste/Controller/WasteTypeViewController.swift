@@ -74,19 +74,9 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
                                 cell.wasteImage.image = final_image
                             }
                         }
+                    }
                 }
-            }/*{
-                let url = URL(string: wasteImageUrl)
-                URLSession.shared.dataTask(with: url!) { (data, response, error) in
-                    if error != nil {
-                        print(error as Any)
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        cell.wasteImage?.image = UIImage(data: data!)
-                    }
-                    
-                }.resume()*/
+            
             }
         }
         return cell
