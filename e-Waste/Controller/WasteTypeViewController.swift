@@ -46,10 +46,10 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if(searching){
-            return searchItemArray.count
+            return wasteData.count
         }
         else{
-            return wasteArray.count
+            return wasteData.count
         }
     }
     
@@ -60,7 +60,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
             cell.wasteName.text = searchItemArray[indexPath.row]
             cell.wasteImage.image = UIImage(imageLiteralResourceName: "vegetable")
         } else {
-            cell.wasteName.text = wasteArray[indexPath.row]
+            cell.wasteName.text = wasteData[indexPath.row].name
             cell.wasteImage.image = UIImage(imageLiteralResourceName: "vegetable")
         }
         return cell
@@ -73,8 +73,8 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     
     //MARK: search functions
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchItemArray = wasteArray.filter({
+    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchItemArray = wasteData.filter({
             $0.lowercased().prefix(searchText.count) == searchText.lowercased()
         })
         searching = true
@@ -96,7 +96,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         }, completion: { finished in
             self.searchBar.becomeFirstResponder()
         })
-    }
+    }*/
     
     func fetchUser(){
         ref = Database.database().reference()
@@ -106,9 +106,15 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
                 let waste = Waste()
                 
                 let name = dictonary["name"] as? String ?? "Not found"
+                let description = dictonary["waste_description"] as? String ?? "Not found"
+                let type = dictonary["waste_type"] as? String ?? "Not found"
+                let image = dictonary["waste_image"] as? String ?? "Not found"
                 waste.name = name
+                waste.waste_description = description
+                waste.waste_type = type
+                waste.waste_image = image
                 self.wasteData.append(waste)
-                print(name)
+                DispatchQueue.main.async { self.tableView.reloadData() }
             }
             //print(snapshot)
             
