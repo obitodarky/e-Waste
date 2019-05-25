@@ -17,5 +17,4 @@ class CompanyTableViewCell: UITableViewCell {
     @IBAction func donateToCompany(_ sender: Any) {
         //donate data transfer
     }
-    
 }
