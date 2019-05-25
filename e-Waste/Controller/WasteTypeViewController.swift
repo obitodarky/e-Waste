@@ -37,7 +37,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
         fetchUser()
         
     }
-    //MARK: table functions
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -105,12 +105,10 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
                 self.wasteData.append(waste)
                 DispatchQueue.main.async { self.tableView.reloadData() }
             }
-            
-            
+
         })
         
     }
-    
     
 }
 
