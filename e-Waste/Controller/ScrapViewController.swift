@@ -7,17 +7,16 @@
 //
 
 import UIKit
-
+import Firebase
 
 
 class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
+    var ref: DatabaseReference!
+    var scrapList = [Organizations]()
+    
     @IBOutlet var scrapTableView: UITableView!
-    let companyNames = ["Electronics", "CVC"]
-    let companyDescription = ["This is an electronics shop","CVC is a non profit organization"]
-    let companyPhotos = ["electronics","CVC"]
-    let companyPhoneNo = ["9871434245","8712312360"]
     
     @IBAction func goToDonate(_ sender: Any) {
         performSegue(withIdentifier: "donateTo", sender: self)
@@ -30,20 +29,46 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return companyNames.count
+        return scrapList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
-        cell.company_name.text = companyNames[indexPath.row]
+        fetchData()
+        
+        
+        /*cell.company_name.text = companyNames[indexPath.row]
         cell.company_image.image = UIImage(imageLiteralResourceName: companyPhotos[indexPath.row])
         cell.company_description.text = companyDescription[indexPath.row]
-        cell.company_phone_number.text = companyPhoneNo[indexPath.row]
+        cell.company_phone_number.text = companyPhoneNo[indexPath.row] */
         
         return cell
         
+    }
+    
+    func fetchData(){
+        ref = Database.database().reference().child("Organization")
+        ref?.observe(.childAdded, with: { (snapshot) in
+            if let dictionary  = snapshot.value as? NSDictionary{
+                let all_scraps = Organizations()
+                
+                let name = dictionary["name"] as? String ?? "Not found"
+                let number = dictionary["number"] as? String ?? "Not found"
+                let description = dictionary["desc"] as? String ?? "Not found"
+                let image = dictionary["image"] as? String ?? "Not found"
+                
+                all_scraps.name = name
+                all_scraps.desc = description
+                all_scraps.number = number
+                all_scraps.image = image
+                
+                self.scrapList.append(all_scraps)
+                
+                DispatchQueue.main.async { self.scrapTableView.reloadData() }
+            }
+        })
     }
     
 
