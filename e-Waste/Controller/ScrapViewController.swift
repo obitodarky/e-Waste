@@ -54,15 +54,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         }
-        
-        
-        /*cell.company_name.text = companyNames[indexPath.row]
-        cell.company_image.image = UIImage(imageLiteralResourceName: companyPhotos[indexPath.row])
-        cell.company_description.text = companyDescription[indexPath.row]
-        cell.company_phone_number.text = companyPhoneNo[indexPath.row] */
-        
         return cell
-        
     }
     
     func fetchData(){

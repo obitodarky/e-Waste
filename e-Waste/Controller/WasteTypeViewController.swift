@@ -80,7 +80,7 @@ class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewD
     }
     
     func fetchUser(){
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("Items")
         ref?.observe(.childAdded, with: { (snapshot) in
             
             if let dictonary = snapshot.value as? NSDictionary{
