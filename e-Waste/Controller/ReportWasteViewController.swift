@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class ReportWasteViewController: ViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ReportWasteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     let imagePicker = UIImagePickerController()

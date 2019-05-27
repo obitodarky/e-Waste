@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 import CoreLocation
 
-class MapView: ViewController {
+class MapView: UIViewController {
     
     @IBOutlet var areaMapView: MKMapView!
     let locationRequest = CoreLocationViewController()

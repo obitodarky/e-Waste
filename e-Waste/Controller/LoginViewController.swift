@@ -11,7 +11,7 @@ import Firebase
 import SVProgressHUD
 import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInUIDelegate{
+class LoginViewController: UIViewController, GIDSignInUIDelegate{
 
 
     @IBOutlet var email: UITextField!

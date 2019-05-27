@@ -12,7 +12,7 @@ import CoreLocation
 import Firebase
 import SVProgressHUD
 
-class CoreLocationViewController: ViewController {
+class CoreLocationViewController: UIViewController {
     
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
@@ -24,7 +24,7 @@ class CoreLocationViewController: ViewController {
             try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: "email")
             UserDefaults.standard.removeObject(forKey: "password")
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
             
             let navVC = UINavigationController(rootViewController: vc!)
             

@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 
 
-class WasteTypeViewController: ViewController,UITableViewDataSource,UITableViewDelegate , UISearchBarDelegate, UISearchDisplayDelegate {
+class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableViewDelegate , UISearchBarDelegate, UISearchDisplayDelegate {
     
     var wasteData = [Waste]()
     var wasteSearchArray = [String]()
