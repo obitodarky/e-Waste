@@ -32,7 +32,7 @@ class FeedbackView: UIViewController {
             let reference = ref.child("Feedbacks")
             let users = Auth.auth().currentUser
             let uid = users!.uid
-            reference.child("Feedbacks").child(uid).setValue(feedbackMessage.text)
+            reference.child(uid).setValue(feedbackMessage.text)
             
             feedbackSent.text = "✅Feedback sent successfuly!"
         } else {
