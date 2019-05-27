@@ -68,16 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		084E18822242136A00A7183E /* Model */ = {
+		084E18822242136A00A7183E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				0849C2B222991D940009EDB0 /* Waste.swift */,
 				08B76230229BB12C00CDB482 /* Organizations.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		084E1883224213A500A7183E /* View */ = {
+		084E1883224213A500A7183E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
@@ -86,32 +86,27 @@
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
 				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		084E1884224213AE00A7183E /* Controller */ = {
+		084E1884224213AE00A7183E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				089D3E9F223A212100C45B26 /* LoginViewController.swift */,
-				08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */,
-				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
-				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
-				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
-				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
-				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
-				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
-				08BB074F228FE98800A51310 /* FeedbackView.swift */,
+				08B76235229BD99100CDB482 /* App Functions */,
+				08B76234229BD94000CDB482 /* Waste */,
+				08B76233229BD92E00CDB482 /* Organization */,
+				08B76232229BD8D000CDB482 /* User */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		089D3E91223A212100C45B26 = {
 			isa = PBXGroup;
 			children = (
 				0863A9A5224DC44A000CA160 /* Assets.xcassets */,
-				084E1884224213AE00A7183E /* Controller */,
-				084E1883224213A500A7183E /* View */,
-				084E18822242136A00A7183E /* Model */,
+				084E1884224213AE00A7183E /* Controllers */,
+				084E1883224213A500A7183E /* Views */,
+				084E18822242136A00A7183E /* Models */,
 				089D3E9C223A212100C45B26 /* e-VMSS */,
 				089D3E9B223A212100C45B26 /* Products */,
 				3DFD2B441D197CA74DC23949 /* Pods */,
@@ -135,6 +130,43 @@
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
 			path = "e-VMSS";
+			sourceTree = "<group>";
+		};
+		08B76232229BD8D000CDB482 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				089D3E9F223A212100C45B26 /* LoginViewController.swift */,
+				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
+				08BB074F228FE98800A51310 /* FeedbackView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		08B76233229BD92E00CDB482 /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
+				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
+		08B76234229BD94000CDB482 /* Waste */ = {
+			isa = PBXGroup;
+			children = (
+				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
+				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
+				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
+			);
+			path = Waste;
+			sourceTree = "<group>";
+		};
+		08B76235229BD99100CDB482 /* App Functions */ = {
+			isa = PBXGroup;
+			children = (
+				08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */,
+			);
+			path = "App Functions";
 			sourceTree = "<group>";
 		};
 		3DFD2B441D197CA74DC23949 /* Pods */ = {
