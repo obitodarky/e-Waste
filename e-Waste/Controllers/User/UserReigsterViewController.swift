@@ -21,8 +21,6 @@ class UserReigsterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         error_message.text = ""
     }
     
@@ -53,7 +51,7 @@ class UserReigsterViewController: UIViewController {
                 
                 if Auth.auth().currentUser != nil {
                     // User is signed in.
-                    // ...
+                    
                     self.ref = Database.database().reference()
                     let reference = self.ref!
                     let user = Auth.auth().currentUser
@@ -66,7 +64,6 @@ class UserReigsterViewController: UIViewController {
                     reference.child("Users").child(uid).child("number").setValue(self.userPhoneNumber.text)
                 } else {
                     // No user is signed in.
-                    // ...
                     self.wrongSignIn()
                 }
                 SVProgressHUD.dismiss()
