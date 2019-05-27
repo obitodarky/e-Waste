@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,6 +18,9 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var organizationName: UITextField!
     @IBOutlet var organizationDescription: UITextView!
     @IBOutlet var registrationStatus: UILabel!
+    
+    var ref: DatabaseReference!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +51,12 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             registrationStatus.text = "Please fill all fields"
         }
         else{
+            SVProgressHUD.show(withStatus: "Registering")
+            ref = Database.database().reference()
+            self.ref.child("Organization").child(organizationName.text!).child("name").setValue(organizationName.text)
+            self
+
+            SVProgressHUD.dismiss()
             registrationStatus.text = "✅Registration Successful!"
         }
     }
