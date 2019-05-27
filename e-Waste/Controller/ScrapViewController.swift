@@ -23,6 +23,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
         
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
@@ -36,7 +37,23 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let cell = scrapTableView.dequeueReusableCell(withIdentifier: "waste", for: indexPath) as! CompanyTableViewCell
         
-        fetchData()
+        let scraps_list = scrapList[indexPath.row]
+        cell.company_name.text = scraps_list.name
+        cell.company_description.text = scraps_list.desc
+        cell.company_phone_number.text = scraps_list.number
+        
+        if let organizationImageUrl = URL(string: scraps_list.image!){
+            print(organizationImageUrl)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: organizationImageUrl)
+                if let data = data {
+                    let final_image = UIImage(data: data)
+                    DispatchQueue.main.async {
+                        cell.company_image.image = final_image
+                    }
+                }
+            }
+        }
         
         
         /*cell.company_name.text = companyNames[indexPath.row]
