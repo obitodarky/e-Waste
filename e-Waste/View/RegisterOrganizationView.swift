@@ -53,8 +53,12 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         else{
             SVProgressHUD.show(withStatus: "Registering")
             ref = Database.database().reference()
-            self.ref.child("Organization").child(organizationName.text!).child("name").setValue(organizationName.text)
-            self
+            let reference = ref.child("Organization")
+            
+            reference.child(organizationName.text!).child("name").setValue(organizationName.text)
+            reference.child(organizationName.text!).child("number").setValue(organizationNumber.text)
+            reference.child(organizationName.text!).child("description").setValue(organizationDescription.text)
+            
 
             SVProgressHUD.dismiss()
             registrationStatus.text = "✅Registration Successful!"
