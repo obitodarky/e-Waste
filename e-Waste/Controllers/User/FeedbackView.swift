@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class FeedbackView: UIViewController {
 
     
     @IBOutlet var feedbackSent: UILabel!
     @IBOutlet var feedbackMessage: UITextView!
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +28,12 @@ class FeedbackView: UIViewController {
     
     @IBAction func submitFeedback(_ sender: Any) {
         if(feedbackMessage.text != ""){
+            ref = Database.database().reference()
+            let reference = ref.child("Feedbacks")
+            let users = Auth.auth().currentUser
+            let uid = users!.uid
+            reference.child("Feedbacks").child(uid).setValue(feedbackMessage.text)
+            
             feedbackSent.text = "✅Feedback sent successfuly!"
         } else {
             feedbackSent.text = "Please write something"

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Harsh Mehta. All rights reserved.
 //
 
+
 import UIKit
 import Firebase
 import SVProgressHUD
@@ -48,7 +49,6 @@ class UserReigsterViewController: UIViewController {
                 self.error_message.text = "Some error occured while Signing up"
                 self.wrongSignIn()
             } else {
-                
                 if Auth.auth().currentUser != nil {
                     // User is signed in.
                     
