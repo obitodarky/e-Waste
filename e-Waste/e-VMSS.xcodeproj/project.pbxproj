@@ -22,6 +22,7 @@
 		089D3EA8223A212400C45B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */; };
 		08A97A84228A99690080A7E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 08A97A83228A99690080A7E4 /* GoogleService-Info.plist */; };
 		08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */; };
+		08B76231229BB12C00CDB482 /* Organizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B76230229BB12C00CDB482 /* Organizations.swift */; };
 		08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB074F228FE98800A51310 /* FeedbackView.swift */; };
 		08BB07522292716000A51310 /* WasteDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */; };
 		08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */; };
@@ -45,6 +46,7 @@
 		089D3EA9223A212400C45B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08A97A83228A99690080A7E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReigsterViewController.swift; sourceTree = "<group>"; };
+		08B76230229BB12C00CDB482 /* Organizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizations.swift; sourceTree = "<group>"; };
 		08BB074F228FE98800A51310 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				0849C2B222991D940009EDB0 /* Waste.swift */,
+				08B76230229BB12C00CDB482 /* Organizations.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
+				08B76231229BB12C00CDB482 /* Organizations.swift in Sources */,
 				0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */,
 				08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */,
 				08BB07582294166B00A51310 /* RegisterOrganizationView.swift in Sources */,
