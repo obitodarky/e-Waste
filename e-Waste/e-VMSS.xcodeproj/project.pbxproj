@@ -86,7 +86,6 @@
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
 				08BB074F228FE98800A51310 /* FeedbackView.swift */,
 				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
-				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,6 +100,7 @@
 				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
 				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
 				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
+				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
