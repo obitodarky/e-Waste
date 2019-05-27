@@ -1,2 +1,4 @@
 Pods/
-e-VMSS/
+xcuserdata/
+*.xcworkspace/
+GoogleService-Info.plist
