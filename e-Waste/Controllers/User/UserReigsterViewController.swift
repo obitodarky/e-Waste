@@ -12,11 +12,17 @@ import SVProgressHUD
 
 class UserReigsterViewController: UIViewController {
     @IBOutlet var userEmail: UITextField!
+    @IBOutlet var userPhoneNumber: UITextField!
+    @IBOutlet var userFirstName: UITextField!
+    @IBOutlet var userLastName: UITextField!
     @IBOutlet var userPassword: UITextField!
     @IBOutlet var error_message: UILabel!
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         error_message.text = ""
     }
     
@@ -44,6 +50,25 @@ class UserReigsterViewController: UIViewController {
                 self.error_message.text = "Some error occured while Signing up"
                 self.wrongSignIn()
             } else {
+                
+                if Auth.auth().currentUser != nil {
+                    // User is signed in.
+                    // ...
+                    self.ref = Database.database().reference()
+                    let reference = self.ref!
+                    let user = Auth.auth().currentUser
+                    let uid = user!.uid
+                    let uemail = user!.email
+                    
+                    reference.child("Users").child(uid).child("first_name").setValue(self.userFirstName.text)
+                    reference.child("Users").child(uid).child("last_name").setValue(self.userLastName.text)
+                    reference.child("Users").child(uid).child("email").setValue(uemail)
+                    reference.child("Users").child(uid).child("number").setValue(self.userPhoneNumber.text)
+                } else {
+                    // No user is signed in.
+                    // ...
+                    self.wrongSignIn()
+                }
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "signIn", sender: self)
             }

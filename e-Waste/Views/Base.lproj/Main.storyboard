@@ -558,7 +558,10 @@
                     <connections>
                         <outlet property="error_message" destination="3ZF-ag-u1D" id="RfR-Pr-9XB"/>
                         <outlet property="userEmail" destination="gYy-z8-gF0" id="lyK-yT-hDp"/>
+                        <outlet property="userFirstName" destination="h0I-P5-7yR" id="RHi-mW-baS"/>
+                        <outlet property="userLastName" destination="6V1-DV-blY" id="cLw-0D-gg7"/>
                         <outlet property="userPassword" destination="2ao-5z-zqb" id="Qbv-Q1-KoB"/>
+                        <outlet property="userPhoneNumber" destination="4kt-Is-7SG" id="914-UN-87k"/>
                         <segue destination="YZL-7H-6fV" kind="show" identifier="signIn" id="oJl-l0-Ldw"/>
                     </connections>
                 </viewController>
@@ -1118,6 +1121,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WpY-Q9-avQ"/>
+        <segue reference="oJl-l0-Ldw"/>
     </inferredMetricsTieBreakers>
 </document>
