@@ -57,7 +57,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             
             reference.child(organizationName.text!).child("name").setValue(organizationName.text)
             reference.child(organizationName.text!).child("number").setValue(organizationNumber.text)
-            reference.child(organizationName.text!).child("description").setValue(organizationDescription.text)
+            reference.child(organizationName.text!).child("desc").setValue(organizationDescription.text)
             
 
             SVProgressHUD.dismiss()
