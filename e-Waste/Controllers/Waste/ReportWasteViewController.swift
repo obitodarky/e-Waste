@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 import MapKit
+import Firebase
 
 class ReportWasteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
+    let getLocation = CoreLocationViewController()
     let imagePicker = UIImagePickerController()
+    var ref: DatabaseReference!
+    
     @IBOutlet weak var wastePhoto: UIImageView!
     @IBOutlet var reportStatus: UILabel!
     
@@ -28,6 +31,11 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
         } else {
+            ref = Database.database().reference()
+            let user = Auth.auth().currentUser
+            let uid = user!.uid
+            let reference = ref.child("Photos")
+            reference.child(uid).setValue(getLocation.previousLocation)
             reportStatus.text = "Photo can't be taken"
         }
     }
