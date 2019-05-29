@@ -77,6 +77,7 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "wasteSegue", sender: self)
+        
     }
     
     func fetchUser(){

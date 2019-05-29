@@ -14,8 +14,10 @@ class WasteDescriptionViewController: UIViewController {
     @IBOutlet var wasteName: UILabel!
     @IBOutlet var wasteType: UILabel!
     @IBOutlet var wasteDescription: UILabel!
+    let wasteInfo = WasteDescriptionTableViewCell()
     override func viewDidLoad() {
         super.viewDidLoad()
+        wasteName.text = wasteInfo.wasteName.text
     }
 
 }
