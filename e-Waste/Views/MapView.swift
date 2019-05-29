@@ -80,7 +80,6 @@ class MapView: UIViewController {
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: startLocation)
         request.destination = MKMapItem(placemark: destinationLocation)
-        
         request.transportType = .automobile
         request.requestsAlternateRoutes = false
         
