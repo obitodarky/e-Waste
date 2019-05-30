@@ -45,7 +45,6 @@ class UserReigsterViewController: UIViewController {
         Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
             if(error != nil ){
                 SVProgressHUD.dismiss()
-                self.error_message.textColor = .red
                 self.error_message.text = "Some error occured while Signing up"
                 self.wrongSignIn()
             } else {
