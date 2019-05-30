@@ -16,6 +16,7 @@
 		0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */; };
 		08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */; };
 		08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */; };
+		088E9EF7229FEBEC00A692DC /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EF6229FEBEC00A692DC /* ButtonsDesign.swift */; };
 		089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9D223A212100C45B26 /* AppDelegate.swift */; };
 		089D3EA0223A212100C45B26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* LoginViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportWasteViewController.swift; sourceTree = "<group>"; };
 		08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteTypeViewController.swift; sourceTree = "<group>"; };
 		08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationViewController.swift; sourceTree = "<group>"; };
+		088E9EF6229FEBEC00A692DC /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
 				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
 				08B76236229D17A800CDB482 /* LoginTextField.swift */,
+				088E9EF6229FEBEC00A692DC /* ButtonsDesign.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				08B76237229D17A800CDB482 /* LoginTextField.swift in Sources */,
 				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
+				088E9EF7229FEBEC00A692DC /* ButtonsDesign.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
 				08B76231229BB12C00CDB482 /* Organizations.swift in Sources */,
 				0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */,

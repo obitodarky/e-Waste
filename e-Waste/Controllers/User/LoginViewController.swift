@@ -18,10 +18,14 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     @IBOutlet var password: UITextField!
     @IBOutlet var incorrectLogin: UILabel!
     
-
+    @IBOutlet var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        incorrectLogin.text = ""
+        loginButton.layer.shadowOpacity = 0.3
+        loginButton.layer.shadowRadius = 1.0
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.cornerRadius = 1
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
