@@ -234,24 +234,24 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a hazardous waste , please put it somwhere else carefuly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEl-8V-XYX">
                                 <rect key="frame" x="20" y="400" width="374" height="40.666666666666686"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hazardous Waste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-U1-L9w">
                                 <rect key="frame" x="20" y="369" width="374" height="29"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waste Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7p-fG-Do1">
                                 <rect key="frame" x="20" y="313" width="374" height="34.666666666666686"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GEl-8V-XYX" firstAttribute="top" secondItem="8fQ-U1-L9w" secondAttribute="bottom" constant="2" id="BWe-Em-oYB"/>
                             <constraint firstItem="Edi-Wy-dOq" firstAttribute="trailing" secondItem="GEl-8V-XYX" secondAttribute="trailing" constant="20" id="KIA-Gf-JVw"/>
@@ -581,7 +581,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jLj-4B-93F" firstAttribute="top" secondItem="wfw-vv-rOv" secondAttribute="bottom" constant="22" id="DP3-hf-rVu"/>
                             <constraint firstItem="fo1-dR-wqB" firstAttribute="leading" secondItem="b8h-m4-FzX" secondAttribute="leading" constant="20" id="NfI-Eg-N6n"/>
@@ -719,7 +719,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="0.93000000000000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YYl-Vp-SKU"/>
                     </view>
                 </viewController>
@@ -778,16 +778,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-fv-f8X">
-                                <rect key="frame" x="157" y="399" width="100" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Take a Photo">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="takePhotoWith_sender:" destination="qgZ-DO-GeO" eventType="touchUpInside" id="upt-fT-sig"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fU5-tj-KjV">
                                 <rect key="frame" x="20" y="101" width="374" height="290"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -796,7 +786,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-DA-HY5">
-                                <rect key="frame" x="20" y="522" width="374" height="21"/>
+                                <rect key="frame" x="20" y="524" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -808,11 +798,22 @@
                                     <navigationItem title="Take a Photo" id="RaG-5H-Iun"/>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-fv-f8X">
+                                <rect key="frame" x="147" y="399" width="120" height="32"/>
+                                <color key="backgroundColor" red="0.37647058820000001" green="0.87450980389999999" blue="0.83921568629999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" title="Take a Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoWith_sender:" destination="qgZ-DO-GeO" eventType="touchUpInside" id="upt-fT-sig"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="bKd-fv-f8X" secondAttribute="trailing" constant="157" id="8q4-db-3iK"/>
-                            <constraint firstItem="bKd-fv-f8X" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="157" id="93m-Kj-T9z"/>
+                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="bKd-fv-f8X" secondAttribute="trailing" constant="147" id="8q4-db-3iK"/>
+                            <constraint firstItem="bKd-fv-f8X" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="147" id="93m-Kj-T9z"/>
                             <constraint firstItem="bKd-fv-f8X" firstAttribute="top" secondItem="fU5-tj-KjV" secondAttribute="bottom" constant="8" id="C6Z-83-KSz"/>
                             <constraint firstItem="dJl-DA-HY5" firstAttribute="top" secondItem="bKd-fv-f8X" secondAttribute="bottom" constant="93" id="Gcx-iU-PO4"/>
                             <constraint firstItem="dJl-DA-HY5" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="Hn6-5g-EmD"/>
@@ -836,7 +837,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dn-iJ-FGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3607" y="1188"/>
+            <point key="canvasLocation" x="3605.7971014492755" y="1187.771739130435"/>
         </scene>
         <!--Register Organization View-->
         <scene sceneID="taO-Lo-xLb">
@@ -914,8 +915,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYi-aP-aB1">
-                                <rect key="frame" x="19" y="686" width="55" height="30"/>
+                                <rect key="frame" x="19" y="686" width="67" height="30"/>
                                 <color key="backgroundColor" red="0.37647058823529411" green="0.87450980392156863" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -982,7 +984,7 @@
                             <constraint firstItem="TQ3-or-PTh" firstAttribute="top" secondItem="Yze-pS-qw3" secondAttribute="bottom" constant="51" id="NDf-W0-qCN"/>
                             <constraint firstItem="YeI-Ug-jfr" firstAttribute="top" secondItem="Yze-pS-qw3" secondAttribute="bottom" constant="22" id="O3W-6T-nA8"/>
                             <constraint firstItem="UXt-qp-smj" firstAttribute="bottom" secondItem="DYi-aP-aB1" secondAttribute="bottom" constant="20" id="QRO-vP-5he"/>
-                            <constraint firstItem="KK2-jl-5kE" firstAttribute="leading" secondItem="DYi-aP-aB1" secondAttribute="trailing" constant="2" id="RG1-CI-hrn"/>
+                            <constraint firstItem="KK2-jl-5kE" firstAttribute="leading" secondItem="DYi-aP-aB1" secondAttribute="trailing" constant="-10" id="RG1-CI-hrn"/>
                             <constraint firstItem="UXt-qp-smj" firstAttribute="bottom" secondItem="ekU-B0-pYt" secondAttribute="bottom" constant="67" id="RLE-gm-4HU"/>
                             <constraint firstItem="x7D-CA-k3d" firstAttribute="leading" secondItem="VsZ-aL-X5g" secondAttribute="trailing" constant="-23" id="Uvj-rg-MMl"/>
                             <constraint firstItem="7XB-3i-UcS" firstAttribute="leading" secondItem="UXt-qp-smj" secondAttribute="leading" constant="20" id="Xmy-5h-Wat"/>
@@ -994,7 +996,7 @@
                             <constraint firstItem="VsZ-aL-X5g" firstAttribute="top" secondItem="oVK-Uw-K2f" secondAttribute="bottom" constant="15" id="erX-4O-raw"/>
                             <constraint firstItem="DYi-aP-aB1" firstAttribute="leading" secondItem="UXt-qp-smj" secondAttribute="leading" constant="19" id="exv-Qs-4wq"/>
                             <constraint firstItem="UXt-qp-smj" firstAttribute="trailing" secondItem="ekU-B0-pYt" secondAttribute="trailing" constant="28" id="fvW-Db-S9y"/>
-                            <constraint firstItem="UXt-qp-smj" firstAttribute="trailing" secondItem="DYi-aP-aB1" secondAttribute="trailing" constant="340" id="gM4-Mw-A5w"/>
+                            <constraint firstItem="UXt-qp-smj" firstAttribute="trailing" secondItem="DYi-aP-aB1" secondAttribute="trailing" constant="328" id="gM4-Mw-A5w"/>
                             <constraint firstItem="aLe-nz-mmD" firstAttribute="leading" secondItem="oVK-Uw-K2f" secondAttribute="trailing" constant="-23" id="kW7-hn-7TV"/>
                             <constraint firstItem="x7D-CA-k3d" firstAttribute="top" secondItem="aLe-nz-mmD" secondAttribute="bottom" constant="39" id="nWZ-zN-IOu"/>
                             <constraint firstItem="aLe-nz-mmD" firstAttribute="top" secondItem="so9-j3-gGJ" secondAttribute="bottom" constant="34" id="pbN-3Z-jGe"/>
