@@ -83,8 +83,8 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
         if(segue.identifier == "wasteSegue"){
             
             let vc = segue.destination as! WasteDescriptionViewController
-            vc.wasteDescription!.text = waste_desc
-            vc.wasteName!.text = waste_name
+            vc.wasteDescription.text = waste_desc
+            vc.wasteName.text = waste_name
             
         }
     }
