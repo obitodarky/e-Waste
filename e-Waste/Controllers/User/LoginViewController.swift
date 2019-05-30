@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        incorrectLogin.text = ""
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
@@ -57,7 +58,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
             if(error != nil){
                 SVProgressHUD.dismiss()
                 self.incorrectLogin.text = "Incorrect Email or Password"
-                self.incorrectLogin.textColor = .red
                 self.wrongLogIn()
             }
             else {
