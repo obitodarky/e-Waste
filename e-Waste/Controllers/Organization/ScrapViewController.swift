@@ -25,6 +25,8 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
+        
+        scrapTableView.separatorColor = UIColor(rgb: 0xC6CCCA)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return scrapList.count }
