@@ -23,6 +23,11 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
     var searchItemArray = [String]()
     var searching = false
     
+    var waste_name: String!
+    var waste_image: String!
+    var waste_desc: String!
+    var waste_type: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate  = self
@@ -67,7 +72,21 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let wastes = wasteData[indexPath.row]
+        waste_name = wastes.name
+        waste_image = wastes.waste_image
+        waste_desc = wastes.waste_description
+        waste_type = wastes.waste_type
         performSegue(withIdentifier: "wasteSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "wasteSegue"){
+            
+            let vc = segue.destination as! WasteDescriptionViewController
+            vc.wasteDescription!.text = waste_desc
+            vc.wasteName!.text = waste_name
+            
+        }
     }
     
     func fetchUser(){

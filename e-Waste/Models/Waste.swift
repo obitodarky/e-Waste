@@ -9,8 +9,8 @@
 import UIKit
 
 class Waste: NSObject {
-    var name: String?
-    var waste_description: String?
-    var waste_image: String?
-    var waste_type: String?
+    var name: String!
+    var waste_description: String!
+    var waste_image: String!
+    var waste_type: String!
 }
