@@ -18,6 +18,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var organizationName: UITextField!
     @IBOutlet var organizationDescription: UITextView!
     @IBOutlet var registrationStatus: UILabel!
+    @IBOutlet var submitOrgButton: UIButton!
     
     var ref: DatabaseReference!
     
@@ -25,9 +26,13 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         registrationStatus.text = ""
+        submitOrgButton.layer.shadowOpacity = 0.15
+        submitOrgButton.layer.shadowRadius = 1
+        submitOrgButton.layer.shadowColor = UIColor.black.cgColor
+        submitOrgButton.layer.cornerRadius = 1
         organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        organizationDescription.layer.borderWidth = 1.0;
-        organizationDescription.layer.cornerRadius = 5.0;
+        organizationDescription.layer.borderWidth = 1.0
+        organizationDescription.layer.cornerRadius = 5.0
     }
     func wrongSubmit(){
         registrationStatus.frame.size.height = 22

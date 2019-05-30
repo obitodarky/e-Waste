@@ -334,10 +334,6 @@
                                                     <state key="normal" title="Donate">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="donateToCompany:" destination="ckd-7e-BLU" eventType="touchUpInside" id="npm-9R-fX1"/>
-                                                        <action selector="goToDonate:" destination="8kO-SD-qrs" eventType="touchUpInside" id="LnC-Hk-DyF"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -507,6 +503,7 @@
                     </view>
                     <connections>
                         <outlet property="error_message" destination="3ZF-ag-u1D" id="RfR-Pr-9XB"/>
+                        <outlet property="signUpButton" destination="dbT-33-unS" id="gdX-2g-v90"/>
                         <outlet property="userEmail" destination="gYy-z8-gF0" id="lyK-yT-hDp"/>
                         <outlet property="userFirstName" destination="h0I-P5-7yR" id="RHi-mW-baS"/>
                         <outlet property="userLastName" destination="6V1-DV-blY" id="cLw-0D-gg7"/>
@@ -860,6 +857,7 @@
                     </view>
                     <connections>
                         <outlet property="reportStatus" destination="dJl-DA-HY5" id="8R5-tr-MEC"/>
+                        <outlet property="takePhoto" destination="bKd-fv-f8X" id="u0u-AN-MSZ"/>
                         <outlet property="wastePhoto" destination="fU5-tj-KjV" id="NvB-nw-IgI"/>
                     </connections>
                 </viewController>
@@ -883,7 +881,7 @@
                                     <constraint firstAttribute="height" constant="128" id="n0P-7D-vSZ"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ3-or-PTh">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+91" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ3-or-PTh">
                                 <rect key="frame" x="20" y="445.66666666666669" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -895,7 +893,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-pS-qw3">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-pS-qw3">
                                 <rect key="frame" x="20" y="364.66666666666669" width="366" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1041,6 +1039,7 @@
                         <outlet property="organizationName" destination="Yze-pS-qw3" id="wQN-qH-dMz"/>
                         <outlet property="organizationNumber" destination="TQ3-or-PTh" id="Ie6-o6-xYl"/>
                         <outlet property="registrationStatus" destination="KK2-jl-5kE" id="Fdf-oI-5tV"/>
+                        <outlet property="submitOrgButton" destination="DYi-aP-aB1" id="WZu-To-iwe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rR3-Xc-PT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1080,6 +1079,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WpY-Q9-avQ"/>
+        <segue reference="oJl-l0-Ldw"/>
     </inferredMetricsTieBreakers>
 </document>

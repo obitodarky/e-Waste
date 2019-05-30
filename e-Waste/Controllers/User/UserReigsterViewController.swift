@@ -18,11 +18,16 @@ class UserReigsterViewController: UIViewController {
     @IBOutlet var userLastName: UITextField!
     @IBOutlet var userPassword: UITextField!
     @IBOutlet var error_message: UILabel!
+    @IBOutlet var signUpButton: UIButton!
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         error_message.text = ""
+        signUpButton.layer.shadowOpacity = 0.15
+        signUpButton.layer.shadowRadius = 1
+        signUpButton.layer.shadowColor = UIColor.black.cgColor
+        signUpButton.layer.cornerRadius = 1
     }
     
     func wrongSignIn(){

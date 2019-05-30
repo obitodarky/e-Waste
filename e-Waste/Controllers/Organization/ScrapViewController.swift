@@ -17,16 +17,20 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var scrapList = [Organizations]()
     
     @IBOutlet var scrapTableView: UITableView!
+
     
-    @IBAction func goToDonate(_ sender: Any) { performSegue(withIdentifier: "donateTo", sender: self) }
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
         
+        donateButton.layer.shadowOpacity = 0.15
+        donateButton.layer.shadowRadius = 1
+        donateButton.layer.shadowColor = UIColor.black.cgColor
+        donateButton.layer.cornerRadius = 1
+        
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
-        
-        scrapTableView.separatorColor = UIColor(rgb: 0xC6CCCA)
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return scrapList.count }

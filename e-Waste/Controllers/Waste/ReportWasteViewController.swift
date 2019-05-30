@@ -13,6 +13,7 @@ import Firebase
 
 class ReportWasteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var takePhoto: UIButton!
     let getLocation = CoreLocationViewController()
     let imagePicker = UIImagePickerController()
     var ref: DatabaseReference!
@@ -23,6 +24,10 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         reportStatus.text = ""
+        takePhoto.layer.shadowOpacity = 0.15
+        takePhoto.layer.shadowRadius = 1
+        takePhoto.layer.shadowColor = UIColor.black.cgColor
+        takePhoto.layer.cornerRadius = 1
     }
     
     @IBAction func takePhoto(_sender: Any){
