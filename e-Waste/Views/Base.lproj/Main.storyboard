@@ -642,6 +642,7 @@
                                 <items>
                                     <navigationItem title="e-Waste" id="EYT-jc-7oh">
                                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="gMD-3F-Hr3">
+                                            <color key="tintColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="logOut:" destination="YZL-7H-6fV" id="X1U-Mm-YX5"/>
                                             </connections>
