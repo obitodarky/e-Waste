@@ -23,11 +23,6 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         fetchData()
         
-        donateButton.layer.shadowOpacity = 0.15
-        donateButton.layer.shadowRadius = 1
-        donateButton.layer.shadowColor = UIColor.black.cgColor
-        donateButton.layer.cornerRadius = 1
-        
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
 
