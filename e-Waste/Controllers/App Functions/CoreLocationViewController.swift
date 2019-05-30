@@ -16,13 +16,9 @@ class CoreLocationViewController: UIViewController {
     
     var locationManager: CLLocationManager?
     var previousLocation: CLLocation?
-    @IBOutlet var takePhoto: UIButton!
-    
-    private func activateLocationServices(){ locationManager?.startUpdatingLocation() }
     
     @IBAction func logOut(_ sender: Any) {
         SVProgressHUD.show()
-        
         do {
             try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: "email")
@@ -44,20 +40,20 @@ class CoreLocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        takePhoto.setImage(UIImage(imageLiteralResourceName: "vegetable"), for: .normal)
-        
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyBest
     }
     @IBAction func startLocationManager(_ sender: UIButton)
     {
+        
         if( CLLocationManager.authorizationStatus() == .authorizedAlways ||
             CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
             activateLocationServices()
         } else { locationManager?.requestWhenInUseAuthorization() }
     }
     
+    private func activateLocationServices(){ locationManager?.startUpdatingLocation() }
 }
 
 extension CoreLocationViewController: CLLocationManagerDelegate{
@@ -68,6 +64,7 @@ extension CoreLocationViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if(previousLocation == nil){ previousLocation =  locations.first }
+            
         else {
             guard let latestLocation = locations.first else { return }
             previousLocation = latestLocation
