@@ -8,15 +8,13 @@
 
 import UIKit
 
-@IBDesignable
 class ButtonsDesign: UIButton {
 
     override func layoutSubviews() {
-        
         layer.shadowOpacity = 0.3
-        layer.shadowRadius = 2.0
-        layer.shadowColor = UIColor.black.cgColor
-        layer.cornerRadius = 2
+        self.layer.shadowRadius = 1.0
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.cornerRadius = 1
     }
 
 }

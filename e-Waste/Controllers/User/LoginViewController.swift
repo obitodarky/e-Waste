@@ -19,13 +19,22 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     @IBOutlet var incorrectLogin: UILabel!
     
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var signUp: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.shadowOpacity = 0.3
-        loginButton.layer.shadowRadius = 1.0
+        
+        incorrectLogin.text = ""
+        loginButton.layer.shadowOpacity = 0.15
+        loginButton.layer.shadowRadius = 1
         loginButton.layer.shadowColor = UIColor.black.cgColor
         loginButton.layer.cornerRadius = 1
+        
+        signUp.layer.shadowOpacity = 0.15
+        signUp.layer.shadowRadius = 1
+        signUp.layer.shadowColor = UIColor.black.cgColor
+        signUp.layer.cornerRadius = 1
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
@@ -73,4 +82,5 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         }
     }
 }
+
 

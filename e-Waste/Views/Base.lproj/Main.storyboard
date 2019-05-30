@@ -112,6 +112,7 @@
                         <outlet property="incorrectLogin" destination="zbn-cw-Oac" id="zp5-vT-Fnz"/>
                         <outlet property="loginButton" destination="GgT-Tr-R40" id="1UZ-lN-GLF"/>
                         <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
+                        <outlet property="signUp" destination="bRp-ri-5P9" id="lfv-Gu-acw"/>
                         <segue destination="YZL-7H-6fV" kind="show" identifier="logIn" id="WpY-Q9-avQ"/>
                     </connections>
                 </viewController>
