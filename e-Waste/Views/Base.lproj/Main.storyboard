@@ -525,16 +525,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please give us your feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihb-K6-lHw">
-                                <rect key="frame" x="20" y="91" width="252" height="24"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <rect key="frame" x="20" y="62" width="374" height="24"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-dR-wqB">
-                                <rect key="frame" x="20" y="133" width="374" height="182"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-vv-rOv">
                                 <rect key="frame" x="20" y="323" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.37647058820000001" green="0.87450980389999999" blue="0.83921568629999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -552,15 +547,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fo1-dR-wqB">
+                                <rect key="frame" x="20" y="104" width="374" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jLj-4B-93F" firstAttribute="top" secondItem="wfw-vv-rOv" secondAttribute="bottom" constant="7" id="DP3-hf-rVu"/>
                             <constraint firstItem="fo1-dR-wqB" firstAttribute="leading" secondItem="b8h-m4-FzX" secondAttribute="leading" constant="20" id="NfI-Eg-N6n"/>
-                            <constraint firstItem="b8h-m4-FzX" firstAttribute="trailing" secondItem="Ihb-K6-lHw" secondAttribute="trailing" constant="142" id="RJQ-vD-2C6"/>
+                            <constraint firstItem="b8h-m4-FzX" firstAttribute="trailing" secondItem="Ihb-K6-lHw" secondAttribute="trailing" constant="20" id="RJQ-vD-2C6"/>
                             <constraint firstItem="b8h-m4-FzX" firstAttribute="trailing" secondItem="jLj-4B-93F" secondAttribute="trailing" constant="20" id="SgO-cs-oTX"/>
-                            <constraint firstItem="Ihb-K6-lHw" firstAttribute="top" secondItem="b8h-m4-FzX" secondAttribute="top" constant="71" id="UhO-Lo-MUf"/>
-                            <constraint firstItem="fo1-dR-wqB" firstAttribute="top" secondItem="b8h-m4-FzX" secondAttribute="top" constant="113" id="as8-AQ-DHB"/>
+                            <constraint firstItem="Ihb-K6-lHw" firstAttribute="top" secondItem="b8h-m4-FzX" secondAttribute="top" constant="42" id="UhO-Lo-MUf"/>
+                            <constraint firstItem="fo1-dR-wqB" firstAttribute="top" secondItem="b8h-m4-FzX" secondAttribute="top" constant="84" id="as8-AQ-DHB"/>
                             <constraint firstItem="wfw-vv-rOv" firstAttribute="top" secondItem="fo1-dR-wqB" secondAttribute="bottom" constant="8" id="biY-t3-xlb"/>
                             <constraint firstItem="b8h-m4-FzX" firstAttribute="trailing" secondItem="fo1-dR-wqB" secondAttribute="trailing" constant="20" id="cUR-vO-0Bq"/>
                             <constraint firstItem="b8h-m4-FzX" firstAttribute="bottom" secondItem="jLj-4B-93F" secondAttribute="bottom" constant="336" id="dJh-9C-zTU"/>
