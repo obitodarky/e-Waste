@@ -17,6 +17,7 @@ class WasteDescriptionViewController: UIViewController {
     let wasteInfo = WasteDescriptionTableViewCell()
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(wasteInfo.wasteName.text as Any)
         wasteName.text = wasteInfo.wasteName.text
     }
 

@@ -18,9 +18,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var scrapTableView: UITableView!
     
-    @IBAction func goToDonate(_ sender: Any) {
-        performSegue(withIdentifier: "donateTo", sender: self)
-    }
+    @IBAction func goToDonate(_ sender: Any) { performSegue(withIdentifier: "donateTo", sender: self) }
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
@@ -29,9 +27,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         scrapTableView.dataSource = self
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scrapList.count
-    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return scrapList.count }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -48,9 +44,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let data = try? Data(contentsOf: organizationImageUrl)
                 if let data = data {
                     let final_image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        cell.company_image.image = final_image
-                    }
+                    DispatchQueue.main.async { cell.company_image.image = final_image }
                 }
             }
         }

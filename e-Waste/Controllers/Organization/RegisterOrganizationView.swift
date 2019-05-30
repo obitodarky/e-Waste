@@ -45,8 +45,8 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         if (organizationDescription.text == ""  ||
             organizationName.text == ""         ||
             organizationNumber.text == ""       ||
-            organizationImage.image  == nil
-            ){
+            organizationImage.image  == nil)
+        {
             wrongSubmit()
             registrationStatus.text = "Please fill all fields"
         }
@@ -70,9 +70,8 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
-        } else {
-            registrationStatus.text = "Photo can't be taken"
         }
+        else { registrationStatus.text = "Photo can't be taken" }
     }
     @IBAction func takePhotoByGallery(_ sender: Any) {
         imagePicker.allowsEditing = false
@@ -85,8 +84,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         organizationImage.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) { dismiss(animated: true, completion: nil) }
     
 }

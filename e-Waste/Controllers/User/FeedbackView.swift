@@ -35,9 +35,8 @@ class FeedbackView: UIViewController {
             reference.child(uid).setValue(feedbackMessage.text)
             
             feedbackSent.text = "✅Feedback sent successfuly!"
-        } else {
-            feedbackSent.text = "Please write something"
         }
+        else { feedbackSent.text = "Please write something" }
     }
     
 }

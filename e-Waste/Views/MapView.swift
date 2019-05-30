@@ -104,24 +104,18 @@ extension MapView: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView = areaMapView.dequeueReusableAnnotationView(withIdentifier: "Annotations")
-        if annotationView == nil{
-            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews")
-        }
-        if let subtitle = annotation.subtitle , subtitle == "Trash"{
-            annotationView!.image = UIImage(named: "trash-can")
-        }
+        if annotationView == nil{ annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews") }
+        if let subtitle = annotation.subtitle , subtitle == "Trash"{ annotationView!.image = UIImage(named: "trash-can") }
         annotationView!.canShowCallout = true
         return annotationView
     }
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-        getDirections(to: view.annotation!.coordinate)
-    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) { getDirections(to: view.annotation!.coordinate) }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderer.strokeColor = .green
         return renderer
-        
     }
     
 }

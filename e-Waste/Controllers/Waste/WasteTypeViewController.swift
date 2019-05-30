@@ -31,18 +31,11 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
         fetchUser()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    func numberOfSections(in tableView: UITableView) -> Int { return 1 }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if(searching){
-            return wasteData.count
-        }
-        else{
-            return wasteData.count
-        }
+        if(searching){ return wasteData.count }
+        else{ return wasteData.count }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,9 +56,7 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
                         let data = try? Data(contentsOf: wasteImageUrl)
                         if let data = data {
                             let final_image = UIImage(data: data)
-                            DispatchQueue.main.async {
-                                cell.wasteImage.image = final_image
-                            }
+                            DispatchQueue.main.async { cell.wasteImage.image = final_image }
                         }
                     }
                 }
@@ -77,13 +68,12 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "wasteSegue", sender: self)
-        
     }
     
     func fetchUser(){
         ref = Database.database().reference().child("Items")
         ref?.observe(.childAdded, with: { (snapshot) in
-            
+
             if let dictonary = snapshot.value as? NSDictionary{
                 let waste = Waste()
                 

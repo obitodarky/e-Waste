@@ -35,9 +35,7 @@ class CoreLocationViewController: UIViewController {
             SVProgressHUD.dismiss()
             
             
-        } catch {
-            SVProgressHUD.dismiss()
-        }
+        } catch { SVProgressHUD.dismiss() }
     }
 
     override func viewDidLoad() {
@@ -50,32 +48,24 @@ class CoreLocationViewController: UIViewController {
     @IBAction func startLocationManager(_ sender: UIButton)
     {
         
-        if(CLLocationManager.authorizationStatus() == .authorizedAlways ||
+        if( CLLocationManager.authorizationStatus() == .authorizedAlways ||
             CLLocationManager.authorizationStatus() == .authorizedWhenInUse){
             activateLocationServices()
-        } else {
-            locationManager?.requestWhenInUseAuthorization()
-        }
+        } else { locationManager?.requestWhenInUseAuthorization() }
     }
     
-    private func activateLocationServices(){
-        locationManager?.startUpdatingLocation()
-    }
-    
+    private func activateLocationServices(){ locationManager?.startUpdatingLocation() }
 }
 
 extension CoreLocationViewController: CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if(status == .authorizedWhenInUse || status == .authorizedAlways){
-            activateLocationServices()
-        }
+        if(status == .authorizedWhenInUse || status == .authorizedAlways){ activateLocationServices() }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if(previousLocation == nil){
-            previousLocation =  locations.first
-        }
+        if(previousLocation == nil){ previousLocation =  locations.first }
+            
         else {
             guard let latestLocation = locations.first else { return }
             previousLocation = latestLocation
