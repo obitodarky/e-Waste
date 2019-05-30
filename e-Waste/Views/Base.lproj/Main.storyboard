@@ -650,24 +650,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
-                                <rect key="frame" x="271" y="366" width="124" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Report Waste">
-                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-trash-128" translatesAutoresizingMaskIntoConstraints="NO" id="yvi-lv-yu8">
                                 <rect key="frame" x="294" y="200" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-screenshot-64" translatesAutoresizingMaskIntoConstraints="NO" id="zgu-Qi-n9d">
-                                <rect key="frame" x="301" y="376" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-feedback-128" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-BO-GOE">
@@ -741,6 +725,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="KJX-9r-cO7" kind="show" id="3Xf-jt-MAY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-q1-RnZ">
+                                <rect key="frame" x="278" y="368" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" backgroundImage="icons8-screenshot-64">
+                                    <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
                                 </connections>
                             </button>
                         </subviews>
