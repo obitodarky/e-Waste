@@ -770,14 +770,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-error-96" translatesAutoresizingMaskIntoConstraints="NO" id="cGn-PJ-6ED">
-                                <rect key="frame" x="54" y="608" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIo-O8-f3s">
+                                <rect key="frame" x="175" y="511" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIo-O8-f3s">
-                                <rect key="frame" x="27" y="662" width="128" height="32"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                                <state key="normal" title="Report To VMC">
+                                <state key="normal" backgroundImage="icons8-error-96">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -803,7 +800,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-DA-HY5">
-                                <rect key="frame" x="20" y="551" width="374" height="21"/>
+                                <rect key="frame" x="20" y="670" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -822,24 +819,41 @@
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mP0-yO-dH9">
+                                <rect key="frame" x="175" y="511" width="64" height="64"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <state key="normal" backgroundImage="icons8-error-96">
+                                    <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report to VMC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVw-gJ-9Ia">
+                                <rect key="frame" x="146" y="583" width="123" height="21"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="bKd-fv-f8X" secondAttribute="trailing" constant="20" id="8q4-db-3iK"/>
                             <constraint firstItem="bKd-fv-f8X" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="93m-Kj-T9z"/>
                             <constraint firstItem="bKd-fv-f8X" firstAttribute="top" secondItem="fU5-tj-KjV" secondAttribute="bottom" constant="18" id="C6Z-83-KSz"/>
-                            <constraint firstItem="dJl-DA-HY5" firstAttribute="top" secondItem="bKd-fv-f8X" secondAttribute="bottom" constant="75" id="Gcx-iU-PO4"/>
+                            <constraint firstItem="dJl-DA-HY5" firstAttribute="top" secondItem="SVw-gJ-9Ia" secondAttribute="bottom" constant="66" id="DCv-CT-pag"/>
+                            <constraint firstItem="SVw-gJ-9Ia" firstAttribute="top" secondItem="mP0-yO-dH9" secondAttribute="bottom" constant="8" id="Fkp-Sr-9My"/>
+                            <constraint firstItem="dJl-DA-HY5" firstAttribute="top" secondItem="bKd-fv-f8X" secondAttribute="bottom" constant="194" id="Gcx-iU-PO4"/>
                             <constraint firstItem="dJl-DA-HY5" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="Hn6-5g-EmD"/>
                             <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="dJl-DA-HY5" secondAttribute="trailing" constant="20" id="IsT-pR-2w9"/>
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="K1l-fT-N5X"/>
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="top" secondItem="Cie-Nx-Nb5" secondAttribute="top" constant="98" id="QKn-1M-0JQ"/>
+                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="mP0-yO-dH9" secondAttribute="trailing" constant="175" id="SMk-Rw-hGB"/>
                             <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="fU5-tj-KjV" secondAttribute="trailing" constant="20" id="SR6-K9-dX4"/>
+                            <constraint firstItem="mP0-yO-dH9" firstAttribute="top" secondItem="bKd-fv-f8X" secondAttribute="bottom" constant="35" id="UFg-kQ-8Mc"/>
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="leading" secondItem="J8c-cL-0JQ" secondAttribute="leadingMargin" id="VSU-wt-Ev1"/>
+                            <constraint firstItem="SVw-gJ-9Ia" firstAttribute="top" secondItem="bKd-fv-f8X" secondAttribute="bottom" constant="107" id="WXz-ar-oRk"/>
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="trailing" secondItem="J8c-cL-0JQ" secondAttribute="trailingMargin" id="aUi-dT-0nM"/>
-                            <constraint firstItem="dIo-O8-f3s" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="27" id="gdI-WQ-mre"/>
-                            <constraint firstItem="fU5-tj-KjV" firstAttribute="leading" secondItem="dIo-O8-f3s" secondAttribute="trailing" constant="-135" id="pPM-J5-5D8"/>
-                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="dIo-O8-f3s" secondAttribute="trailing" constant="259" id="tbL-ty-RCs"/>
-                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="bottom" secondItem="dIo-O8-f3s" secondAttribute="bottom" constant="42" id="zVz-Pz-fJc"/>
+                            <constraint firstItem="SVw-gJ-9Ia" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="146" id="jhk-Z4-Zcf"/>
+                            <constraint firstItem="mP0-yO-dH9" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="175" id="qlE-aO-aAR"/>
+                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="SVw-gJ-9Ia" secondAttribute="trailing" constant="145" id="zLs-7m-2vk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cie-Nx-Nb5"/>
                     </view>
