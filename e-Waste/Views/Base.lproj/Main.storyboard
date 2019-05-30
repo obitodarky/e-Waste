@@ -728,6 +728,7 @@
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="registerOrg:" destination="YZL-7H-6fV" eventType="touchUpInside" id="F4P-9x-SbO"/>
                                     <segue destination="U3c-of-fq4" kind="show" id="TL4-q6-bWi"/>
                                 </connections>
                             </button>
@@ -746,6 +747,9 @@
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YYl-Vp-SKU"/>
                     </view>
+                    <connections>
+                        <outlet property="takePhoto" destination="gMP-q1-RnZ" id="9D9-6R-OPf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfO-PC-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
