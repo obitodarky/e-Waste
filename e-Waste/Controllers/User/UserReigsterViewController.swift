@@ -44,35 +44,46 @@ class UserReigsterViewController: UIViewController {
         
     }
     @IBAction func registerButton(_ sender: Any) {
-        if (userEmail.text != nil || userPassword.text != nil){
+        if (userEmail.text != ""
+            && userPassword.text != ""
+            && userFirstName.text != ""
+            && userLastName.text != ""
+            && userPhoneNumber.text != ""){
+            
             SVProgressHUD.show(withStatus: "Signing up")
-        }
-        Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
-            if(error != nil ){
-                SVProgressHUD.dismiss()
-                self.error_message.text = "Some error occured while Signing up"
-                self.wrongSignIn()
-            } else {
-                if Auth.auth().currentUser != nil {
-                    // User is signed in.
-                    
-                    self.ref = Database.database().reference()
-                    let reference = self.ref!
-                    let user = Auth.auth().currentUser
-                    let uid = user!.uid
-                    let uemail = user!.email
-                    
-                    reference.child("Users").child(uid).child("first_name").setValue(self.userFirstName.text)
-                    reference.child("Users").child(uid).child("last_name").setValue(self.userLastName.text)
-                    reference.child("Users").child(uid).child("email").setValue(uemail)
-                    reference.child("Users").child(uid).child("number").setValue(self.userPhoneNumber.text)
-                } else {
-                    // No user is signed in.
+            
+            Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
+                if(error != nil ){
+                    SVProgressHUD.dismiss()
+                    self.error_message.text = "Some error occured while Signing up"
                     self.wrongSignIn()
+                } else {
+                    if Auth.auth().currentUser != nil {
+                        // User is signed in.
+                        
+                        self.ref = Database.database().reference()
+                        let reference = self.ref!
+                        let user = Auth.auth().currentUser
+                        let uid = user!.uid
+                        let uemail = user!.email
+                        
+                        reference.child("Users").child(uid).child("first_name").setValue(self.userFirstName.text)
+                        reference.child("Users").child(uid).child("last_name").setValue(self.userLastName.text)
+                        reference.child("Users").child(uid).child("email").setValue(uemail)
+                        reference.child("Users").child(uid).child("number").setValue(self.userPhoneNumber.text)
+                    } else {
+                        // No user is signed in.
+                        self.wrongSignIn()
+                    }
+                    SVProgressHUD.dismiss()
+                    self.performSegue(withIdentifier: "signIn", sender: self)
                 }
-                SVProgressHUD.dismiss()
-                self.performSegue(withIdentifier: "signIn", sender: self)
             }
         }
+        else {
+            self.error_message.text = "Please fill all fields"
+            self.wrongSignIn()
+        }
+
     }
 }
