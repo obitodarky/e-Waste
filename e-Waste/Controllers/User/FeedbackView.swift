@@ -27,12 +27,6 @@ class FeedbackView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        year = calendar.component(.year, from: date)
-        week = calendar.component(.weekOfYear, from: date)
-        hour = calendar.component(.hour, from: date)
-        minutes = calendar.component(.minute, from: date)
-        seconds = calendar.component(.second, from: date)
         
         feedbackSent.text = ""
         feedbackMessage.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
@@ -43,6 +37,11 @@ class FeedbackView: UIViewController {
     @IBAction func submitFeedback(_ sender: Any) {
         if(feedbackMessage.text != ""){
             
+            year = calendar.component(.year, from: date)
+            week = calendar.component(.weekOfYear, from: date)
+            hour = calendar.component(.hour, from: date)
+            minutes = calendar.component(.minute, from: date)
+            seconds = calendar.component(.second, from: date)
             
             ref = Database.database().reference()
             let reference = ref.child("Feedbacks")
