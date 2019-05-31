@@ -24,17 +24,14 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     var minutes: Int = 0
     var seconds: Int = 0
     
+
     @IBOutlet weak var wastePhoto: UIImageView!
     @IBOutlet var reportStatus: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        year = calendar.component(.year, from: date)
-        week = calendar.component(.weekOfYear, from: date)
-        hour = calendar.component(.hour, from: date)
-        minutes = calendar.component(.minute, from: date)
-        seconds = calendar.component(.second, from: date)
+
         
         reportStatus.text = ""
         takePhoto.layer.shadowOpacity = 0.15
@@ -43,15 +40,23 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         takePhoto.layer.cornerRadius = 1
     }
     
-    @IBAction func takePhoto(_sender: Any){
-        imagePicker.delegate = self
-        //TO Be moved later on inside camera source
-        ref = Database.database().reference()
+    @IBAction func reportPhoto(_ sender: Any) {
+        year = calendar.component(.year, from: date)
+        week = calendar.component(.weekOfYear, from: date)
+        hour = calendar.component(.hour, from: date)
+        minutes = calendar.component(.minute, from: date)
+        seconds = calendar.component(.second, from: date)
+        
         let user = Auth.auth().currentUser
         let uid = user!.uid
-        let reference = ref.child("Photos")
-        reference.child(uid).child("time").setValue(String(year) + String(week) + String(hour) + String(minutes) + String(seconds))
+        ref = Database.database().reference().child("Photos")
+        let reference = ref.child(uid).child(String(year) + String(week) + String(hour) + String(minutes) + String(seconds))
         
+        reference.child("Location").setValue("Coordinates")
+        reference.child("Photo").setValue("Image")
+    }
+    @IBAction func takePhoto(_sender: Any){
+        imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             imagePicker.sourceType = .camera
             self.present(imagePicker, animated: true, completion: nil)
