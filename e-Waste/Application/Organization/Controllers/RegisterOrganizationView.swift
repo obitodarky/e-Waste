@@ -67,8 +67,11 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
                         print(error!)
                         return
                     } else {
-                        print(metadata)
-                        //reference.setValue(metadata)
+                        print(storageRef.downloadURL(completion: { (url, error) in
+                            guard let downloadURL = url else { return }
+                            reference.child(self.organizationName.text!).child("image").setValue(downloadURL)
+                        }))
+                        
                     }
                 }
             }
@@ -76,7 +79,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             reference.child(organizationName.text!).child("name").setValue(organizationName.text)
             reference.child(organizationName.text!).child("number").setValue(organizationNumber.text)
             reference.child(organizationName.text!).child("desc").setValue(organizationDescription.text)
-            //reference.child(organizationName.text!).child("image").set
             
 
             SVProgressHUD.dismiss()
