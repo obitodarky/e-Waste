@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SVProgressHUD
+import FirebaseStorage
 
 class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -21,7 +22,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet var submitOrgButton: UIButton!
     
     var ref: DatabaseReference!
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +60,23 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             SVProgressHUD.show(withStatus: "Registering")
             ref = Database.database().reference()
             let reference = ref.child("Organization")
+            let storageRef = Storage.storage().reference().child("profilePhoto" + organizationName.text!)
+            if let uploadData = organizationImage.image?.pngData(){
+                storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                    if(error != nil) {
+                        print(error!)
+                        return
+                    } else {
+                        print(metadata)
+                        //reference.setValue(metadata)
+                    }
+                }
+            }
             
             reference.child(organizationName.text!).child("name").setValue(organizationName.text)
             reference.child(organizationName.text!).child("number").setValue(organizationNumber.text)
             reference.child(organizationName.text!).child("desc").setValue(organizationDescription.text)
+            //reference.child(organizationName.text!).child("image").set
             
 
             SVProgressHUD.dismiss()
@@ -85,6 +99,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         present(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         organizationImage.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
