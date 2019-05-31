@@ -30,9 +30,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        
+    
         reportStatus.text = ""
         takePhoto.layer.shadowOpacity = 0.15
         takePhoto.layer.shadowRadius = 1
@@ -50,7 +48,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         let user = Auth.auth().currentUser
         let uid = user!.uid
         ref = Database.database().reference().child("Photos")
-        let reference = ref.child(uid).child(String(year) + String(week) + String(hour) + String(minutes) + String(seconds))
+        let reference = ref.child(String(year) + String(week) + String(hour) + String(minutes) + String(seconds)).child(uid)
         
         reference.child("Location").setValue("Coordinates")
         reference.child("Photo").setValue("Image")
