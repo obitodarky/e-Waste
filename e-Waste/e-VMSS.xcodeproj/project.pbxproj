@@ -79,26 +79,69 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		084E1883224213A500A7183E /* Views */ = {
+		084E1883224213A500A7183E /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
-				08557C7F224A3CF400431369 /* MapView.swift */,
 				089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */,
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
-				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
 				08B76236229D17A800CDB482 /* LoginTextField.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		084E1884224213AE00A7183E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				084E1883224213A500A7183E /* MainView */,
+				08B76235229BD99100CDB482 /* Location */,
+				08B76234229BD94000CDB482 /* Waste */,
+				08B76233229BD92E00CDB482 /* Organization */,
+				08B76232229BD8D000CDB482 /* User */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		088E9EF822A1018D00A692DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
+				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
+				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		088E9EF922A101A900A692DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		084E1884224213AE00A7183E /* Controllers */ = {
+		088E9EFA22A101D500A692DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				08B76235229BD99100CDB482 /* App Functions */,
-				08B76234229BD94000CDB482 /* Waste */,
-				08B76233229BD92E00CDB482 /* Organization */,
-				08B76232229BD8D000CDB482 /* User */,
+				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		088E9EFB22A101E100A692DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
+				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		088E9EFC22A102ED00A692DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08BB074F228FE98800A51310 /* FeedbackView.swift */,
+				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
+				089D3E9F223A212100C45B26 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,8 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0863A9A5224DC44A000CA160 /* Assets.xcassets */,
-				084E1884224213AE00A7183E /* Controllers */,
-				084E1883224213A500A7183E /* Views */,
+				084E1884224213AE00A7183E /* Application */,
 				084E18822242136A00A7183E /* Models */,
 				089D3E9C223A212100C45B26 /* e-VMSS */,
 				089D3E9B223A212100C45B26 /* Products */,
@@ -138,9 +180,7 @@
 		08B76232229BD8D000CDB482 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				089D3E9F223A212100C45B26 /* LoginViewController.swift */,
-				08A97A85228AA5C70080A7E4 /* UserReigsterViewController.swift */,
-				08BB074F228FE98800A51310 /* FeedbackView.swift */,
+				088E9EFC22A102ED00A692DC /* Controllers */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -148,8 +188,8 @@
 		08B76233229BD92E00CDB482 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
-				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
-				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
+				088E9EFB22A101E100A692DC /* Controllers */,
+				088E9EFA22A101D500A692DC /* Views */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -157,19 +197,19 @@
 		08B76234229BD94000CDB482 /* Waste */ = {
 			isa = PBXGroup;
 			children = (
-				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
-				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
-				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
+				088E9EF922A101A900A692DC /* Views */,
+				088E9EF822A1018D00A692DC /* Controllers */,
 			);
 			path = Waste;
 			sourceTree = "<group>";
 		};
-		08B76235229BD99100CDB482 /* App Functions */ = {
+		08B76235229BD99100CDB482 /* Location */ = {
 			isa = PBXGroup;
 			children = (
 				08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */,
+				08557C7F224A3CF400431369 /* MapView.swift */,
 			);
-			path = "App Functions";
+			path = Location;
 			sourceTree = "<group>";
 		};
 		3DFD2B441D197CA74DC23949 /* Pods */ = {
