@@ -12,6 +12,7 @@ import Firebase
 import SVProgressHUD
 
 class UserReigsterViewController: UIViewController {
+    
     @IBOutlet var userEmail: UITextField!
     @IBOutlet var userPhoneNumber: UITextField!
     @IBOutlet var userFirstName: UITextField!
@@ -23,6 +24,9 @@ class UserReigsterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         error_message.text = ""
         signUpButton.layer.shadowOpacity = 0.15
         signUpButton.layer.shadowRadius = 1
