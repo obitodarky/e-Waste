@@ -67,6 +67,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         wastePhoto.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
+        reportStatus.text = "✅ Photo Submitted!"
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
