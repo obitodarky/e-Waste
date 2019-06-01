@@ -176,6 +176,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eYN-4k-1XP" id="B2a-Cd-D3Y"/>
+                                    <outlet property="delegate" destination="eYN-4k-1XP" id="Hu1-Hx-5p7"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -683,7 +687,7 @@
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KJX-9r-cO7" kind="show" id="3Xf-jt-MAY"/>
+                                    <segue destination="eYN-4k-1XP" kind="show" id="jCZ-zV-NJ7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4s-fp-Lau">
