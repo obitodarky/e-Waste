@@ -22,6 +22,7 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
     var databaseHandle: DatabaseHandle?
     var searchItemArray = [String]()
     var searching = false
+    var wasteNames = [String]()
     
     var waste_name: String!
     var waste_image: String!
@@ -74,6 +75,10 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "wasteSegue", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
     func fetchUser(){
         ref = Database.database().reference().child("Items")
         ref?.observe(.childAdded, with: { (snapshot) in
@@ -91,6 +96,7 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
                 waste.waste_type = type
                 waste.waste_image = image
                 self.wasteData.append(waste)
+                self.wasteNames.append(waste.name)
                 DispatchQueue.main.async { self.tableView.reloadData() }
             }
         })

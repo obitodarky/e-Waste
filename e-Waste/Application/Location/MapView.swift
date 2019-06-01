@@ -9,6 +9,7 @@
 import Foundation
 import MapKit
 import CoreLocation
+import Firebase
 
 class MapView: UIViewController {
     
@@ -24,6 +25,7 @@ class MapView: UIViewController {
         super.viewDidLoad()
         areaMapView.delegate = self
         setLocation()
+
     }
     
     func setLocationManager(){

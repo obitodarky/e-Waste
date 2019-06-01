@@ -95,6 +95,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         else { registrationStatus.text = "Photo can't be taken" }
     }
     @IBAction func takePhotoByGallery(_ sender: Any) {
+        imagePicker.delegate = self
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
