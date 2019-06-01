@@ -61,7 +61,6 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
                     wasteSearchArray.append(wastes.name!)
                     wasteSearchArray.sort()
                 if let wasteImageUrl = URL(string: wastes.waste_image!){
-                    print(wasteImageUrl)
                     DispatchQueue.global().async {
                         let data = try? Data(contentsOf: wasteImageUrl)
                         if let data = data {
