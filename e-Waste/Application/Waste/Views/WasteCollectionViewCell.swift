@@ -10,4 +10,8 @@ import UIKit
 
 class WasteCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet var wasteImage: UIImageView!
+    @IBOutlet var wasteName: UILabel!
+    @IBOutlet var wasteType: UILabel!
+    @IBOutlet var wasteDescription: UILabel!
 }

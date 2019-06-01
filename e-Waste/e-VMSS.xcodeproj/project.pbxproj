@@ -29,7 +29,6 @@
 		08B76237229D17A800CDB482 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B76236229D17A800CDB482 /* LoginTextField.swift */; };
 		08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB074F228FE98800A51310 /* FeedbackView.swift */; };
 		08BB07522292716000A51310 /* WasteDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */; };
-		08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */; };
 		08BB07582294166B00A51310 /* RegisterOrganizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BB07572294166B00A51310 /* RegisterOrganizationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +56,6 @@
 		08B76236229D17A800CDB482 /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		08BB074F228FE98800A51310 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionTableViewCell.swift; sourceTree = "<group>"; };
-		08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteDescriptionViewController.swift; sourceTree = "<group>"; };
 		08BB07572294166B00A51310 /* RegisterOrganizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOrganizationView.swift; sourceTree = "<group>"; };
 		462829244DCDCC0EF0EEC316 /* Pods-e-VMSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-VMSS.release.xcconfig"; path = "Pods/Target Support Files/Pods-e-VMSS/Pods-e-VMSS.release.xcconfig"; sourceTree = "<group>"; };
 		C0275A150434F454BAE880B5 /* Pods_e_VMSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_VMSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +111,6 @@
 			children = (
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
 				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
-				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
 				088E9F0322A27F5500A692DC /* WasteDataViewController.swift */,
 			);
 			path = Controllers;
@@ -389,7 +386,6 @@
 				088E9F0222A277E100A692DC /* WasteCollectionViewCell.swift in Sources */,
 				0849C2B322991D940009EDB0 /* Waste.swift in Sources */,
 				08B76237229D17A800CDB482 /* LoginTextField.swift in Sources */,
-				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
 				088E9F0422A27F5500A692DC /* WasteDataViewController.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,

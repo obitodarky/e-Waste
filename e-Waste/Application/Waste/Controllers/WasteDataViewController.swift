@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WasteDataViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -14,28 +15,19 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet var wasteCollectionView: UICollectionView!
     
     var wasteData = [Waste]()
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchUser()
         let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
         layout.itemSize = CGSize(width: (self.wasteCollectionView.frame.size.width - 20)/2, height: (self.wasteCollectionView.frame.height)/2)
-        // Do any additional setup after loading the view.
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return wasteData.count
@@ -48,6 +40,27 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         
         return cell
        
+    }
+    func fetchUser(){
+        ref = Database.database().reference().child("Items")
+        ref?.observe(.childAdded, with: { (snapshot) in
+            
+            if let dictonary = snapshot.value as? NSDictionary{
+                let waste = Waste()
+                
+                let name = dictonary["name"] as? String ?? "Not found"
+                let description = dictonary["waste_description"] as? String ?? "Not found"
+                let type = dictonary["waste_type"] as? String ?? "Not found"
+                let image = dictonary["waste_image"] as? String ?? "Not found"
+                
+                waste.name = name
+                waste.waste_description = description
+                waste.waste_type = type
+                waste.waste_image = image
+                self.wasteData.append(waste)
+                DispatchQueue.main.async { self.wasteCollectionView.reloadData() }
+            }
+        })
     }
     
 }
