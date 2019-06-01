@@ -18,13 +18,15 @@ class MapView: UIViewController {
     var centralLocation: Double = 1000
     let locationManager = CLLocationManager()
     let sampleTrash = MKPointAnnotation()
+    var ref: DatabaseReference!
     //dictonary for trashcan locations : [latititude: longitute]
-    let trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
+    var trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         areaMapView.delegate = self
         setLocation()
+        fetchData()
 
     }
     
@@ -86,6 +88,25 @@ class MapView: UIViewController {
         request.requestsAlternateRoutes = false
         
         return request
+    }
+    func fetchData(){
+        ref = Database.database().reference().child("Dustbins")
+        ref?.observe(.childAdded, with: { (snapshot) in
+            if let dictionary  = snapshot.value as? NSDictionary{
+                let dustbin = Dustbins()
+                
+                let latitude = dictionary["latitude"] as? String ?? "Not found"
+                let longitude = dictionary["longitude"] as? String ?? "Not found"
+
+                dustbin.latitude = latitude
+                dustbin.longitude = longitude
+                
+                self.trashCans.updateValue(Double(dustbin.longitude!) as! Double, forKey: Double(dustbin.latitude!) as! Double)
+                
+                print(self.trashCans)
+                
+            }
+        })
     }
 }
 
