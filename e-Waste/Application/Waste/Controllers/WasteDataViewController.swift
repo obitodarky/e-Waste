@@ -24,7 +24,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: (self.wasteCollectionView.frame.size.width - 20)/2, height: (self.wasteCollectionView.frame.height)/2)
+
 
     }
     
