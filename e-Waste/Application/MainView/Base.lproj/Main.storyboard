@@ -123,7 +123,7 @@
         <!--Waste Collection View Controller-->
         <scene sceneID="sII-JO-KOc">
             <objects>
-                <viewController id="eYN-4k-1XP" customClass="WasteCollectionViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="waste_col" id="eYN-4k-1XP" customClass="WasteCollectionViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7c-Bl-mkr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
