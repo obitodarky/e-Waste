@@ -13,6 +13,7 @@ import Firebase
 class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
+
     var ref: DatabaseReference!
     var scrapList = [Organizations]()
     
@@ -25,6 +26,7 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         scrapTableView.delegate = self
         scrapTableView.dataSource = self
+        
 
     }
     
@@ -38,6 +40,10 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.company_name.text = scraps_list.name
         cell.company_description.text = scraps_list.desc
         cell.company_phone_number.text = scraps_list.number
+        cell.donateButton.layer.shadowOpacity = 0.15
+        cell.donateButton.layer.shadowRadius = 1
+        cell.donateButton.layer.shadowColor = UIColor.black.cgColor
+        cell.donateButton.layer.cornerRadius = 1
         
         if let organizationImageUrl = URL(string: scraps_list.image!){
             print(organizationImageUrl)

@@ -371,6 +371,7 @@
                                             <outlet property="company_image" destination="aVC-2I-BbE" id="eBJ-U2-ssL"/>
                                             <outlet property="company_name" destination="kli-qJ-X2U" id="vGs-21-6oO"/>
                                             <outlet property="company_phone_number" destination="wa8-wa-vvZ" id="SBr-ZF-bJw"/>
+                                            <outlet property="donateButton" destination="Xzy-PL-Z5Y" id="hKp-Y9-Sgu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
