@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="2640.579710144928" y="-48.097826086956523"/>
         </scene>
-        <!--Waste Collection View Controller-->
+        <!--Waste Data View Controller-->
         <scene sceneID="sII-JO-KOc">
             <objects>
-                <viewController storyboardIdentifier="waste_col" id="eYN-4k-1XP" customClass="WasteCollectionViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="waste_col" id="eYN-4k-1XP" customClass="WasteDataViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7c-Bl-mkr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

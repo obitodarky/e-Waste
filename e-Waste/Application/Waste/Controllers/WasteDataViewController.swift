@@ -8,7 +8,8 @@
 
 import UIKit
 
-class WasteDataViewController: UIViewController {
+class WasteDataViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +27,12 @@ class WasteDataViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
 }
