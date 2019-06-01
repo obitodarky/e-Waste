@@ -37,7 +37,7 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
         tableView.isUserInteractionEnabled = true
         tableView.layer.cornerRadius = 5
         tableView.layer.masksToBounds = true
-        
+        tableView.rowHeight = 254
         fetchUser()
     }
     
