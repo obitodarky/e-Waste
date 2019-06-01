@@ -51,7 +51,7 @@ class MapView: UIViewController {
     }
     
     func setAnnotations(){
-        self.areaMapView.removeAnnotations(self.areaMapView.annotations)
+        //self.areaMapView.removeAnnotations(self.areaMapView.annotations)
 
         for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
@@ -62,11 +62,11 @@ class MapView: UIViewController {
     }
     
     func getDirections(to coordinate: CLLocationCoordinate2D){
-        self.areaMapView.removeOverlays(self.areaMapView.overlays)
+        
         guard let location = locationManager.location?.coordinate else{ return }
         let request = createDirectionsRequest(from: location, to: coordinate)
         let directions = MKDirections(request: request)
-        
+        self.areaMapView.removeOverlays(self.areaMapView.overlays)
         directions.calculate { [unowned self] (response, error) in
             guard let response = response else { return }
             for route in response.routes {
@@ -103,9 +103,6 @@ class MapView: UIViewController {
                 dustbin.longitude = longitude
                 
                 //self.trashCans.updateValue(Double(dustbin.longitude!), forKey: Double(dustbin.latitude!))
-                
-                
-                
             }
         })
         //setAnnotations()
@@ -135,7 +132,10 @@ extension MapView: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) { getDirections(to: view.annotation!.coordinate) }
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        getDirections(to: view.annotation!.coordinate)
+        
+    }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
