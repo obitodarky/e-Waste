@@ -39,6 +39,12 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let wastes = wasteData[indexPath.row]
         cell.wasteName.text = wastes.name
+        cell.wasteType.text = wastes.waste_type
+        cell.wasteDescription.text = wastes.waste_description
+        cell.wasteImage.layer.shadowOpacity = 0.15
+        cell.wasteImage.layer.shadowRadius = 1
+        cell.wasteImage.layer.shadowColor = UIColor.black.cgColor
+        cell.wasteImage.layer.cornerRadius = 1
         if let wasteImageUrl = URL(string: wastes.waste_image!){
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: wasteImageUrl)
