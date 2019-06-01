@@ -39,7 +39,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         
         let wastes = wasteData[indexPath.row]
         cell.wasteName.text = wastes.name
-        cell.wasteType.text = wastes.waste_type
+        cell.wasteType.text = "(\(String(wastes.waste_type)))"
         cell.wasteDescription.text = wastes.waste_description
         cell.wasteImage.layer.shadowOpacity = 0.15
         cell.wasteImage.layer.shadowRadius = 1
