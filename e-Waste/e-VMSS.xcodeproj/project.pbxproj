@@ -17,6 +17,7 @@
 		08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */; };
 		08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */; };
 		088E9EFE22A24CD800A692DC /* Dustbins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EFD22A24CD800A692DC /* Dustbins.swift */; };
+		088E9F0022A2767F00A692DC /* WasteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EFF22A2767F00A692DC /* WasteCollectionViewController.swift */; };
 		089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9D223A212100C45B26 /* AppDelegate.swift */; };
 		089D3EA0223A212100C45B26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* LoginViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteTypeViewController.swift; sourceTree = "<group>"; };
 		08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationViewController.swift; sourceTree = "<group>"; };
 		088E9EFD22A24CD800A692DC /* Dustbins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dustbins.swift; sourceTree = "<group>"; };
+		088E9EFF22A2767F00A692DC /* WasteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteCollectionViewController.swift; sourceTree = "<group>"; };
 		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
 				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 				08BB075522928DFC00A51310 /* WasteDescriptionViewController.swift */,
+				088E9EFF22A2767F00A692DC /* WasteCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,
 				08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
+				088E9F0022A2767F00A692DC /* WasteCollectionViewController.swift in Sources */,
 				08B76231229BB12C00CDB482 /* Organizations.swift in Sources */,
 				0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */,
 				08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */,
