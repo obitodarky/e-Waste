@@ -20,13 +20,14 @@ class MapView: UIViewController {
     let sampleTrash = MKPointAnnotation()
     var ref: DatabaseReference!
     //dictonary for trashcan locations : [latititude: longitute]
-    var trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
+    var trashCans = [Double?: Double?]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         areaMapView.delegate = self
-        setLocation()
         fetchData()
+        setLocation()
+        
 
     }
     
@@ -45,17 +46,19 @@ class MapView: UIViewController {
     func setLocation() {
         areaMapView.showsUserLocation = true
         locationManager.startUpdatingLocation()
+        fetchData()
         centerLocation()
         setAnnotations()
     }
     
     func setAnnotations(){
         self.areaMapView.removeAnnotations(self.areaMapView.annotations)
-        
+        fetchData()
+        print(trashCans)
         for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
             trashLocation.subtitle = "Trash"
-            trashLocation.coordinate = CLLocationCoordinate2D(latitude: latitutde, longitude: longitute)
+            trashLocation.coordinate = CLLocationCoordinate2D(latitude: latitutde!, longitude: longitute!)
             self.areaMapView.addAnnotation(trashLocation)
         }
     }
@@ -101,12 +104,13 @@ class MapView: UIViewController {
                 dustbin.latitude = latitude
                 dustbin.longitude = longitude
                 
-                self.trashCans.updateValue(Double(dustbin.longitude!) as! Double, forKey: Double(dustbin.latitude!) as! Double)
+                self.trashCans.updateValue(Double(dustbin.longitude!), forKey: Double(dustbin.latitude!))
                 
-                print(self.trashCans)
+                
                 
             }
         })
+        //setAnnotations()
     }
 }
 
