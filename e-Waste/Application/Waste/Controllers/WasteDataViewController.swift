@@ -37,6 +37,17 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
        
         let cell = wasteCollectionView.dequeueReusableCell(withReuseIdentifier: "waste_col", for: indexPath) as! WasteCollectionViewCell
         
+        let wastes = wasteData[indexPath.row]
+        cell.wasteName.text = wastes.name
+        if let wasteImageUrl = URL(string: wastes.waste_image!){
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: wasteImageUrl)
+                if let data = data {
+                    let final_image = UIImage(data: data)
+                    DispatchQueue.main.async { cell.wasteImage.image = final_image }
+                }
+            }
+        }
         
         return cell
        
