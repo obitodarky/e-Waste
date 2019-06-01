@@ -18,6 +18,11 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (self.wasteCollectionView.frame.size.width - 20)/2, height: (self.wasteCollectionView.frame.height)/2)
         // Do any additional setup after loading the view.
     }
     
@@ -39,6 +44,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let cell = wasteCollectionView.dequeueReusableCell(withReuseIdentifier: "waste_col", for: indexPath) as! WasteCollectionViewCell
+        
         
         return cell
        
