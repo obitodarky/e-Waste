@@ -34,6 +34,10 @@ class WasteTypeViewController: UIViewController,UITableViewDataSource,UITableVie
         tableView.delegate  = self
         tableView.dataSource = self
         
+        tableView.isUserInteractionEnabled = true
+        tableView.layer.cornerRadius = 5
+        tableView.layer.masksToBounds = true
+        
         fetchUser()
     }
     
