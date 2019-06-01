@@ -11,6 +11,10 @@ import UIKit
 class WasteDataViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
 
+    @IBOutlet var wasteCollectionView: UICollectionView!
+    
+    var wasteData = [Waste]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,11 +32,16 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        
+        return wasteData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+       
+        let cell = wasteCollectionView.dequeueReusableCell(withReuseIdentifier: "waste_col", for: indexPath) as! WasteCollectionViewCell
+        
+        return cell
+       
     }
     
 }
