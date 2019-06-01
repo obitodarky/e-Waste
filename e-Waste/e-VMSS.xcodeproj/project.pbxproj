@@ -18,6 +18,7 @@
 		08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */; };
 		088E9EFE22A24CD800A692DC /* Dustbins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EFD22A24CD800A692DC /* Dustbins.swift */; };
 		088E9F0022A2767F00A692DC /* WasteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EFF22A2767F00A692DC /* WasteCollectionViewController.swift */; };
+		088E9F0222A277E100A692DC /* WasteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */; };
 		089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9D223A212100C45B26 /* AppDelegate.swift */; };
 		089D3EA0223A212100C45B26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089D3E9F223A212100C45B26 /* LoginViewController.swift */; };
 		089D3EA3223A212100C45B26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089D3EA1223A212100C45B26 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationViewController.swift; sourceTree = "<group>"; };
 		088E9EFD22A24CD800A692DC /* Dustbins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dustbins.swift; sourceTree = "<group>"; };
 		088E9EFF22A2767F00A692DC /* WasteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteCollectionViewController.swift; sourceTree = "<group>"; };
+		088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteCollectionViewCell.swift; sourceTree = "<group>"; };
 		089D3E9A223A212100C45B26 /* e-VMSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-VMSS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		089D3E9D223A212100C45B26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089D3E9F223A212100C45B26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				08BB07512292716000A51310 /* WasteDescriptionTableViewCell.swift */,
+				088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088E9F0222A277E100A692DC /* WasteCollectionViewCell.swift in Sources */,
 				0849C2B322991D940009EDB0 /* Waste.swift in Sources */,
 				08B76237229D17A800CDB482 /* LoginTextField.swift in Sources */,
 				08BB075622928DFC00A51310 /* WasteDescriptionViewController.swift in Sources */,

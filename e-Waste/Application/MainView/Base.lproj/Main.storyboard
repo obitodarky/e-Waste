@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="2640.579710144928" y="-48.097826086956523"/>
         </scene>
-        <!--View Controller-->
+        <!--Waste Collection View Controller-->
         <scene sceneID="sII-JO-KOc">
             <objects>
-                <viewController id="eYN-4k-1XP" sceneMemberID="viewController">
+                <viewController id="eYN-4k-1XP" customClass="WasteCollectionViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B7c-Bl-mkr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pRr-Kl-6JL">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="waste_col" id="pRr-Kl-6JL" customClass="WasteCollectionViewCell" customModule="e_VMSS" customModuleProvider="target">
                                         <rect key="frame" x="14.666666666666666" y="0.0" width="385" height="381"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
