@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 import Firebase
+import SVProgressHUD
 
 class ReportWasteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -65,6 +66,9 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                         reference.child("Location").setValue("Coordinates")
                         reference.child("Photo").setValue("Image")
                         reference.child("User").setValue(uid)
+                        
+                        SVProgressHUD.show(withStatus: "Reporting")
+                        self.reportStatus.text = "✅ Photo Submitted!"
                     })
                     
                 }
@@ -86,7 +90,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         wastePhoto.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
-        reportStatus.text = "✅ Photo Submitted!"
+        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
