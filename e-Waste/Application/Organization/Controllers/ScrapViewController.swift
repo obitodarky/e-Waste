@@ -45,6 +45,14 @@ class ScrapViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.donateButton.layer.shadowColor = UIColor.black.cgColor
         cell.donateButton.layer.cornerRadius = 1
         
+        cell.company_image.layer.shadowColor = UIColor.black.cgColor
+        cell.company_image.layer.cornerRadius = 1
+        cell.company_image.layer.masksToBounds = false
+        cell.company_image.layer.shadowOpacity = 0.3
+        cell.company_image.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
+        cell.company_image.layer.shadowRadius = 2
+        cell.company_image.layer.shouldRasterize = true
+        
         if let organizationImageUrl = URL(string: scraps_list.image!){
             print(organizationImageUrl)
             DispatchQueue.global().async {

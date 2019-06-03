@@ -20,11 +20,10 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchUser()
-        let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         
+        let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
-
 
     }
     
