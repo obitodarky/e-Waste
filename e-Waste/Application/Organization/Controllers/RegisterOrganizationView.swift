@@ -59,27 +59,35 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         else{
             SVProgressHUD.show(withStatus: "Registering")
             ref = Database.database().reference()
-            let reference = ref.child("Organization")
+            
             let storageRef = Storage.storage().reference().child("profilePhoto" + organizationName.text!)
             if let uploadData = organizationImage.image?.pngData(){
-                storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-                    if(error != nil) {
-                        print(error!)
-                        return
-                    } else {
-                        //
-                        
+                storageRef.putData(uploadData, metadata: nil) { (metadata, eror) in
+                    storageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+                            // Uh-oh, an error occurred!
+                            return
+                        }
+                            let reference = self.ref.child("Organization")
+                        reference.child(self.organizationName.text!).child("name").setValue(self.organizationName.text)
+                        reference.child(self.organizationName.text!).child("name").setValue(self.organizationName.text)
+                        reference.child(self.organizationName.text!).child("number").setValue(self.organizationNumber.text)
+                        reference.child(self.organizationName.text!).child("desc").setValue(self.organizationDescription.text)
+                            reference.child(self.organizationName.text!).child("image").setValue(downloadURL.absoluteString)
+                            SVProgressHUD.dismiss()
+                            self.registrationStatus.text = "✅Registration Successful!"
                     }
+
+                    
                 }
+                
+
             }
             
-            reference.child(organizationName.text!).child("name").setValue(organizationName.text)
-            reference.child(organizationName.text!).child("number").setValue(organizationNumber.text)
-            reference.child(organizationName.text!).child("desc").setValue(organizationDescription.text)
+        
             
 
-            SVProgressHUD.dismiss()
-            registrationStatus.text = "✅Registration Successful!"
+
         }
     }
     //MARK: image picker
@@ -97,11 +105,14 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         imagePicker.sourceType = .photoLibrary
         imagePicker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(imagePicker, animated: true, completion: nil)
+        
+        
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         organizationImage.image = wasteImage
+
         imagePicker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) { dismiss(animated: true, completion: nil) }
