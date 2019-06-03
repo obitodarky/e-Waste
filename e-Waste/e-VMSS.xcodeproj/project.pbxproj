@@ -14,7 +14,6 @@
 		08557C80224A3CF400431369 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08557C7F224A3CF400431369 /* MapView.swift */; };
 		0863A9A6224DC44A000CA160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0863A9A5224DC44A000CA160 /* Assets.xcassets */; };
 		0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */; };
-		08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */; };
 		08743EBD2249EA2300C2389C /* CoreLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */; };
 		088E9EFE22A24CD800A692DC /* Dustbins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9EFD22A24CD800A692DC /* Dustbins.swift */; };
 		088E9F0222A277E100A692DC /* WasteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */; };
@@ -39,7 +38,6 @@
 		08557C7F224A3CF400431369 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0863A9A5224DC44A000CA160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportWasteViewController.swift; sourceTree = "<group>"; };
-		08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteTypeViewController.swift; sourceTree = "<group>"; };
 		08743EBC2249EA2300C2389C /* CoreLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationViewController.swift; sourceTree = "<group>"; };
 		088E9EFD22A24CD800A692DC /* Dustbins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dustbins.swift; sourceTree = "<group>"; };
 		088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				0863A9A7224DD382000CA160 /* ReportWasteViewController.swift */,
-				08743EBA22479BAC00C2389C /* WasteTypeViewController.swift */,
 				088E9F0322A27F5500A692DC /* WasteDataViewController.swift */,
 			);
 			path = Controllers;
@@ -399,7 +396,6 @@
 				08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */,
 				0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */,
 				08557C80224A3CF400431369 /* MapView.swift in Sources */,
-				08743EBB22479BAC00C2389C /* WasteTypeViewController.swift in Sources */,
 				089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
