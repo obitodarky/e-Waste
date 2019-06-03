@@ -84,10 +84,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
 
             }
             
-        
-            
-
-
         }
     }
     //MARK: image picker
