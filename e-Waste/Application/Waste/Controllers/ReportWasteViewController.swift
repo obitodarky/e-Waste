@@ -46,35 +46,38 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         minutes = calendar.component(.minute, from: date)
         seconds = calendar.component(.second, from: date)
         
-        let date = String(year) + String(week) + String(hour) + String(minutes) + String(seconds)
-        
-        let user = Auth.auth().currentUser
-        let uid = user!.uid
-        ref = Database.database().reference().child("Photos")
-        let reference = ref.child(date)
-        
-        let storageRef = Storage.storage().reference().child("wastePhoto:" + date)
-        if let uploadData = wastePhoto.image?.pngData(){
-            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-                if(error != nil) {
-                    print(error!)
-                    return
-                } else {
-                    storageRef.downloadURL(completion: { (url, error) in
-                        guard let downloadURL = url else { return }
-                        print(downloadURL)
-                        reference.child("Location").setValue("Coordinates")
-                        reference.child("Photo").setValue("Image")
-                        reference.child("User").setValue(uid)
+        if(wastePhoto.image == nil){
+            reportStatus.text = "Please select a photo"
+        } else {
+            let date = String(year) + String(week) + String(hour) + String(minutes) + String(seconds)
+            
+            let user = Auth.auth().currentUser
+            let uid = user!.uid
+            ref = Database.database().reference().child("Photos")
+            let reference = ref.child(date)
+            
+            let storageRef = Storage.storage().reference().child("wastePhoto:" + date)
+            if let uploadData = wastePhoto.image?.pngData(){
+                storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                    if(error != nil) {
+                        print(error!)
+                        return
+                    } else {
+                        storageRef.downloadURL(completion: { (url, error) in
+                            guard let downloadURL = url else { return }
+                            print(downloadURL)
+                            reference.child("Location").setValue("Coordinates")
+                            reference.child("Photo").setValue("Image")
+                            reference.child("User").setValue(uid)
+                            
+                            SVProgressHUD.show(withStatus: "Reporting")
+                            self.reportStatus.text = "✅ Photo Submitted!"
+                        })
                         
-                        SVProgressHUD.show(withStatus: "Reporting")
-                        self.reportStatus.text = "✅ Photo Submitted!"
-                    })
-                    
+                    }
                 }
             }
         }
-
     }
     @IBAction func takePhoto(_sender: Any){
         imagePicker.delegate = self
