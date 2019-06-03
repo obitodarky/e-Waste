@@ -50,7 +50,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         let user = Auth.auth().currentUser
         let uid = user!.uid
         ref = Database.database().reference().child("Photos")
-        let reference = ref.child(date).child(uid)
+        let reference = ref.child(date)
         
         let storageRef = Storage.storage().reference().child("wastePhoto:" + date)
         if let uploadData = wastePhoto.image?.pngData(){
@@ -62,14 +62,15 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                     storageRef.downloadURL(completion: { (url, error) in
                         guard let downloadURL = url else { return }
                         print(downloadURL)
-                        //reference.child(self.organizationName.text!).child("image").setValue(downloadURL)
+                        reference.child("Location").setValue("Coordinates")
+                        reference.child("Photo").setValue("Image")
+                        reference.child("User").setValue(uid)
                     })
                     
                 }
             }
         }
-        reference.child("Location").setValue("Coordinates")
-        reference.child("Photo").setValue("Image")
+
     }
     @IBAction func takePhoto(_sender: Any){
         imagePicker.delegate = self
