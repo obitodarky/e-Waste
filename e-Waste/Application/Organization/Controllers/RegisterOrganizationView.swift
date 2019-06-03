@@ -67,10 +67,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
                         print(error!)
                         return
                     } else {
-                        storageRef.downloadURL(completion: { (url, error) in
-                            guard let downloadURL = url else { return }
-                            reference.child(self.organizationName.text!).child("image").setValue(downloadURL)
-                        })
+                        //
                         
                     }
                 }
