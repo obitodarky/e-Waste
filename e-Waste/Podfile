@@ -12,6 +12,8 @@ target 'e-VMSS' do
     pod 'Firebase/Storage'
     pod 'SVProgressHUD'
     pod 'GoogleSignIn'
+    pod 'CountryPicker', '~> 1.3'
+
 end
 
 post_install do |installer|
