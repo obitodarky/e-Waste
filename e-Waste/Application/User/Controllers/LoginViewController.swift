@@ -35,6 +35,13 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         signUp.layer.shadowRadius = 1
         signUp.layer.shadowColor = UIColor.black.cgColor
         signUp.layer.cornerRadius = 1
+        
+        email.layer.borderWidth = 2.0
+        email.layer.cornerRadius = 5.0
+        email.layer.borderColor = UIColor.black.cgColor
+        password.layer.borderWidth = 2.0
+        password.layer.cornerRadius = 5.0
+        password.layer.borderColor = UIColor.black.cgColor
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
