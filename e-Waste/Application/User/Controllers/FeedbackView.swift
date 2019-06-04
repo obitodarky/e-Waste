@@ -30,7 +30,7 @@ class FeedbackView: UIViewController {
         super.viewDidLoad()
         
         feedbackSent.text = ""
-        feedbackMessage.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        feedbackMessage.layer.borderColor = UIColor.black.cgColor
         feedbackMessage.layer.borderWidth = 2.0;
         feedbackMessage.layer.cornerRadius = 5.0;
     }
