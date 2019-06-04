@@ -32,6 +32,18 @@ class UserReigsterViewController: UIViewController {
         signUpButton.layer.shadowRadius = 1
         signUpButton.layer.shadowColor = UIColor.black.cgColor
         signUpButton.layer.cornerRadius = 1
+        userEmail.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        userEmail.layer.borderWidth = 2.0
+        userEmail.layer.cornerRadius = 5.0
+        userLastName.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        userFirstName.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        userPassword.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        userLastName.layer.borderWidth = 2.0
+        userFirstName.layer.borderWidth = 2.0
+        userPassword.layer.borderWidth = 2.0
+        userPassword.layer.cornerRadius = 5.0
+        userLastName.layer.cornerRadius = 5.0
+        userFirstName.layer.cornerRadius = 5.0
     }
     
     func wrongSignIn(){

@@ -31,9 +31,15 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         submitOrgButton.layer.shadowRadius = 1
         submitOrgButton.layer.shadowColor = UIColor.black.cgColor
         submitOrgButton.layer.cornerRadius = 1
-        organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        organizationDescription.layer.borderWidth = 1.0
+        organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        organizationDescription.layer.borderWidth = 2.0
         organizationDescription.layer.cornerRadius = 5.0
+        organizationName.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        organizationNumber.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
+        organizationName.layer.borderWidth = 2.0
+        organizationNumber.layer.borderWidth = 2.0
+        organizationName.layer.cornerRadius = 5.0
+        organizationNumber.layer.cornerRadius = 5.0
     }
     func wrongSubmit(){
         registrationStatus.frame.size.height = 22
