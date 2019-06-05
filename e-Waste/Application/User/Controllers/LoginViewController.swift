@@ -17,7 +17,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var incorrectLogin: UILabel!
-    
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signUp: UIButton!
     
