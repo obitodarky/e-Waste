@@ -40,6 +40,7 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         organizationNumber.layer.borderWidth = 2.0
         organizationName.layer.cornerRadius = 5.0
         organizationNumber.layer.cornerRadius = 5.0
+
     }
     func wrongSubmit(){
         registrationStatus.frame.size.height = 22
@@ -87,7 +88,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
                     
                 }
                 
-
             }
             
         }
