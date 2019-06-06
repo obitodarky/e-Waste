@@ -54,7 +54,6 @@ class UserReigsterViewController: UIViewController {
             && userPhoneNumber.text != ""){
             
             SVProgressHUD.show(withStatus: "Signing up")
-            
             Auth.auth().createUser(withEmail: userEmail.text!, password: userPassword.text!) { (user, error) in
                 if(error != nil ){
                     SVProgressHUD.dismiss()
