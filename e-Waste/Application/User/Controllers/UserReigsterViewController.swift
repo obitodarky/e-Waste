@@ -40,7 +40,7 @@ class UserReigsterViewController: UIViewController {
         animation.duration = 0.07
         animation.repeatCount = 3
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: error_message.center.x - 10, y: error_message.center.y) )
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: error_message.center.x - 10, y: error_message.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: error_message.center.x + 10, y: error_message.center.y))
         
         error_message.layer.add(animation, forKey: "position")
@@ -62,7 +62,6 @@ class UserReigsterViewController: UIViewController {
                     self.wrongSignIn()
                 } else {
                     if Auth.auth().currentUser != nil {
-                        // User is signed in.
                         
                         self.ref = Database.database().reference()
                         let reference = self.ref!
@@ -75,7 +74,6 @@ class UserReigsterViewController: UIViewController {
                         reference.child("Users").child(uid).child("email").setValue(uemail)
                         reference.child("Users").child(uid).child("number").setValue(self.userPhoneNumber.text)
                     } else {
-                        // No user is signed in.
                         self.wrongSignIn()
                     }
                     SVProgressHUD.dismiss()

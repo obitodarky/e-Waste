@@ -28,7 +28,6 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return wasteData.count
     }
     
