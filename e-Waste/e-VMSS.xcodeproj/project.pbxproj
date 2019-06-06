@@ -161,7 +161,7 @@
 			children = (
 				0863A9A5224DC44A000CA160 /* Assets.xcassets */,
 				084E1884224213AE00A7183E /* e-Waste */,
-				089D3E9C223A212100C45B26 /* App */,
+				089D3E9C223A212100C45B26 /* e-VMSS */,
 				089D3E9B223A212100C45B26 /* Products */,
 				3DFD2B441D197CA74DC23949 /* Pods */,
 				FAC934A239B411FEF5812A1C /* Frameworks */,
@@ -176,14 +176,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		089D3E9C223A212100C45B26 /* App */ = {
+		089D3E9C223A212100C45B26 /* e-VMSS */ = {
 			isa = PBXGroup;
 			children = (
 				08A97A83228A99690080A7E4 /* GoogleService-Info.plist */,
 				089D3E9D223A212100C45B26 /* AppDelegate.swift */,
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
-			path = App;
+			path = "e-VMSS";
 			sourceTree = "<group>";
 		};
 		08B76232229BD8D000CDB482 /* User */ = {
