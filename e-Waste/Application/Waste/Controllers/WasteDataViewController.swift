@@ -55,13 +55,10 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
                     let final_image = UIImage(data: data)
                     DispatchQueue.main.async {
                         cell.wasteImage.image = final_image
-    
-
                     }
                 }
             }
         }
-        
         return cell
        
     }
