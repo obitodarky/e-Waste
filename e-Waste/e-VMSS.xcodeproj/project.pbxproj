@@ -72,16 +72,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		084E18822242136A00A7183E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				0849C2B222991D940009EDB0 /* Waste.swift */,
-				08B76230229BB12C00CDB482 /* Organizations.swift */,
-				088E9EFD22A24CD800A692DC /* Dustbins.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		084E1883224213A500A7183E /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +82,7 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		084E1884224213AE00A7183E /* Application */ = {
+		084E1884224213AE00A7183E /* e-Waste */ = {
 			isa = PBXGroup;
 			children = (
 				084E1883224213A500A7183E /* MainView */,
@@ -101,7 +91,7 @@
 				08B76233229BD92E00CDB482 /* Organization */,
 				08B76232229BD8D000CDB482 /* User */,
 			);
-			path = Application;
+			path = "e-Waste";
 			sourceTree = "<group>";
 		};
 		088E9EF822A1018D00A692DC /* Controllers */ = {
@@ -149,13 +139,29 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		088E9F0522A9273F00A692DC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0849C2B222991D940009EDB0 /* Waste.swift */,
+				088E9EFD22A24CD800A692DC /* Dustbins.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		088E9F0622A9275C00A692DC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				08B76230229BB12C00CDB482 /* Organizations.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		089D3E91223A212100C45B26 = {
 			isa = PBXGroup;
 			children = (
 				0863A9A5224DC44A000CA160 /* Assets.xcassets */,
-				084E1884224213AE00A7183E /* Application */,
-				084E18822242136A00A7183E /* Models */,
-				089D3E9C223A212100C45B26 /* e-VMSS */,
+				084E1884224213AE00A7183E /* e-Waste */,
+				089D3E9C223A212100C45B26 /* App */,
 				089D3E9B223A212100C45B26 /* Products */,
 				3DFD2B441D197CA74DC23949 /* Pods */,
 				FAC934A239B411FEF5812A1C /* Frameworks */,
@@ -170,14 +176,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		089D3E9C223A212100C45B26 /* e-VMSS */ = {
+		089D3E9C223A212100C45B26 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				08A97A83228A99690080A7E4 /* GoogleService-Info.plist */,
 				089D3E9D223A212100C45B26 /* AppDelegate.swift */,
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
-			path = "e-VMSS";
+			path = App;
 			sourceTree = "<group>";
 		};
 		08B76232229BD8D000CDB482 /* User */ = {
@@ -191,6 +197,7 @@
 		08B76233229BD92E00CDB482 /* Organization */ = {
 			isa = PBXGroup;
 			children = (
+				088E9F0622A9275C00A692DC /* Modules */,
 				088E9EFB22A101E100A692DC /* Controllers */,
 				088E9EFA22A101D500A692DC /* Views */,
 			);
@@ -200,6 +207,7 @@
 		08B76234229BD94000CDB482 /* Waste */ = {
 			isa = PBXGroup;
 			children = (
+				088E9F0522A9273F00A692DC /* Modules */,
 				088E9EF922A101A900A692DC /* Views */,
 				088E9EF822A1018D00A692DC /* Controllers */,
 			);
