@@ -21,7 +21,13 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     @IBOutlet var signUp: UIButton!
     
     @IBAction func showPassword(_ sender: Any) {
-        password.isSecureTextEntry = false
+        if(password.isSecureTextEntry){
+            password.isSecureTextEntry = false
+        } else {
+            password.isSecureTextEntry = true
+        }
+        
+        
     }
     
     override func viewDidLoad() {
