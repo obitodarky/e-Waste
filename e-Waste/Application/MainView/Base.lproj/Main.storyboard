@@ -96,6 +96,14 @@
                                 <color key="textColor" red="0.35686274509803922" green="0.396078431372549" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLZ-10-IPU">
+                                <rect key="frame" x="325" y="348" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-eye-52"/>
+                                <connections>
+                                    <action selector="showPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYj-TS-sYu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.44313725490196076" green="0.85882352941176465" blue="0.56470588235294117" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1002,6 +1010,7 @@
     </scenes>
     <resources>
         <image name="icons8-error-96" width="96" height="96"/>
+        <image name="icons8-eye-52" width="52" height="52"/>
         <image name="icons8-feedback-128" width="128" height="128"/>
         <image name="icons8-form-96" width="96" height="96"/>
         <image name="icons8-google-images-96" width="96" height="96"/>
