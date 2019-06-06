@@ -43,7 +43,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         wastePhoto.layer.shadowOpacity = 0.3
         wastePhoto.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
         wastePhoto.layer.shadowRadius = 2
-        wastePhoto.layer.shouldRasterize = true
+        wastePhoto.layer.shouldRasterize = true 
     }
     
     @IBAction func reportPhoto(_ sender: Any) {
