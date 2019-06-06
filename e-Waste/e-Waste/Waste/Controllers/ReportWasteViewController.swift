@@ -55,7 +55,6 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
             let uid = user!.uid
             ref = Database.database().reference().child("Photos")
             let reference = ref.child(date)
-            
             let storageRef = Storage.storage().reference().child("wastePhoto:" + date)
             if let uploadData = wastePhoto.image?.pngData(){
                 storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
