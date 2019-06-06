@@ -751,7 +751,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJl-DA-HY5">
-                                <rect key="frame" x="142" y="610" width="130" height="21"/>
+                                <rect key="frame" x="20" y="610" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -759,7 +759,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="dJl-DA-HY5" secondAttribute="trailing" constant="142" id="1Ac-da-jCY"/>
+                            <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="dJl-DA-HY5" secondAttribute="trailing" constant="20" id="1Ac-da-jCY"/>
                             <constraint firstItem="BLC-8M-HhL" firstAttribute="trailing" secondItem="Cie-Nx-Nb5" secondAttribute="trailing" id="7QE-7c-Hcc"/>
                             <constraint firstItem="Cie-Nx-Nb5" firstAttribute="trailing" secondItem="bKd-fv-f8X" secondAttribute="trailing" constant="20" id="8q4-db-3iK"/>
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="top" secondItem="jue-cZ-H59" secondAttribute="bottom" constant="17" id="8vh-Fs-j00"/>
@@ -779,7 +779,7 @@
                             <constraint firstItem="fU5-tj-KjV" firstAttribute="trailing" secondItem="J8c-cL-0JQ" secondAttribute="trailingMargin" id="aUi-dT-0nM"/>
                             <constraint firstItem="BLC-8M-HhL" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" id="fqu-8j-fsU"/>
                             <constraint firstItem="SVw-gJ-9Ia" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="146" id="jhk-Z4-Zcf"/>
-                            <constraint firstItem="dJl-DA-HY5" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="142" id="pff-uO-7J4"/>
+                            <constraint firstItem="dJl-DA-HY5" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="pff-uO-7J4"/>
                             <constraint firstItem="jue-cZ-H59" firstAttribute="top" secondItem="BLC-8M-HhL" secondAttribute="bottom" constant="10" id="qNa-cu-dPd"/>
                             <constraint firstItem="mP0-yO-dH9" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="175" id="qlE-aO-aAR"/>
                             <constraint firstItem="jue-cZ-H59" firstAttribute="leading" secondItem="Cie-Nx-Nb5" secondAttribute="leading" constant="20" id="v6N-sP-t8u"/>
