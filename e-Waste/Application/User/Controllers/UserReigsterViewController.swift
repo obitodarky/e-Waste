@@ -25,25 +25,12 @@ class UserReigsterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         error_message.text = ""
         signUpButton.layer.shadowOpacity = 0.15
         signUpButton.layer.shadowRadius = 1
         signUpButton.layer.shadowColor = UIColor.black.cgColor
         signUpButton.layer.cornerRadius = 1
-        userEmail.layer.borderColor = UIColor.black.cgColor
-        userEmail.layer.borderWidth = 2.0
-        userEmail.layer.cornerRadius = 5.0
-        userLastName.layer.borderColor = UIColor.black.cgColor
-        userFirstName.layer.borderColor = UIColor.black.cgColor
-        userPassword.layer.borderColor = UIColor.black.cgColor
-        userLastName.layer.borderWidth = 2.0
-        userFirstName.layer.borderWidth = 2.0
-        userPassword.layer.borderWidth = 2.0
-        userPassword.layer.cornerRadius = 5.0
-        userLastName.layer.cornerRadius = 5.0
-        userFirstName.layer.cornerRadius = 5.0
+
     }
     
     func wrongSignIn(){
