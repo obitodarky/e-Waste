@@ -18,6 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xux-Cw-kf1" customClass="UIViewX" customModule="e_VMSS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ipl-LE-O65" customClass="LoginTextField" customModule="e_VMSS" customModuleProvider="target">
                                 <rect key="frame" x="59" y="256" width="296" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,14 +118,20 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="xux-Cw-kf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6dv-qw-Vt1"/>
+                            <constraint firstItem="xux-Cw-kf1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7PT-zo-Jj2"/>
+                            <constraint firstItem="xux-Cw-kf1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="8eI-J6-dP1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xux-Cw-kf1" secondAttribute="bottom" id="YXR-2I-7dU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.4431372549" green="0.85882352939999995" blue="0.56470588239999997" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -121,7 +139,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="Ipl-LE-O65" id="ckq-3B-zDO"/>
-                        <outlet property="gradientView" destination="8bC-Xf-vdC" id="ibk-bY-ohe"/>
+                        <outlet property="gradientView" destination="xux-Cw-kf1" id="7HG-LD-kOi"/>
                         <outlet property="incorrectLogin" destination="zbn-cw-Oac" id="zp5-vT-Fnz"/>
                         <outlet property="loginButton" destination="GgT-Tr-R40" id="1UZ-lN-GLF"/>
                         <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
@@ -137,7 +155,7 @@
         <scene sceneID="sII-JO-KOc">
             <objects>
                 <viewController storyboardIdentifier="waste_col" id="eYN-4k-1XP" customClass="WasteDataViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="B7c-Bl-mkr">
+                    <view key="view" contentMode="scaleToFill" id="B7c-Bl-mkr" customClass="UIViewX" customModule="e_VMSS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -151,6 +169,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" fixedFrame="YES" id="9IG-C3-13B" customClass="UIViewX" customModule="e_VMSS" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="waste_col" id="pRr-Kl-6JL" customClass="WasteCollectionViewCell" customModule="e_VMSS" customModuleProvider="target">
                                         <rect key="frame" x="10" y="0.0" width="394" height="381"/>
@@ -206,6 +229,7 @@
                         <viewLayoutGuide key="safeArea" id="xvJ-rU-CLN"/>
                     </view>
                     <connections>
+                        <outlet property="gradientView" destination="9IG-C3-13B" id="6CI-p0-v4Q"/>
                         <outlet property="wasteCollectionView" destination="h9n-Uu-QMA" id="qKp-OC-f9Y"/>
                     </connections>
                 </viewController>

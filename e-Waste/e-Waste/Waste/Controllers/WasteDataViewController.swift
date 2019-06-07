@@ -12,7 +12,13 @@ import Firebase
 class WasteDataViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
 
+
+    @IBOutlet var gradientView: UIViewX!
     @IBOutlet var wasteCollectionView: UICollectionView!
+    
+    var colorArrayIndex = -1
+    
+    var colorArray: [(color1: UIColor, color2: UIColor)] = []
     
     var wasteData = [Waste]()
     var ref: DatabaseReference!
@@ -21,10 +27,37 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         super.viewDidLoad()
         fetchUser()
         
+        colorArray.append((color1: #colorLiteral(red: 0.5033842325, green: 0.8740338683, blue: 0.6319764256, alpha: 0.8470588235), color2: #colorLiteral(red: 0.3411764801, green: 0.8529547339, blue: 0.4490480466, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.3411764801, green: 0.8529547339, blue: 0.4490480466, alpha: 1), color2: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), color2: #colorLiteral(red: 0.2392156869, green: 0.8018642754, blue: 0.9686274529, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.2392156869, green: 0.8018642754, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), color2: #colorLiteral(red: 0.4044704911, green: 0.8740338683, blue: 1, alpha: 0.8470588235)))
+        colorArray.append((color1: #colorLiteral(red: 0.4044704911, green: 0.8740338683, blue: 1, alpha: 0.8470588235), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
+        colorArray.append((color1: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), color2: #colorLiteral(red: 0.4164567924, green: 0.8740338683, blue: 0.4390986431, alpha: 0.8470588235)))
+        
+        
         let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
+        animateBackgroundColor()
 
+    }
+    func animateBackgroundColor(){
+        //colorArrayIndex = colorArrayIndex == (colorArray.count -1) ? 0 : colorArrayIndex + 1
+        if(colorArrayIndex == colorArray.count - 1){
+            colorArrayIndex = 0
+        } else {
+            colorArrayIndex += 1
+        }
+        
+        UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
+            self.gradientView.firstColor = self.colorArray[self.colorArrayIndex].color1
+            self.gradientView.secondColor = self.colorArray[self.colorArrayIndex].color2
+        }) { (sucess) in
+            self.animateBackgroundColor()
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
