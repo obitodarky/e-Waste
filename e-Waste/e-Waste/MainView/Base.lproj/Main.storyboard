@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIViewX" customModule="e_VMSS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -106,13 +106,22 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.44313725490196076" green="0.85882352941176465" blue="0.56470588235294117" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.33333333329999998" green="0.33333333329999998" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.4431372549" green="0.85882352939999995" blue="0.56470588239999997" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="VQF-vQ-RNk"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="Ipl-LE-O65" id="ckq-3B-zDO"/>
+                        <outlet property="gradientView" destination="8bC-Xf-vdC" id="ibk-bY-ohe"/>
                         <outlet property="incorrectLogin" destination="zbn-cw-Oac" id="zp5-vT-Fnz"/>
                         <outlet property="loginButton" destination="GgT-Tr-R40" id="1UZ-lN-GLF"/>
                         <outlet property="password" destination="JMf-H8-pI6" id="dJq-Mk-bRZ"/>
@@ -1019,6 +1028,6 @@
         <image name="icons8-trash-128" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oJl-l0-Ldw"/>
+        <segue reference="WpY-Q9-avQ"/>
     </inferredMetricsTieBreakers>
 </document>
