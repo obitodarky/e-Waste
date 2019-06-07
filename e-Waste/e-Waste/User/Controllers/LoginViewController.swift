@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
             colorArrayIndex += 1
         }
         
-        UIView.transition(with: gradientView, duration: 4, options: [.transitionCrossDissolve], animations: {
+        UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
             self.gradientView.firstColor = self.colorArray[self.colorArrayIndex].color1
             self.gradientView.secondColor = self.colorArray[self.colorArrayIndex].color2
         }) { (sucess) in
