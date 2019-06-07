@@ -62,7 +62,6 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     }
     
     func animateBackgroundColor(){
-        //colorArrayIndex = colorArrayIndex == (colorArray.count -1) ? 0 : colorArrayIndex + 1
         if(colorArrayIndex == colorArray.count - 1){
             colorArrayIndex = 0
         } else {
