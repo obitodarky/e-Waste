@@ -90,7 +90,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         animation.duration = 0.07
         animation.repeatCount = 3
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x - 10, y: incorrectLogin.center.y) )
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x - 10, y: incorrectLogin.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x + 10, y: incorrectLogin.center.y))
         
         incorrectLogin.layer.add(animation, forKey: "position")
