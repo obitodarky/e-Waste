@@ -355,12 +355,11 @@
                     <navigationItem key="navigationItem" id="dIo-gv-I8n"/>
                     <connections>
                         <outlet property="scrapTableView" destination="hGp-Wk-X33" id="cBd-6T-Txt"/>
-                        <segue destination="dSQ-NI-35L" kind="show" id="lVo-gu-YnT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8X-ku-3kI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4830" y="302"/>
+            <point key="canvasLocation" x="5071" y="425"/>
         </scene>
         <!--Company View Controller-->
         <scene sceneID="7X6-Sh-4Oz">
@@ -386,7 +385,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nD3-JH-uPf" customClass="CompanyCollectionViewCell" customModule="e_VMSS" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="comp_cell" id="nD3-JH-uPf" customClass="CompanyCollectionViewCell" customModule="e_VMSS" customModuleProvider="target">
                                         <rect key="frame" x="10" y="0.0" width="394" height="291"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -701,7 +700,7 @@
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8kO-SD-qrs" kind="show" id="CBD-5e-VeC"/>
+                                    <segue destination="dSQ-NI-35L" kind="show" id="N3G-mz-Dmg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhG-hz-e02">
