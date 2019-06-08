@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		000A76B2C49055D0B30FCA4D /* Pods_e_VMSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0275A150434F454BAE880B5 /* Pods_e_VMSS.framework */; };
-		0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0824DE11227E89EA0051B949 /* ScrapViewController.swift */; };
 		0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */; };
 		0849C2B322991D940009EDB0 /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0849C2B222991D940009EDB0 /* Waste.swift */; };
 		08557C80224A3CF400431369 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08557C7F224A3CF400431369 /* MapView.swift */; };
@@ -34,7 +33,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0824DE11227E89EA0051B949 /* ScrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapViewController.swift; sourceTree = "<group>"; };
 		0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		0849C2B222991D940009EDB0 /* Waste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waste.swift; sourceTree = "<group>"; };
 		08557C7F224A3CF400431369 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 		088E9EFB22A101E100A692DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0824DE11227E89EA0051B949 /* ScrapViewController.swift */,
 				08BB07572294166B00A51310 /* RegisterOrganizationView.swift */,
 			);
 			path = Controllers;
@@ -408,7 +405,6 @@
 				088E9F0F22AB7DB200A692DC /* CompanyCollectionViewCell.swift in Sources */,
 				089D3EA0223A212100C45B26 /* LoginViewController.swift in Sources */,
 				08A97A86228AA5C70080A7E4 /* UserReigsterViewController.swift in Sources */,
-				0824DE12227E89EA0051B949 /* ScrapViewController.swift in Sources */,
 				088E9F0D22AB7D0C00A692DC /* CompanyViewController.swift in Sources */,
 				08557C80224A3CF400431369 /* MapView.swift in Sources */,
 				089D3E9E223A212100C45B26 /* AppDelegate.swift in Sources */,
