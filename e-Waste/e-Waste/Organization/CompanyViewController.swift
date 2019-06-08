@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-class CompanyViewController: UIViewController {
+class CompanyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    
 
     @IBOutlet var gradientView: UIViewX!
     @IBOutlet var companyCollectionView: UICollectionView!
@@ -42,6 +44,13 @@ class CompanyViewController: UIViewController {
     
     func animateBackgroundColor(){
         
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
     }
 
 }

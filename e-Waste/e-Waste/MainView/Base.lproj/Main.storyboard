@@ -448,6 +448,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dSQ-NI-35L" id="Rfk-0l-fgi"/>
+                                    <outlet property="delegate" destination="dSQ-NI-35L" id="Lpb-Op-vsv"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
