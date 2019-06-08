@@ -14,4 +14,5 @@ class CompanyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var companyName: UILabel!
     @IBOutlet var companyNumber: UILabel!
     @IBOutlet var companyDescripttion: UILabel!
+    @IBOutlet var donateButton: UIButton!
 }

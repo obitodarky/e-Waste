@@ -24,7 +24,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fetchData()
         colorArray.append((color1: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), color2: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), color2: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), color2: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
@@ -39,7 +39,6 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
         animateBackgroundColor()
-        
     }
     
     func animateBackgroundColor(){
@@ -67,10 +66,10 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.companyName.text = scraps_list.name
         cell.companyDescripttion.text = scraps_list.desc
         cell.companyNumber.text = scraps_list.number
-        /*cell.donateButton.layer.shadowOpacity = 0.15
+        cell.donateButton.layer.shadowOpacity = 0.15
         cell.donateButton.layer.shadowRadius = 1
         cell.donateButton.layer.shadowColor = UIColor.black.cgColor
-        cell.donateButton.layer.cornerRadius = 1 */
+        cell.donateButton.layer.cornerRadius = 1 
         
         cell.companyImage.layer.shadowColor = UIColor.black.cgColor
         cell.companyImage.layer.cornerRadius = 1
@@ -93,5 +92,28 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return cell
     }
+    func fetchData(){
+        ref = Database.database().reference().child("Organization")
+        ref?.observe(.childAdded, with: { (snapshot) in
+            if let dictionary  = snapshot.value as? NSDictionary{
+                let all_scraps = Organizations()
+                
+                let name = dictionary["name"] as? String ?? "Not found"
+                let number = dictionary["number"] as? String ?? "Not found"
+                let description = dictionary["desc"] as? String ?? "Not found"
+                let image = dictionary["image"] as? String ?? "Not found"
+                
+                all_scraps.name = name
+                all_scraps.desc = description
+                all_scraps.number = number
+                all_scraps.image = image
+                
+                self.scrapList.append(all_scraps)
+                
+                DispatchQueue.main.async { self.companyCollectionView.reloadData() }
+            }
+        })
+    }
+
 
 }

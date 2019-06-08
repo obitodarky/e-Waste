@@ -445,6 +445,7 @@
                                             <outlet property="companyImage" destination="36K-Yk-IYb" id="x6d-KI-GPG"/>
                                             <outlet property="companyName" destination="UsG-jw-ads" id="pby-6v-Hkr"/>
                                             <outlet property="companyNumber" destination="lIX-d4-eHd" id="gpF-5p-aVC"/>
+                                            <outlet property="donateButton" destination="y1D-SL-S1c" id="rKd-3e-Mfh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
