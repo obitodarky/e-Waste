@@ -10,5 +10,8 @@
 import UIKit
 
 class CompanyCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet var companyImage: UIImageView!
+    @IBOutlet var companyName: UILabel!
+    @IBOutlet var companyNumber: UILabel!
+    @IBOutlet var companyDescripttion: UILabel!
 }
