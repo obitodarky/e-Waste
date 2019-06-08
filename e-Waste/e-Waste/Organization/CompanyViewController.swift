@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CompanyViewController: UIViewController {
 
@@ -15,6 +16,10 @@ class CompanyViewController: UIViewController {
     var colorArray: [(color1: UIColor,color2: UIColor)] = []
     
     var colorArrayIndex = -1
+    
+    var ref: DatabaseReference!
+    var scrapList = [Organizations]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +33,7 @@ class CompanyViewController: UIViewController {
         colorArray.append((color1: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), color2: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
         
         
-        let layout = wasteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = companyCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
         animateBackgroundColor()
