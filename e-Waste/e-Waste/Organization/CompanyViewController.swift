@@ -63,6 +63,34 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = companyCollectionView.dequeueReusableCell(withReuseIdentifier: "comp_cell", for: indexPath) as! CompanyCollectionViewCell
         
+        let scraps_list = scrapList[indexPath.row]
+        cell.companyName.text = scraps_list.name
+        cell.companyDescripttion.text = scraps_list.desc
+        cell.companyNumber.text = scraps_list.number
+        /*cell.donateButton.layer.shadowOpacity = 0.15
+        cell.donateButton.layer.shadowRadius = 1
+        cell.donateButton.layer.shadowColor = UIColor.black.cgColor
+        cell.donateButton.layer.cornerRadius = 1 */
+        
+        cell.companyImage.layer.shadowColor = UIColor.black.cgColor
+        cell.companyImage.layer.cornerRadius = 1
+        cell.companyImage.layer.masksToBounds = false
+        cell.companyImage.layer.shadowOpacity = 0.3
+        cell.companyImage.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
+        cell.companyImage.layer.shadowRadius = 2
+        cell.companyImage.layer.shouldRasterize = true
+        
+        if let organizationImageUrl = URL(string: scraps_list.image!){
+            print(organizationImageUrl)
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: organizationImageUrl)
+                if let data = data {
+                    let final_image = UIImage(data: data)
+                    DispatchQueue.main.async { cell.companyImage.image = final_image }
+                }
+            }
+        }
+        
         return cell
     }
 
