@@ -43,8 +43,19 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func animateBackgroundColor(){
-        
+        if(colorArrayIndex == colorArray.count - 1){
+            colorArrayIndex = 0
+        } else {
+            colorArrayIndex += 1
+        }
+        UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
+            self.gradientView.firstColor = self.colorArray[self.colorArrayIndex].color1
+            self.gradientView.secondColor = self.colorArray[self.colorArrayIndex].color2
+        }) { (sucess) in
+            self.animateBackgroundColor()
+        }
     }
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return scrapList.count
     }
