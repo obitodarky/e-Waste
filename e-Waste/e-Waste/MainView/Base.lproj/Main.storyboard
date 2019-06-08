@@ -361,10 +361,10 @@
             </objects>
             <point key="canvasLocation" x="4830" y="302"/>
         </scene>
-        <!--View Controller-->
+        <!--Company View Controller-->
         <scene sceneID="7X6-Sh-4Oz">
             <objects>
-                <viewController id="dSQ-NI-35L" sceneMemberID="viewController">
+                <viewController id="dSQ-NI-35L" customClass="CompanyViewController" customModule="e_VMSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j17-BG-931">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
