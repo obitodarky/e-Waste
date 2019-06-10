@@ -13,4 +13,5 @@ class Organizations: NSObject {
     var desc: String?
     var number: String?
     var image: String?
+    var address: String?
 }

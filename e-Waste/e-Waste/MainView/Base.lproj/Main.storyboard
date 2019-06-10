@@ -324,6 +324,7 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="companyAddress" destination="0UF-p9-Guj" id="Dv9-zk-Nsi"/>
                                             <outlet property="companyDescripttion" destination="H3n-vH-kyF" id="EDJ-53-OCS"/>
                                             <outlet property="companyImage" destination="36K-Yk-IYb" id="x6d-KI-GPG"/>
                                             <outlet property="companyName" destination="UsG-jw-ads" id="pby-6v-Hkr"/>

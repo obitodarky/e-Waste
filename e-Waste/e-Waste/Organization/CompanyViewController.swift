@@ -66,6 +66,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.companyName.text = scraps_list.name
         cell.companyDescripttion.text = scraps_list.desc
         cell.companyNumber.text = scraps_list.number
+        cell.companyAddress.text = scraps_list.address
         cell.donateButton.layer.shadowOpacity = 0.15
         cell.donateButton.layer.shadowRadius = 1
         cell.donateButton.layer.shadowColor = UIColor.black.cgColor
@@ -102,7 +103,9 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
                 let number = dictionary["number"] as? String ?? "Not found"
                 let description = dictionary["desc"] as? String ?? "Not found"
                 let image = dictionary["image"] as? String ?? "Not found"
+                let address = dictionary["address"] as? String ?? "Not Found"
                 
+                all_scraps.address = address
                 all_scraps.name = name
                 all_scraps.desc = description
                 all_scraps.number = number
