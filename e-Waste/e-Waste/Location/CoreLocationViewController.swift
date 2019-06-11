@@ -37,6 +37,9 @@ class CoreLocationViewController: UIViewController {
         } catch { SVProgressHUD.dismiss() }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

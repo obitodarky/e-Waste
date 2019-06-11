@@ -24,8 +24,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     var hour: Int = 0
     var minutes: Int = 0
     var seconds: Int = 0
-    
-    let getLocation = CoreLocationViewController()
+    var location: CLLocationCoordinate2D!
 
     @IBOutlet weak var wastePhoto: UIImageView!
     @IBOutlet var reportStatus: UILabel!
@@ -45,8 +44,8 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         wastePhoto.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
         wastePhoto.layer.shadowRadius = 2
         wastePhoto.layer.shouldRasterize = true
-        getLocation.activateLocationServices()
-        print(getLocation.locationManager?.location?.coordinate.latitude as Any)
+        //getLocation.activateLocationServices()
+        //print(getLocation.locationManager?.location?.coordinate.latitude as Any)
     }
     
     @IBAction func reportPhoto(_ sender: Any) {
