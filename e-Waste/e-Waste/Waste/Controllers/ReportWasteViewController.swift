@@ -44,8 +44,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         wastePhoto.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
         wastePhoto.layer.shadowRadius = 2
         wastePhoto.layer.shouldRasterize = true
-        //getLocation.activateLocationServices()
-        //print(getLocation.locationManager?.location?.coordinate.latitude as Any)
+
     }
     
     @IBAction func reportPhoto(_ sender: Any) {
@@ -74,7 +73,8 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                         storageRef.downloadURL(completion: { (url, error) in
                             guard let downloadURL = url else { return }
                             print(downloadURL)
-                            reference.child("Location").setValue("Coordinates")
+                            reference.child("Location").child("latitute").setValue(self.location.latitude)
+                            reference.child("Location").child("longitute").setValue(self.location.longitude)
                             reference.child("Photo").setValue("Image")
                             reference.child("User").setValue(uid)
                             

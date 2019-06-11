@@ -667,7 +667,7 @@
                                     <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qgZ-DO-GeO" kind="show" id="0Gu-mP-oyV"/>
+                                    <segue destination="qgZ-DO-GeO" kind="show" identifier="report_waste" id="0Gu-mP-oyV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register Organization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DY1-Ld-GZp">
