@@ -32,8 +32,6 @@ class CoreLocationViewController: UIViewController {
             share?.window?.makeKeyAndVisible()
             navigationController?.popToRootViewController(animated: true)
             SVProgressHUD.dismiss()
-            
-            
         } catch { SVProgressHUD.dismiss() }
     }
 
@@ -42,7 +40,6 @@ class CoreLocationViewController: UIViewController {
         if (segue.identifier == "report_waste"){
             let vc = segue.destination as! ReportWasteViewController
             vc.location = previousLocation?.coordinate
-            
         }
     }
     override func viewDidLoad() {

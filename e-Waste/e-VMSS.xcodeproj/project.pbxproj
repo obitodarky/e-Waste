@@ -74,25 +74,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		084E1883224213A500A7183E /* MainView */ = {
+		0821E18A22AFC45200D0AEB4 /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				088E9F0722AA2E4400A692DC /* UIViewX.swift */,
+				08B76236229D17A800CDB482 /* LoginTextField.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
+		084E1883224213A500A7183E /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				089D3EA6223A212400C45B26 /* LaunchScreen.storyboard */,
 				089D3EA1223A212100C45B26 /* Main.storyboard */,
-				08B76236229D17A800CDB482 /* LoginTextField.swift */,
 			);
-			path = MainView;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		084E1884224213AE00A7183E /* e-Waste */ = {
 			isa = PBXGroup;
 			children = (
-				084E1883224213A500A7183E /* MainView */,
+				0821E18A22AFC45200D0AEB4 /* Designables */,
+				084E1883224213A500A7183E /* Storyboard */,
 				08B76235229BD99100CDB482 /* Location */,
 				08B76234229BD94000CDB482 /* Waste */,
 				08B76233229BD92E00CDB482 /* Organization */,
 				08B76232229BD8D000CDB482 /* User */,
-				088E9F0722AA2E4400A692DC /* UIViewX.swift */,
 			);
 			path = "e-Waste";
 			sourceTree = "<group>";
