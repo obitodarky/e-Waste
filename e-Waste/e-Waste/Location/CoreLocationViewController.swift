@@ -53,7 +53,7 @@ class CoreLocationViewController: UIViewController {
         } else { locationManager?.requestWhenInUseAuthorization() }
     }
     
-    private func activateLocationServices(){ locationManager?.startUpdatingLocation() }
+    func activateLocationServices(){ locationManager?.startUpdatingLocation() }
 }
 
 extension CoreLocationViewController: CLLocationManagerDelegate{
