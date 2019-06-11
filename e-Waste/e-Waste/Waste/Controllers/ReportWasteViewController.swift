@@ -75,7 +75,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                             print(downloadURL)
                             reference.child("Location").child("latitute").setValue(self.location.latitude)
                             reference.child("Location").child("longitute").setValue(self.location.longitude)
-                            reference.child("Photo").setValue(downloadURL)
+                            reference.child("Photo").setValue(downloadURL.absoluteString)
                             reference.child("User").setValue(uid)
                             
                             SVProgressHUD.show(withStatus: "Reporting")
