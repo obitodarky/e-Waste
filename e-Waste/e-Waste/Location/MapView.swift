@@ -27,8 +27,6 @@ class MapView: UIViewController {
         areaMapView.delegate = self
         fetchData()
         setLocation()
-        
-
     }
     
     func setLocationManager(){
