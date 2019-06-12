@@ -60,14 +60,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         GIDSignIn.sharedInstance().signIn()
         animateBackgroundColor()
     }
-    
-    func animateBackgroundColor(){
+    func animateBackgroundColor() {
         if(colorArrayIndex == colorArray.count - 1){
             colorArrayIndex = 0
         } else {
             colorArrayIndex += 1
         }
-        
         UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
             self.gradientView.firstColor = self.colorArray[self.colorArrayIndex].color1
             self.gradientView.secondColor = self.colorArray[self.colorArrayIndex].color2
@@ -78,14 +76,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = true
+    navigationController?.isNavigationBarHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
-    
     func wrongLogIn(){
-        
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 3
@@ -96,11 +92,9 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         incorrectLogin.layer.add(animation, forKey: "position")
         
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
     @IBAction func logInPressed(_ sender: Any) {
        UIApplication.shared.beginIgnoringInteractionEvents()
         if(password.text != ""){
