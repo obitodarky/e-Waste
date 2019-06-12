@@ -83,6 +83,26 @@
 			path = Designables;
 			sourceTree = "<group>";
 		};
+		0821E18D22B0FDA700D0AEB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0849C2B222991D940009EDB0 /* Waste.swift */,
+				08B76230229BB12C00CDB482 /* Organizations.swift */,
+				088E9EFD22A24CD800A692DC /* Dustbins.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0821E18E22B0FDCC00D0AEB4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				088E9F0E22AB7DB200A692DC /* CompanyCollectionViewCell.swift */,
+				088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */,
+				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		084E1883224213A500A7183E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,36 +115,13 @@
 		084E1884224213AE00A7183E /* e-Waste */ = {
 			isa = PBXGroup;
 			children = (
+				0821E18E22B0FDCC00D0AEB4 /* Views */,
+				0821E18D22B0FDA700D0AEB4 /* Models */,
 				088E9EFC22A102ED00A692DC /* Controllers */,
 				0821E18A22AFC45200D0AEB4 /* Designables */,
 				084E1883224213A500A7183E /* Storyboards */,
-				08B76234229BD94000CDB482 /* Waste */,
-				08B76233229BD92E00CDB482 /* Organization */,
 			);
 			path = "e-Waste";
-			sourceTree = "<group>";
-		};
-		088E9EF922A101A900A692DC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		088E9EFA22A101D500A692DC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		088E9EFB22A101E100A692DC /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		088E9EFC22A102ED00A692DC /* Controllers */ = {
@@ -141,23 +138,6 @@
 				089D3E9F223A212100C45B26 /* LoginViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		088E9F0522A9273F00A692DC /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				0849C2B222991D940009EDB0 /* Waste.swift */,
-				088E9EFD22A24CD800A692DC /* Dustbins.swift */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		088E9F0622A9275C00A692DC /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				08B76230229BB12C00CDB482 /* Organizations.swift */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		089D3E91223A212100C45B26 = {
@@ -188,26 +168,6 @@
 				089D3EA9223A212400C45B26 /* Info.plist */,
 			);
 			path = "e-VMSS";
-			sourceTree = "<group>";
-		};
-		08B76233229BD92E00CDB482 /* Organization */ = {
-			isa = PBXGroup;
-			children = (
-				088E9F0622A9275C00A692DC /* Modules */,
-				088E9EFB22A101E100A692DC /* Controllers */,
-				088E9EFA22A101D500A692DC /* Views */,
-				088E9F0E22AB7DB200A692DC /* CompanyCollectionViewCell.swift */,
-			);
-			path = Organization;
-			sourceTree = "<group>";
-		};
-		08B76234229BD94000CDB482 /* Waste */ = {
-			isa = PBXGroup;
-			children = (
-				088E9F0522A9273F00A692DC /* Modules */,
-				088E9EF922A101A900A692DC /* Views */,
-			);
-			path = Waste;
 			sourceTree = "<group>";
 		};
 		3DFD2B441D197CA74DC23949 /* Pods */ = {
