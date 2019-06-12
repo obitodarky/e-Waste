@@ -102,6 +102,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     }
     
     @IBAction func logInPressed(_ sender: Any) {
+       UIApplication.shared.beginIgnoringInteractionEvents()
         if(password.text != ""){
             SVProgressHUD.show(withStatus: "Logging in")
         }
@@ -111,12 +112,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
                 self.incorrectLogin.text = "Incorrect Email or Password"
                 self.wrongLogIn()
             }
-            else {
-                UserDefaults.standard.setValue(self.email.text, forKey: "email")
+            else {        UserDefaults.standard.setValue(self.email.text, forKey: "email")
                 UserDefaults.standard.setValue(self.password.text, forKey: "password")
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "logIn", sender: self)
             }
+            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
 }
