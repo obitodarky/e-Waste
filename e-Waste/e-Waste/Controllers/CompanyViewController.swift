@@ -15,10 +15,8 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
 
     @IBOutlet var gradientView: UIViewX!
     @IBOutlet var companyCollectionView: UICollectionView!
-    var colorArray: [(color1: UIColor,color2: UIColor)] = []
-    
+    var colorArray: [(color1: UIColor, color2: UIColor)] = []
     var colorArrayIndex = -1
-    
     var ref: DatabaseReference!
     var scrapList = [Organizations]()
     
@@ -34,15 +32,14 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         colorArray.append((color1: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), color2: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), color2: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
         
-        
         let layout = companyCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
         animateBackgroundColor()
     }
     
-    func animateBackgroundColor(){
-        if(colorArrayIndex == colorArray.count - 1){
+    func animateBackgroundColor() {
+        if colorArrayIndex == colorArray.count - 1 {
             colorArrayIndex = 0
         } else {
             colorArrayIndex += 1
@@ -50,18 +47,16 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         UIView.transition(with: gradientView, duration: 2, options: [.transitionCrossDissolve], animations: {
             self.gradientView.firstColor = self.colorArray[self.colorArrayIndex].color1
             self.gradientView.secondColor = self.colorArray[self.colorArrayIndex].color2
-        }) { (sucess) in
+        }) { sucess in
             self.animateBackgroundColor()
         }
     }
-        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return scrapList.count
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = companyCollectionView.dequeueReusableCell(withReuseIdentifier: "comp_cell", for: indexPath) as! CompanyCollectionViewCell
-        
         let scraps_list = scrapList[indexPath.row]
         cell.companyName.text = scraps_list.name
         cell.companyDescripttion.text = scraps_list.desc
@@ -70,8 +65,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.donateButton.layer.shadowOpacity = 0.15
         cell.donateButton.layer.shadowRadius = 1
         cell.donateButton.layer.shadowColor = UIColor.black.cgColor
-        cell.donateButton.layer.cornerRadius = 1 
-        
+        cell.donateButton.layer.cornerRadius = 1
         cell.companyImage.layer.shadowColor = UIColor.black.cgColor
         cell.companyImage.layer.cornerRadius = 1
         cell.companyImage.layer.masksToBounds = false
@@ -80,7 +74,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.companyImage.layer.shadowRadius = 2
         cell.companyImage.layer.shouldRasterize = true
         
-        if let organizationImageUrl = URL(string: scraps_list.image!){
+        if let organizationImageUrl = URL(string: scraps_list.image!) {
             print(organizationImageUrl)
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: organizationImageUrl)
@@ -90,13 +84,12 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
                 }
             }
         }
-        
         return cell
     }
-    func fetchData(){
+    func fetchData() {
         ref = Database.database().reference().child("Organization")
         ref?.observe(.childAdded, with: { (snapshot) in
-            if let dictionary  = snapshot.value as? NSDictionary{
+            if let dictionary  = snapshot.value as? NSDictionary {
                 let all_scraps = Organizations()
                 
                 let name = dictionary["name"] as? String ?? "Not found"
@@ -104,19 +97,14 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
                 let description = dictionary["desc"] as? String ?? "Not found"
                 let image = dictionary["image"] as? String ?? "Not found"
                 let address = dictionary["address"] as? String ?? "Not Found"
-                
                 all_scraps.address = address
                 all_scraps.name = name
                 all_scraps.desc = description
                 all_scraps.number = number
                 all_scraps.image = image
-                
                 self.scrapList.append(all_scraps)
-                
                 DispatchQueue.main.async { self.companyCollectionView.reloadData() }
             }
         })
     }
-
-
 }
