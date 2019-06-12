@@ -9,7 +9,6 @@
 import UIKit
 
 class CompanyTableViewCell: UITableViewCell {
-    
     @IBOutlet var company_image: UIImageView!
     @IBOutlet var company_name: UILabel!
     @IBOutlet var company_description: UILabel!
@@ -18,6 +17,4 @@ class CompanyTableViewCell: UITableViewCell {
     @IBAction func donateToCompany(_ sender: Any) {
         //donate data transfer
     }
-    
-    
 }
