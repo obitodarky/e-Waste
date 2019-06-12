@@ -23,28 +23,23 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
     
     @IBAction func showPassword(_ sender: Any) {
-        if(password.isSecureTextEntry){
+        if password.isSecureTextEntry {
             password.isSecureTextEntry = false
-        }else{
+        } else{
             password.isSecureTextEntry = true
         }
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         incorrectLogin.text = ""
         loginButton.layer.shadowOpacity = 0.15
         loginButton.layer.shadowRadius = 1
         loginButton.layer.shadowColor = UIColor.black.cgColor
         loginButton.layer.cornerRadius = 1
-        
         signUp.layer.shadowOpacity = 0.15
         signUp.layer.shadowRadius = 1
         signUp.layer.shadowColor = UIColor.black.cgColor
         signUp.layer.cornerRadius = 1
-        
         colorArray.append((color1: #colorLiteral(red: 0.5033842325, green: 0.8740338683, blue: 0.6319764256, alpha: 0.8470588235), color2: #colorLiteral(red: 0.3411764801, green: 0.8529547339, blue: 0.4490480466, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.3411764801, green: 0.8529547339, blue: 0.4490480466, alpha: 1), color2: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
@@ -58,7 +53,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         animateBackgroundColor()
     }
     func animateBackgroundColor() {
-        if(colorArrayIndex == colorArray.count - 1){
+        if colorArrayIndex == colorArray.count - 1 {
             colorArrayIndex = 0
         } else {
             colorArrayIndex += 1
@@ -83,9 +78,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         animation.autoreverses = true
         animation.fromValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x - 10, y: incorrectLogin.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(x: incorrectLogin.center.x + 10, y: incorrectLogin.center.y))
-        
         incorrectLogin.layer.add(animation, forKey: "position")
-        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
