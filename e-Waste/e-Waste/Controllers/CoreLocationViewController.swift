@@ -50,8 +50,11 @@ class CoreLocationViewController: UIViewController {
             activateLocationServices()
         } else { locationManager?.requestWhenInUseAuthorization() }
     }
-    func activateLocationServices() { locationManager?.startUpdatingLocation() }
+    func activateLocationServices() {
+        locationManager?.startUpdatingLocation()
+    }
 }
+
 extension CoreLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways { activateLocationServices() }

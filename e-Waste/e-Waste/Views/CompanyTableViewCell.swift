@@ -18,3 +18,4 @@ class CompanyTableViewCell: UITableViewCell {
         //donate data transfer
     }
 }
+

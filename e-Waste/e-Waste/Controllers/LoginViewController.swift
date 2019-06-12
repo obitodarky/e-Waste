@@ -66,10 +66,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         }
     }
     override func viewWillAppear(_ animated: Bool) {
-    navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
-    navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
     func wrongLogIn(){
         let animation = CABasicAnimation(keyPath: "position")
@@ -93,8 +93,8 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
                 SVProgressHUD.dismiss()
                 self.incorrectLogin.text = "Incorrect Email or Password"
                 self.wrongLogIn()
-            }
-            else {        UserDefaults.standard.setValue(self.email.text, forKey: "email")
+            } else {
+                UserDefaults.standard.setValue(self.email.text, forKey: "email")
                 UserDefaults.standard.setValue(self.password.text, forKey: "password")
                 SVProgressHUD.dismiss()
                 self.performSegue(withIdentifier: "logIn", sender: self)

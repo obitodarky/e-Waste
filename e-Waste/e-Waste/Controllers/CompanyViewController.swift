@@ -11,15 +11,13 @@ import Firebase
 
 class CompanyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    
-
     @IBOutlet var gradientView: UIViewX!
     @IBOutlet var companyCollectionView: UICollectionView!
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
     var colorArrayIndex = -1
     var ref: DatabaseReference!
     var scrapList = [Organizations]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
@@ -31,7 +29,6 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         colorArray.append((color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1), color2: #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)))
         colorArray.append((color1: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), color2: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
-        
         let layout = companyCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
@@ -91,7 +88,6 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         ref?.observe(.childAdded, with: { (snapshot) in
             if let dictionary  = snapshot.value as? NSDictionary {
                 let all_scraps = Organizations()
-                
                 let name = dictionary["name"] as? String ?? "Not found"
                 let number = dictionary["number"] as? String ?? "Not found"
                 let description = dictionary["desc"] as? String ?? "Not found"

@@ -25,13 +25,11 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     var minutes: Int = 0
     var seconds: Int = 0
     var location: CLLocationCoordinate2D!
-
     @IBOutlet weak var wastePhoto: UIImageView!
     @IBOutlet var reportStatus: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         reportStatus.text = ""
         takePhoto.layer.shadowOpacity = 0.15
         takePhoto.layer.shadowRadius = 1
@@ -53,12 +51,10 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         hour = calendar.component(.hour, from: date)
         minutes = calendar.component(.minute, from: date)
         seconds = calendar.component(.second, from: date)
-        
         if(wastePhoto.image == nil){
             reportStatus.text = "Please select a photo"
         } else {
             let date = String(year) + String(week) + String(hour) + String(minutes) + String(seconds)
-            
             let user = Auth.auth().currentUser
             let uid = user!.uid
             ref = Database.database().reference().child("Photos")
@@ -77,11 +73,9 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                             reference.child("Location").child("longitute").setValue(self.location.longitude)
                             reference.child("Photo").setValue(downloadURL.absoluteString)
                             reference.child("User").setValue(uid)
-                            
                             SVProgressHUD.show(withStatus: "Reporting")
                             self.reportStatus.text = "✅ Photo Submitted!"
                         })
-                        
                     }
                 }
             }
@@ -101,7 +95,6 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         wastePhoto.image = wasteImage
         imagePicker.dismiss(animated: true, completion: nil)
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

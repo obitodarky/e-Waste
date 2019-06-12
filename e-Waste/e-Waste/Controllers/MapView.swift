@@ -21,7 +21,7 @@ class MapView: UIViewController {
     var ref: DatabaseReference!
     //dictonary for trashcan locations : [latititude: longitute]
     var trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         areaMapView.delegate = self
@@ -50,7 +50,6 @@ class MapView: UIViewController {
     
     func setAnnotations(){
         //self.areaMapView.removeAnnotations(self.areaMapView.annotations)
-
         for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
             trashLocation.subtitle = "Trash"
@@ -60,7 +59,6 @@ class MapView: UIViewController {
     }
     
     func getDirections(to coordinate: CLLocationCoordinate2D){
-        
         guard let location = locationManager.location?.coordinate else{ return }
         let request = createDirectionsRequest(from: location, to: coordinate)
         let directions = MKDirections(request: request)
@@ -79,13 +77,11 @@ class MapView: UIViewController {
         let destination = trash_coordinate
         let startLocation = MKPlacemark(coordinate: coordinate)
         let destinationLocation = MKPlacemark(coordinate: destination)
-        
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: startLocation)
         request.destination = MKMapItem(placemark: destinationLocation)
         request.transportType = .automobile
         request.requestsAlternateRoutes = false
-        
         return request
     }
     func fetchData(){
@@ -93,17 +89,13 @@ class MapView: UIViewController {
         ref?.observe(.childAdded, with: { (snapshot) in
             if let dictionary  = snapshot.value as? NSDictionary{
                 let dustbin = Dustbins()
-                
                 let latitude = dictionary["latitude"] as? String ?? "Not found"
                 let longitude = dictionary["longitude"] as? String ?? "Not found"
-
                 dustbin.latitude = latitude
                 dustbin.longitude = longitude
-                
                 //self.trashCans.updateValue(Double(dustbin.longitude!), forKey: Double(dustbin.latitude!))
             }
         })
-        //setAnnotations()
     }
 }
 
@@ -129,7 +121,7 @@ extension MapView: MKMapViewDelegate {
         annotationView!.canShowCallout = true
         return annotationView
     }
-    
+
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         getDirections(to: view.annotation!.coordinate)
         
@@ -148,10 +140,8 @@ extension UIColor {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
     }
-    
     convenience init(rgb: Int) {
         self.init(
             red: (rgb >> 16) & 0xFF,

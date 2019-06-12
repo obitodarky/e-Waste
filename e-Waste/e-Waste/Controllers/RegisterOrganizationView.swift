@@ -32,7 +32,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
         organizationDescription.layer.borderWidth = 2.0
         organizationDescription.layer.cornerRadius = 5.0
         organizationDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 3.0).cgColor
-
     }
     func wrongSubmit() {
         registrationStatus.frame.size.height = 22
@@ -44,7 +43,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
             x: registrationStatus.center.x - 10, y: registrationStatus.center.y))
         animation.toValue = NSValue(cgPoint: CGPoint(
             x: registrationStatus.center.x + 10, y: registrationStatus.center.y))
-
         registrationStatus.layer.add(animation, forKey: "position")
     }
     // MARK: submit button
@@ -104,7 +102,6 @@ class RegisterOrganizationView: UIViewController, UIImagePickerControllerDelegat
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         let wasteImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         organizationImage.image = wasteImage
-
         imagePicker.dismiss(animated: true, completion: nil)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) { dismiss(animated: true, completion: nil) }
