@@ -12,18 +12,14 @@ import SVProgressHUD
 import GoogleSignIn
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate{
-
-
-
+    
     @IBOutlet var gradientView: UIViewX!
     @IBOutlet var email: UITextField!
     @IBOutlet var password: UITextField!
     @IBOutlet var incorrectLogin: UILabel!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signUp: UIButton!
-    
     var colorArrayIndex = -1
-    
     var colorArray: [(color1: UIColor, color2: UIColor)] = []
     
     @IBAction func showPassword(_ sender: Any) {
@@ -33,6 +29,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
             password.isSecureTextEntry = true
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,14 +69,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
         }) { (sucess) in
             self.animateBackgroundColor()
         }
-        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
     navigationController?.isNavigationBarHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = false
+    navigationController?.isNavigationBarHidden = false
     }
     func wrongLogIn(){
         let animation = CABasicAnimation(keyPath: "position")
