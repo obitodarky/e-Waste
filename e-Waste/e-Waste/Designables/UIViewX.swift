@@ -29,7 +29,6 @@ class UIViewX: UIView {
             updateView()
         }
     }
-    
     override class var layerClass: AnyClass {
         get {
             return CAGradientLayer.self
@@ -37,18 +36,16 @@ class UIViewX: UIView {
     }
     
     func updateView() {
-        let layer = self.layer as! CAGradientLayer
-        layer.colors = [ firstColor.cgColor, secondColor.cgColor ]
-        
-        if (horizontalGradient) {
-            layer.startPoint = CGPoint(x: 0.0, y: 0.5)
-            layer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        let layer = self.layer as? CAGradientLayer
+        layer?.colors = [ firstColor.cgColor, secondColor.cgColor ]
+        if horizontalGradient {
+            layer?.startPoint = CGPoint(x: 0.0, y: 0.5)
+            layer?.endPoint = CGPoint(x: 1.0, y: 0.5)
         } else {
-            layer.startPoint = CGPoint(x: 0, y: 0)
-            layer.endPoint = CGPoint(x: 0, y: 1)
+            layer?.startPoint = CGPoint(x: 0, y: 0)
+            layer?.endPoint = CGPoint(x: 0, y: 1)
         }
     }
-    
     // MARK: - Border
     
     @IBInspectable public var borderColor: UIColor = UIColor.clear {
@@ -56,7 +53,6 @@ class UIViewX: UIView {
             layer.borderColor = borderColor.cgColor
         }
     }
-    
     @IBInspectable public var borderWidth: CGFloat = 0 {
         didSet {
             layer.borderWidth = borderWidth
@@ -68,7 +64,6 @@ class UIViewX: UIView {
             layer.cornerRadius = cornerRadius
         }
     }
-    
     // MARK: - Shadow
     
     @IBInspectable public var shadowOpacity: CGFloat = 0 {
@@ -82,18 +77,14 @@ class UIViewX: UIView {
             layer.shadowColor = shadowColor.cgColor
         }
     }
-    
     @IBInspectable public var shadowRadius: CGFloat = 0 {
         didSet {
             layer.shadowRadius = shadowRadius
         }
     }
-    
     @IBInspectable public var shadowOffsetY: CGFloat = 0 {
         didSet {
             layer.shadowOffset.height = shadowOffsetY
         }
     }
 }
-
-
