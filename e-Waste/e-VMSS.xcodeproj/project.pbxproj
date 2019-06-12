@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		000A76B2C49055D0B30FCA4D /* Pods_e_VMSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0275A150434F454BAE880B5 /* Pods_e_VMSS.framework */; };
-		0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */; };
 		0849C2B322991D940009EDB0 /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0849C2B222991D940009EDB0 /* Waste.swift */; };
 		08557C80224A3CF400431369 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08557C7F224A3CF400431369 /* MapView.swift */; };
 		0863A9A6224DC44A000CA160 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0863A9A5224DC44A000CA160 /* Assets.xcassets */; };
@@ -33,7 +32,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
 		0849C2B222991D940009EDB0 /* Waste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waste.swift; sourceTree = "<group>"; };
 		08557C7F224A3CF400431369 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0863A9A5224DC44A000CA160 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			children = (
 				088E9F0E22AB7DB200A692DC /* CompanyCollectionViewCell.swift */,
 				088E9F0122A277E100A692DC /* WasteCollectionViewCell.swift */,
-				0825A6D8228D4B5E0095CDE0 /* CompanyTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,7 +339,6 @@
 				088E9F0422A27F5500A692DC /* WasteDataViewController.swift in Sources */,
 				0863A9A8224DD382000CA160 /* ReportWasteViewController.swift in Sources */,
 				08B76231229BB12C00CDB482 /* Organizations.swift in Sources */,
-				0825A6D9228D4B5E0095CDE0 /* CompanyTableViewCell.swift in Sources */,
 				08BB0750228FE98800A51310 /* FeedbackView.swift in Sources */,
 				08BB07582294166B00A51310 /* RegisterOrganizationView.swift in Sources */,
 				088E9EFE22A24CD800A692DC /* Dustbins.swift in Sources */,
