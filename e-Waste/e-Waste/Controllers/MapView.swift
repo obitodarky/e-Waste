@@ -10,7 +10,6 @@ import Foundation
 import MapKit
 import CoreLocation
 import Firebase
-
 class MapView: UIViewController {
     
     @IBOutlet var areaMapView: MKMapView!
