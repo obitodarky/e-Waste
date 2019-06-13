@@ -45,6 +45,7 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func reportPhoto(_ sender: Any) {
+        SVProgressHUD.show(withStatus: "Reporting")
         year = calendar.component(.year, from: date)
         week = calendar.component(.weekOfYear, from: date)
         hour = calendar.component(.hour, from: date)
@@ -72,14 +73,16 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
                             reference.child("Location").child("longitute").setValue(self.location.longitude)
                             reference.child("Photo").setValue(downloadURL.absoluteString)
                             reference.child("User").setValue(uid)
-                            SVProgressHUD.show(withStatus: "Reporting")
+                            
                             self.reportStatus.text = "✅ Photo Submitted!"
                         })
                     }
                 }
             }
+            SVProgressHUD.dismiss()
         }
     }
+    
     @IBAction func takePhoto(_sender: Any){
         imagePicker.delegate = self
         if UIImagePickerController.isSourceTypeAvailable(.camera){
