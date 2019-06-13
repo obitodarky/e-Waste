@@ -93,7 +93,6 @@ class MapView: UIViewController {
                 let longitude = dictionary["longitude"] as? String ?? "Not found"
                 dustbin.latitude = latitude
                 dustbin.longitude = longitude
-                //self.trashCans.updateValue(Double(dustbin.longitude!), forKey: Double(dustbin.latitude!))
             }
         })
     }
