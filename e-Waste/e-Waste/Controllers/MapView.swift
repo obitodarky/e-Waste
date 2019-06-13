@@ -124,7 +124,6 @@ extension MapView: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         getDirections(to: view.annotation!.coordinate)
-        
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -132,7 +131,6 @@ extension MapView: MKMapViewDelegate {
         renderer.strokeColor = UIColor(rgb: 0x71DB90)
         return renderer
     }
-    
 }
 
 extension UIColor {

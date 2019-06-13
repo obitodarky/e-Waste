@@ -35,7 +35,6 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         layout.sectionInset = UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7)
         layout.minimumInteritemSpacing = 5
         animateBackgroundColor()
-
     }
     func animateBackgroundColor(){
         //colorArrayIndex = colorArrayIndex == (colorArray.count -1) ? 0 : colorArrayIndex + 1
@@ -86,7 +85,6 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
     func fetchUser(){
         ref = Database.database().reference().child("Items")
         ref?.observe(.childAdded, with: { (snapshot) in
-            
             if let dictonary = snapshot.value as? NSDictionary{
                 let waste = Waste()
                 let name = dictonary["name"] as? String ?? "Not found"
@@ -102,5 +100,4 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
             }
         })
     }
-    
 }

@@ -32,7 +32,6 @@ class CoreLocationViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //
         if segue.identifier == "report_waste"{
             let viewController = segue.destination as? ReportWasteViewController
             viewController?.location = previousLocation?.coordinate
