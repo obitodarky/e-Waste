@@ -36,7 +36,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         layout.minimumInteritemSpacing = 5
         animateBackgroundColor()
     }
-    func animateBackgroundColor(){
+    func animateBackgroundColor() {
         //colorArrayIndex = colorArrayIndex == (colorArray.count -1) ? 0 : colorArrayIndex + 1
         if(colorArrayIndex == colorArray.count - 1){
             colorArrayIndex = 0
@@ -82,7 +82,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         }
         return cell
     }
-    func fetchUser(){
+    func fetchUser() {
         ref = Database.database().reference().child("Items")
         ref?.observe(.childAdded, with: { (snapshot) in
             if let dictonary = snapshot.value as? NSDictionary{

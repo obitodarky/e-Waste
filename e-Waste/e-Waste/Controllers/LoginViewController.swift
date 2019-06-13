@@ -71,7 +71,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate{
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
     }
-    func wrongLogIn(){
+    func wrongLogIn() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.07
         animation.repeatCount = 3

@@ -29,12 +29,12 @@ class MapView: UIViewController {
         setLocation()
     }
     
-    func setLocationManager(){
+    func setLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func centerLocation(){
+    func centerLocation() {
         if let location = locationManager.location?.coordinate{
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: centralLocation , longitudinalMeters: centralLocation)
             areaMapView.setRegion(region, animated: true)
@@ -48,7 +48,7 @@ class MapView: UIViewController {
         setAnnotations()
     }
     
-    func setAnnotations(){
+    func setAnnotations() {
         //self.areaMapView.removeAnnotations(self.areaMapView.annotations)
         for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
@@ -58,8 +58,8 @@ class MapView: UIViewController {
         }
     }
     
-    func getDirections(to coordinate: CLLocationCoordinate2D){
-        guard let location = locationManager.location?.coordinate else{ return }
+    func getDirections(to coordinate: CLLocationCoordinate2D) {
+        guard let location = locationManager.location?.coordinate else { return }
         let request = createDirectionsRequest(from: location, to: coordinate)
         let directions = MKDirections(request: request)
         self.areaMapView.removeOverlays(self.areaMapView.overlays)
@@ -72,7 +72,7 @@ class MapView: UIViewController {
         }
     }
     
-    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D, to trash_coordinate: CLLocationCoordinate2D) -> MKDirections.Request{
+    func createDirectionsRequest(from coordinate: CLLocationCoordinate2D, to trash_coordinate: CLLocationCoordinate2D) -> MKDirections.Request {
         
         let destination = trash_coordinate
         let startLocation = MKPlacemark(coordinate: coordinate)
@@ -84,7 +84,7 @@ class MapView: UIViewController {
         request.requestsAlternateRoutes = false
         return request
     }
-    func fetchData(){
+    func fetchData() {
         ref = Database.database().reference().child("Dustbins")
         ref?.observe(.childAdded, with: { (snapshot) in
             if let dictionary  = snapshot.value as? NSDictionary{
