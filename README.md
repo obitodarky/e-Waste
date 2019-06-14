@@ -11,7 +11,7 @@ The database of the application is on Firebase. All data is updated and refreshe
 ## Installation Guide
 First Clone the repository by running.
 ```
-https://github.com/obitodarky/e-Waste.git
+git clone https://github.com/obitodarky/e-Waste.git
 ```
 
 ### Installing CocoaPods
