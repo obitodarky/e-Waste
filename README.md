@@ -6,7 +6,7 @@ Waste Management and Collection iOS Application. This app aims in helping users 
 - Users can report waste on roads/public places by taking a picture.
 - Users can donate waste/scrap in their house to needy organizations(which can be registered via the app)
 
-
+The database of the application is on Firebase. All data is updated and refreshed realtime.
 
 ## Installation Guide
 First Clone the repository by running.
