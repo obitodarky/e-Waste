@@ -175,7 +175,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="NO"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalGradient" value="YES"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <cells>
