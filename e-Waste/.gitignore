@@ -1,5 +1,5 @@
 Pods/
 GoogleService-Info.plist
 Info.plist
-.DS_Store
-e-VMSS.xcworkspace/xcuserdata
+*.DS_Store
+xcuserdata/
