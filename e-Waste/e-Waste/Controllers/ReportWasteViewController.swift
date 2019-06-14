@@ -45,16 +45,17 @@ class ReportWasteViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func reportPhoto(_ sender: Any) {
-        SVProgressHUD.show(withStatus: "Reporting")
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        year = calendar.component(.year, from: date)
-        week = calendar.component(.weekOfYear, from: date)
-        hour = calendar.component(.hour, from: date)
-        minutes = calendar.component(.minute, from: date)
-        seconds = calendar.component(.second, from: date)
+
         if(wastePhoto.image == nil){
             reportStatus.text = "Please select a photo"
         } else {
+            SVProgressHUD.show(withStatus: "Reporting")
+            UIApplication.shared.beginIgnoringInteractionEvents()
+            year = calendar.component(.year, from: date)
+            week = calendar.component(.weekOfYear, from: date)
+            hour = calendar.component(.hour, from: date)
+            minutes = calendar.component(.minute, from: date)
+            seconds = calendar.component(.second, from: date)
             let date = String(year) + String(week) + String(hour) + String(minutes) + String(seconds)
             let user = Auth.auth().currentUser
             let uid = user!.uid
