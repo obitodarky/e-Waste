@@ -6,7 +6,7 @@ Waste Management and Collection iOS Application. This app aims in helping users 
 - Users can report waste on roads/public places by taking a picture.
 - Users can donate waste/scrap in their house to needy organizations(which can be registered via the app)
 
-The database of the application is on Firebase. All data is updated and refreshed realtime.
+The database of the application is on Firebase. All data is updated and refreshed in realtime.
 
 ## Installation Guide
 First Clone the repository by running.
@@ -24,4 +24,4 @@ You need to install CocoaPods first. To do that, run the following in command in
 Once CocoaPods is installed. Go to the repository folder/`e-Waste`, then in terminal, run `pod install`
 
 ### Run Project
-After installing all the neccessary Pods, you can open the `e-VMSS.xcworkspace` in `X-Code` And then select an emulator (**iPhone 8** is preffered) and run the program.
+After installing all the neccessary Pods, you can open the `e-VMSS.xcworkspace` in `X-Code` And then select an emulator (**iPhone 8 Plus** is preffered) and run the program.
