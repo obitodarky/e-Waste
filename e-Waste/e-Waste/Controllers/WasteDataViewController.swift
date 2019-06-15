@@ -71,9 +71,7 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
                 let data = try? Data(contentsOf: wasteImageUrl)
                 if let data = data {
                     let final_image = UIImage(data: data)
-                    DispatchQueue.main.async {
-                        cell.wasteImage.image = final_image
-                    }
+                    DispatchQueue.main.async { cell.wasteImage.image = final_image }
                 }
             }
         }
