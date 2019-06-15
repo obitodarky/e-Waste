@@ -11,8 +11,6 @@ import Firebase
 
 class WasteDataViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-
-
     @IBOutlet var gradientView: UIViewX!
     @IBOutlet var wasteCollectionView: UICollectionView!
     var colorArrayIndex = -1
@@ -37,7 +35,6 @@ class WasteDataViewController: UIViewController, UICollectionViewDataSource, UIC
         animateBackgroundColor()
     }
     func animateBackgroundColor() {
-        //colorArrayIndex = colorArrayIndex == (colorArray.count -1) ? 0 : colorArrayIndex + 1
         if(colorArrayIndex == colorArray.count - 1){
             colorArrayIndex = 0
         } else {
