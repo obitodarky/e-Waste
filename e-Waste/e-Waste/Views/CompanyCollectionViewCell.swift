@@ -16,4 +16,8 @@ class CompanyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var companyDescripttion: UILabel!
     @IBOutlet var donateButton: UIButton!
     @IBOutlet var companyAddress: UILabel!
+    
+    @IBAction func donateTapped(_ sender: Any) {
+        //
+    }
 }
