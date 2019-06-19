@@ -16,10 +16,6 @@ class CompanyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var companyDescripttion: UILabel!
     @IBOutlet var donateButton: UIButton!
     @IBOutlet var companyAddress: UILabel!
+    var bankDetails: String!
     
-    @IBAction func donateTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-                
-    }
 }

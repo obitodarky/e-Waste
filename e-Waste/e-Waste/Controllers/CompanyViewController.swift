@@ -36,6 +36,11 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         animateBackgroundColor()
     }
     
+    @IBAction func donatePressed(_ sender: Any) {
+        let alert = UIAlertController(title: "Donate", message: "Bank ID: " + scrapList[0].account!, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true)
+    }
     func animateBackgroundColor() {
         if colorArrayIndex == colorArray.count - 1 {
             colorArrayIndex = 0
@@ -60,6 +65,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.companyDescripttion.text = scraps_list.desc
         cell.companyNumber.text = scraps_list.number
         cell.companyAddress.text = scraps_list.address
+        cell.bankDetails = scraps_list.account
         cell.donateButton.layer.shadowOpacity = 0.15
         cell.donateButton.layer.shadowRadius = 1
         cell.donateButton.layer.shadowColor = UIColor.black.cgColor
@@ -71,6 +77,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.companyImage.layer.shadowOffset = CGSize(width: -1.5, height: 1.5)
         cell.companyImage.layer.shadowRadius = 2
         cell.companyImage.layer.shouldRasterize = true
+        
         
         if let organizationImageUrl = URL(string: scraps_list.image!) {
             print(organizationImageUrl)
@@ -94,7 +101,9 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
                 let description = dictionary["desc"] as? String ?? "Not found"
                 let image = dictionary["image"] as? String ?? "Not found"
                 let address = dictionary["address"] as? String ?? "Not Found"
+                let account = dictionary["account"] as? String ?? "Not found"
                 all_scraps.address = address
+                all_scraps.account = account
                 all_scraps.name = name
                 all_scraps.desc = description
                 all_scraps.number = number
