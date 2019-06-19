@@ -14,4 +14,5 @@ class Organizations: NSObject {
     var number: String?
     var image: String?
     var address: String?
+    var account: String?
 }
