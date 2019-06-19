@@ -287,7 +287,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="donateTapped:" destination="nD3-JH-uPf" eventType="touchUpInside" id="DOS-k1-5Gb"/>
+                                                        <action selector="donatePressed:" destination="dSQ-NI-35L" eventType="touchUpInside" id="UBD-Lk-Ra8"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36K-Yk-IYb">
@@ -352,7 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GaK-5t-O7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5408.6956521739139" y="481.79347826086962"/>
+            <point key="canvasLocation" x="4970" y="488"/>
         </scene>
         <!--User Reigster View Controller-->
         <scene sceneID="wQw-pT-5za">
