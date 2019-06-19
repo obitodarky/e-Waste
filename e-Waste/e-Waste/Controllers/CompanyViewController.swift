@@ -18,6 +18,7 @@ class CompanyViewController: UIViewController, UICollectionViewDataSource, UICol
     var ref: DatabaseReference!
     var scrapList = [Organizations]()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchData()
