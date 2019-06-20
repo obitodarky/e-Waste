@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     
 </head>
-<div ng-app="app_name" ng-controller="ctrl1">
+<div ng-app="app_name" ng-controller="ctrl1" data-ng-init="init()">
 <body>
     <center>
     <h3>Add Items</h3>
@@ -20,15 +20,16 @@
                 <option ng-repeat="item in items">{{item}}</option>
             </select>
         <br><br><textarea placeholder="Enter description of Item" style="height: 70px; width: 250px" ng-model="desc"></textarea>
-        <br><br><input type="file" ng-model="type">
-        <br><br><button>Submit</button>
+        <br><br><input type="text" ng-model="type"> 
+        <br><br><input type="file" ng-model="image">
+        <br><br><button ng-click="writeData()">Submit</button>
     </form>    
     </center>
 </div>
 </body>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
