@@ -6,19 +6,23 @@
     <title>e-Waste</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="main.js"></script>
+    
 </head>
 <div ng-app="app_name" ng-controller="ctrl1">
 <body>
     <center>
     <h3>Add Items</h3>
+    
     <form>
-        <br><input type="text" placeholder="Item Name" ng-model="name">
+        <br>
+        <br><input type="text" placeholder="Item Name" ng-model="name"> <span> <select>
+                <option>Existing Items</option>
+                <option ng-repeat="item in items">{{item}}</option>
+            </select>
         <br><br><textarea placeholder="Enter description of Item" style="height: 70px; width: 250px" ng-model="desc"></textarea>
         <br><br><input type="file" ng-model="type">
-        <br><br><button ng-click="updateValue()">Submit</button>
-        <br>{{final_name}}
-    </form>
+        <br><br><button>Submit</button>
+    </form>    
     </center>
 </div>
 </body>
@@ -28,6 +32,6 @@
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
-
     <script src="firebase.js"></script>
+    <script src="main.js"></script>
 </html>
