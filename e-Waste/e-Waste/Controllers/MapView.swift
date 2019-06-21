@@ -108,7 +108,7 @@ extension MapView: CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     }
-}
+} 
 
 extension MapView: MKMapViewDelegate {
     
