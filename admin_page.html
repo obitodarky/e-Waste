@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     
 </head>
-<div ng-app="app_name" ng-controller="ctrl1" data-ng-init="init()">
+<div >
 <body>
     <center>
     <h3>Add Items</h3>
@@ -17,12 +17,12 @@
         <br>
         <br><input type="text" placeholder="Item Name" ng-model="name"> <span> <select>
                 <option>Existing Items</option>
-                <option ng-repeat="item in items">{{item}}</option>
+                
             </select>
         <br><br><textarea placeholder="Enter description of Item" style="height: 70px; width: 250px" ng-model="desc"></textarea>
         <br><br><input type="text" ng-model="type"> 
         <br><br><input type="file" ng-model="image">
-        <br><br><button ng-click="writeData()">Submit</button>
+        <br><br><button onclick="writeData()">Submit</button>
     </form>    
     </center>
 </div>
@@ -34,5 +34,4 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
     <script src="firebase.js"></script>
-    <script src="main.js"></script>
 </html>
