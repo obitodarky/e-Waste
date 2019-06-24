@@ -26,7 +26,7 @@ class MapView: UIViewController {
         areaMapView.delegate = self
         fetchData()
         setLocation()
-    }
+    }   
     
     func setLocationManager() {
         locationManager.delegate = self
@@ -108,7 +108,7 @@ extension MapView: CLLocationManagerDelegate {
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     }
-} 
+}
 
 extension MapView: MKMapViewDelegate {
     
