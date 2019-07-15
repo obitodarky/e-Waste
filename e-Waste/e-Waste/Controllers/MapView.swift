@@ -19,14 +19,16 @@ class MapView: UIViewController {
     let sampleTrash = MKPointAnnotation()
     var ref: DatabaseReference!
     //dictonary for trashcan locations : [latititude: longitute]
-    var trashCans: [Double: Double] = [22.292009: 73.122745, 22.294579: 73.123123, 22.291407: 73.119975]
+    var trashCan1 = CLLocationCoordinate2DMake(22.292009, 73.122745)
+    var trashCan2 = CLLocationCoordinate2DMake(22.293309, 73.122941)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         areaMapView.delegate = self
         fetchData()
         setLocation()
-    }   
+    }
     
     func setLocationManager() {
         locationManager.delegate = self
@@ -49,12 +51,18 @@ class MapView: UIViewController {
     
     func setAnnotations() {
         //self.areaMapView.removeAnnotations(self.areaMapView.annotations)
-        for (latitutde, longitute) in trashCans {
             let trashLocation = MKPointAnnotation()
             trashLocation.subtitle = "Trash"
-            trashLocation.coordinate = CLLocationCoordinate2D(latitude: latitutde, longitude: longitute)
+            trashLocation.title = "Vasna"
+            trashLocation.coordinate = trashCan1
             self.areaMapView.addAnnotation(trashLocation)
-        }
+        
+            let location2 = MKPointAnnotation()
+            location2.coordinate = trashCan2
+            location2.subtitle = "Trash"
+            location2.title = "Vasna"
+            self.areaMapView.addAnnotation(location2)
+        
     }
     
     func getDirections(to coordinate: CLLocationCoordinate2D) {
@@ -114,9 +122,13 @@ extension MapView: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView = areaMapView.dequeueReusableAnnotationView(withIdentifier: "Annotations")
-        if annotationView == nil{ annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews") }
-        if let subtitle = annotation.subtitle , subtitle == "Trash"{ annotationView!.image = UIImage(named: "trash-can") }
-        annotationView!.canShowCallout = true
+        if annotationView == nil{ annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationViews")
+            if let subtitle = annotation.subtitle , subtitle == "Trash"{ annotationView!.image = UIImage(named: "trash-can") }
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+
         return annotationView
     }
 

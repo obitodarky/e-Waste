@@ -13,16 +13,17 @@
     <center>
     <h3>Add Items</h3>
     
-    <form>
+    <form name="myform">
         <br>
-        <br><input type="text" placeholder="Item Name" ng-model="name"> <span> <select>
-                <option>Existing Items</option>
-                
-            </select>
-        <br><br><textarea placeholder="Enter description of Item" style="height: 70px; width: 250px" ng-model="desc"></textarea>
-        <br><br><input type="text" ng-model="type"> 
-        <br><br><input type="file" ng-model="image">
+        <br><input name= "name" type="text" placeholder="Item Name" id="name"> <span>
+        <br><br><textarea name="desc" placeholder="Enter description of Item" style="height: 70px; width: 250px" id="desc"></textarea>
+        <br><br><input type="text" name="type" ng-model="type" placeholder="waste type" id="type"> 
+        <br><br><input type="text" name="img" id="photo" ng-model="url" placeholder="image url">
         <br><br><button onclick="writeData()">Submit</button>
+        <br><br>
+        <input type ="button" onclick="window.location.href = 'file:///Users/harshmehta/Desktop/Harsh/projects/ES//vieworg.html';" value="View Organization">
+        <input type ="button" onclick="window.location.href = 'file:///Users/harshmehta/Desktop/Harsh/projects/ES//viewwaste.html';" value="View Feedback">
+        <input type ="button" onclick="window.location.href = 'file:///Users/harshmehta/Desktop/Harsh/projects/ES//viewaste.html';" value="View Waste"></button>
     </form>    
     </center>
 </div>
