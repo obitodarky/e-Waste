@@ -8,6 +8,15 @@ Waste Management and Collection iOS Application. This app aims in helping users 
 
 The database of the application is on Firebase. All data is updated and refreshed in realtime.
 
+## Screenshots
+
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/login.png" width="330"></img>
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/google.png" width="330"></img>
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/menu.png" width="330"></img>
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/map.png" width="330"></img>
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/wastes.png" width="330"></img>
+<img src="https://github.com/obitodarky/e-Waste/blob/master/images/feedback.png" width="330"></img>
+
 ## Installation Guide
 First Clone the repository by running.
 ```
